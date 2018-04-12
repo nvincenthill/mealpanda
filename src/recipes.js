@@ -1,3 +1,5 @@
+const recipes = 
+
 [
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
@@ -1575,3 +1577,5 @@
     "lng": -122.25
   }
 ]
+
+export default recipes;

@@ -38,48 +38,12 @@
     >
   </head>
   <body>
-    <div class="jumbotron">
-        <h1 id="maintitle">
-          Hey Mel ... What do you want for dinner this week?
-        </h1>
-        <p> 
-          <button type="submit" class = "btn btn-danger btn-lg" id="generate"> Let the robots decide... </button>
-        </p>
-    </div>        
-    <div id="ingfunctions">
-      <p> 
-        <button 
-          type="submit" 
-          class ="btn btn-success btn-lg" 
-          id="ibutton"
-        > 
-        What do we need? 
-        </button>
-        <button 
-          type="submit" 
-          class ="btn btn-hide btn-lg" 
-          id="hbutton"
-        > 
-          Hide Grocery List 
-       </button>
-      </p>
-    </div>
-    </div>
-    <div id="main">
+    <div id="main" class="loader">
       <!-- This is where our React app will go -->
     </div>
-    <div class="footer"> 
-        <h4> Created by 
-          <a class="myname" href="https://nvincenthill.github.io/"> 
-            Nicholas Vincent-Hill
-          </a> 
-          </b> 
-            in
-          <b> 
-            2018 
-          </b> 
-        </h4>
-    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react-dom.js"></script>
     <script 
       src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
     >
@@ -87,10 +51,6 @@
     <script 
       src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
       >
-    </script>
-    <script 
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-JVPShwslmxd4eLsk3a9EXBnr3ZGsGkQ"
-    >
     </script>
   </body>
 </html>
