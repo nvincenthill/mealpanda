@@ -2,7 +2,6 @@ import React from "react";
 import GroceryList from "./GroceryList";
 
 class Header extends React.Component {
-  
   componentWillMount() {
     // console.log("MOUNTING HEADER");
   }
@@ -12,7 +11,7 @@ class Header extends React.Component {
   }
 
   render() {
-    const generateButton =         
+    const generateButton = (
       <p>
         <button
           onClick={this.props.loadMenu}
@@ -24,8 +23,9 @@ class Header extends React.Component {
           Let the robots decide...{" "}
         </button>
       </p>
+    );
 
-    const groceryListButton =         
+    const groceryListButton = (
       <p>
         <button
           onClick={this.props.loadGroceryList}
@@ -37,28 +37,29 @@ class Header extends React.Component {
           What do we need?{" "}
         </button>
       </p>
+    );
 
-    const HideGroceryListButton =         
+    const HideGroceryListButton = (
       <p>
         <button type="submit" className="btn btn-hide btn-lg" id="hbutton">
           {" "}
           Hide Grocery List{" "}
         </button>
       </p>
+    );
 
     return (
-      <div className="jumbotron">       
+      <div className="jumbotron">
         <h1 id="maintitle">{this.props.title}</h1>
-          {this.props.generateButtonHidden ? null : generateButton}
+        {this.props.generateButtonHidden ? null : generateButton}
+        <div>{this.props.groceryButtonHidden ? null : groceryListButton}</div>
         <div>
-          {this.props.groceryButtonHidden ? null : groceryListButton}
+          {this.props.HideGroceryListButtonHidden ? null : HideGroceryListButton}
         </div>
-        <div>
-          {this.props.hideGroceryButtonHidden ? null : HideGroceryListButton}
-        </div>
-          {this.props.groceryListHidden ? null : <GroceryList recipeData={this.props.recipeData} />}
-        <div>
-        </div>
+        {this.props.groceryListHidden ? null : (
+          <GroceryList recipeData={this.props.recipeData} />
+        )}
+        <div />
       </div>
     );
   }

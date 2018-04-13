@@ -7,9 +7,11 @@ import RestaurantModal from "./RestaurantModal";
 class MenuItem extends React.Component {
   render() {
     const recipeOrRestaurantModal =
-      this.props.recipeData["@type"] === "Recipe"
-        ? <RecipeModal recipeData={this.props.recipeData} />
-        : <RestaurantModal recipeData={this.props.recipeData} />;
+      this.props.recipeData["@type"] === "Recipe" ? (
+        <RecipeModal recipeData={this.props.recipeData} />
+      ) : (
+        <RestaurantModal recipeData={this.props.recipeData} />
+      );
     return (
       <TransitionGroup component="div">
         <CSSTransition
@@ -33,14 +35,13 @@ class MenuItem extends React.Component {
                 <p id="dinnerdef1" className="definitions">
                   {this.props.recipeData.description}
                 </p>{" "}
+                {recipeOrRestaurantModal}
                 <button
                   className="btn btn-warning"
                   onClick={() => this.props.changeRecipe(this.props.index)}
                 >
                   Remove
                 </button>
-                <br />
-                {recipeOrRestaurantModal}
               </div>
             </Thumbnail>
           </Col>
