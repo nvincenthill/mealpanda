@@ -43,11 +43,11 @@ class RecipeModal extends React.Component {
     const name = this.props.recipeData.name;
 
     const recipeInstructions = this.props.recipeData.recipeInstructions.map(
-      key => <li index={key}>{key}</li>
+      key => <li key={key}>{key}</li>
     );
 
     const recipeIngredients = this.props.recipeData.recipeIngredient.map(
-      key => <li index={key}>{key}</li>
+      key => <li key={key}>{key}</li>
     );
 
     return (

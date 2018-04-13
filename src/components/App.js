@@ -15,7 +15,8 @@ class App extends React.Component {
     menuHidden: true,
     generateButtonHidden: false,
     groceryButtonHidden: true,
-    groceryListHidden: true,
+    HideGroceryListButtonHidden: true,
+    groceryListHidden: true
   };
 
   loadMenu = () => {
@@ -81,6 +82,7 @@ class App extends React.Component {
           groceryButtonHidden={this.state.groceryButtonHidden}
           groceryListHidden={this.state.groceryListHidden}
           recipeData={this.state.randomRecipes}
+          HideGroceryListButtonHidden={this.state.HideGroceryListButtonHidden}
         />
         <Menu
           menuHidden={this.state.menuHidden}

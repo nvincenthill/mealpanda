@@ -1,0 +1,36 @@
+Units of measure (uom):
+
+bbl
+cu
+doz
+F
+fl oz
+ft
+gal
+gr
+in
+lb
+oz
+pt
+qt
+sq
+tbsp
+tsp
+yd
+clvs
+
+Types:
+
+Beverages
+Canned Goods
+Frozen Foods
+Meat & Seafood
+Produce
+Condiments
+Bread & Bakery
+Wine, Beer, & Spirits
+Deli
+Cookies, Snacks, & Candy
+Dairy, Eggs, & Cheese
+Spices & Herbs
+Grains, Pastas, & Sides

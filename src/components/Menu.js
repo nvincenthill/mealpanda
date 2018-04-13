@@ -32,12 +32,17 @@ class Menu extends React.Component {
           <Row className="show-grid">
             {Object.keys(this.props.recipeData).map(key => (
               <MenuItem
+                key={key}
                 index={key}
                 week={week[key]}
                 recipeData={this.props.recipeData[key]}
                 changeRecipe={this.props.changeRecipe}
-                handleCloseInformationModal={this.props.handleCloseInformationModal}
-                handleShowInformationModal={this.props.handleShowInformationModal}
+                handleCloseInformationModal={
+                  this.props.handleCloseInformationModal
+                }
+                handleShowInformationModal={
+                  this.props.handleShowInformationModal
+                }
               />
             ))}
           </Row>

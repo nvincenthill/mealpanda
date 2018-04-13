@@ -4,47 +4,46 @@
     text-align: center;
     padding: 5px 0px 5px 0px;
     margin-bottom: 0;
-    }
+}
 
 .tab-content {
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     padding: 10px;
-    }
+}
 
 .nav-tabs {
     margin-bottom: 0;
-    }
+}
 
 .page-header {
     text-align: center;
-    font-family: 'Lato';
+    font-family: "Lato";
     margin-top: 5px;
-    }
+}
 
 .media-body {
-
 }
 
 .media-heading {
-   font-weight: bold; 
+    font-weight: bold;
 }
 
 .thesis {
-
 }
 
 .topic {
     text-align: center;
 }
 
-
-.table tr:hover {background-color: dimgrey;}
+.table tr:hover {
+    background-color: dimgrey;
+}
 
 .caption {
     text-align: center;
-    font-family: 'Lato';
+    font-family: "Lato";
 }
 
 #ingfunctions {
@@ -52,7 +51,7 @@
 }
 
 .day {
-    font-family: 'Oswald';
+    font-family: "Oswald";
     text-transform: uppercase;
     text-align: center;
     font-weight: 600;
@@ -70,18 +69,16 @@
 }
 
 #ingtable {
-    display: none;
     margin: auto;
 }
 
 .thumbnail {
-    padding:5px;
-    border:0;
+    padding: 5px;
+    border: 0;
     margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
     height: 100%;
-    
 }
 
 .row.equal {
@@ -90,7 +87,7 @@
     flex-wrap: wrap;
     height: 100%;
 }
- 
+
 #inglistheader {
     text-align: left;
 }
@@ -103,13 +100,11 @@
     transition: filter 1s ease-in;
 }
 
-img:hover {-webkit-filter:none;}
-
 /*.btn-default:hover {-webkit-filter: sepia(100%);}*/
 
 .btn-default {
     margin-top: 5pt;
-    font-family: 'Oswald';
+    font-family: "Oswald";
     text-transform: uppercase;
     font-size: 18px;
     line-height: 23px;
@@ -119,7 +114,7 @@ img:hover {-webkit-filter:none;}
 
 .btn-default:focus {
     margin-top: 5pt;
-    font-family: 'Oswald';
+    font-family: "Oswald";
     text-transform: uppercase;
     font-size: 18px;
     line-height: 23px;
@@ -129,12 +124,11 @@ img:hover {-webkit-filter:none;}
 }
 
 #rbutton {
-
 }
 
 #maintitle {
     font-size: 4em;
-    font-family: 'Dancing Script', cursive;
+    font-family: "Dancing Script", cursive;
     font-weight: 600;
     padding: 0px 0px 5px 0px;
     margin-left: 10px;
@@ -143,12 +137,12 @@ img:hover {-webkit-filter:none;}
 
 .name {
     font-size: 2em;
-    font-family: 'Lato';
+    font-family: "Lato";
     font-weight: 500;
 }
 
 .btn-danger {
-    font-family: 'Oswald';
+    font-family: "Oswald";
     text-transform: uppercase;
     font-size: 18px;
     line-height: 23px;
@@ -158,7 +152,7 @@ img:hover {-webkit-filter:none;}
 }
 
 .btn-success {
-    font-family: 'Oswald';
+    font-family: "Oswald";
     text-transform: uppercase;
     font-size: 18px;
     line-height: 23px;
@@ -168,23 +162,22 @@ img:hover {-webkit-filter:none;}
 }
 
 .definitions {
-    font-family: 'Lato';
+    font-family: "Lato";
     font-size: large;
-
 }
 
 #inglistbody {
-    font-family: 'Lato';
+    font-family: "Lato";
 }
 
 .footer {
     text-align: center;
-    font-family: 'Lato';
+    font-family: "Lato";
 }
 
 .btn-warning {
     margin-top: 5pt;
-    font-family: 'Oswald';
+    font-family: "Oswald";
     text-transform: uppercase;
     font-size: 18px;
     line-height: 23px;
@@ -195,7 +188,7 @@ img:hover {-webkit-filter:none;}
 }
 
 .btn-warning:focus {
-    font-family: 'Oswald';
+    font-family: "Oswald";
     text-transform: uppercase;
     font-size: 18px;
     line-height: 23px;
@@ -224,8 +217,8 @@ img:hover {-webkit-filter:none;}
 }
 
 .btn-secondary {
-        margin-top: 5pt;
-    font-family: 'Oswald';
+    margin-top: 5pt;
+    font-family: "Oswald";
     text-transform: uppercase;
     font-size: 18px;
     line-height: 23px;
@@ -235,7 +228,7 @@ img:hover {-webkit-filter:none;}
 
 .btn-primary {
     margin-top: 5pt;
-    font-family: 'Oswald';
+    font-family: "Oswald";
     text-transform: uppercase;
     font-size: 18px;
     line-height: 23px;
@@ -247,15 +240,14 @@ img:hover {-webkit-filter:none;}
     text-align: center;
     margin-top: 0;
     padding: 0px 0px 0px 0px;
-    font-family: 'Lato';
+    font-family: "Lato";
 }
 
 .instructions {
-
 }
 
 .instructionsheader {
-    font-family: 'Oswald';
+    font-family: "Oswald";
     text-transform: uppercase;
     text-align: center;
     font-weight: 600;
@@ -270,16 +262,15 @@ img:hover {-webkit-filter:none;}
 }
 
 .btn-hide {
-
 }
 
 #hbutton {
-    font-family: 'Oswald';
+    font-family: "Oswald";
     text-transform: uppercase;
     font-size: 18px;
     line-height: 23px;
     letter-spacing: 2px;
-/*    outline: none !important;*/
+    /*    outline: none !important;*/
     background-color: black;
 }
 
@@ -292,7 +283,7 @@ img:hover {-webkit-filter:none;}
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Lato';
+    font-family: "Lato";
 }
 
 #map {
@@ -302,7 +293,7 @@ img:hover {-webkit-filter:none;}
 }
 
 .directionsheader {
-    font-family: 'Oswald';
+    font-family: "Oswald";
     text-transform: uppercase;
     text-align: center;
     font-weight: 600;
@@ -314,15 +305,15 @@ img:hover {-webkit-filter:none;}
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width:400px;
-    height:400px;
-    background:yellow
+    width: 400px;
+    height: 400px;
+    background: yellow;
 }
 
 .recipedataheader {
     font-family: Oswald;
     margin-left: 5pt;
-    text-align: center;  
+    text-align: center;
 }
 
 .major-input-group {
@@ -340,7 +331,6 @@ img:hover {-webkit-filter:none;}
 }
 
 #commitingbutton {
-
 }
 
 .enteringredientsform {
@@ -364,28 +354,28 @@ img:hover {-webkit-filter:none;}
 }
 
 [data-toggle="toggle"] {
-	display: none;
+    display: none;
 }
 
 .loader:empty {
-  position: absolute;
-  top: calc(50% - 4em);
-  left: calc(50% - 4em);
-  width: 6em;
-  height: 6em;
-  border: 1.1em solid rgba(0, 0, 0, 0.2);
-  border-left: 1.1em solid #000000;
-  border-radius: 50%;
-  animation: load8 1.1s infinite linear;
+    position: absolute;
+    top: calc(50% - 4em);
+    left: calc(50% - 4em);
+    width: 6em;
+    height: 6em;
+    border: 1.1em solid rgba(0, 0, 0, 0.2);
+    border-left: 1.1em solid #000000;
+    border-radius: 50%;
+    animation: load8 1.1s infinite linear;
 }
 
 @keyframes load8 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .menu {
@@ -406,16 +396,21 @@ img:hover {-webkit-filter:none;}
 img {
     width: 100%;
     height: auto;
+    box-shadow: 0 5px 10px 0 hsla(0, 0%, 0%, 0.2);
 }
 
+/*img:hover {
+    -webkit-filter: grayscale(100%);
+}*/
+
 .modal-header {
-   padding: 10px 10px 0px 0px;
-   font-size: 1em;
-   font-family: 'Oswald';
+    padding: 10px 10px 0px 0px;
+    font-size: 1em;
+    font-family: "Oswald";
 }
 
 .signinbtn {
-    font-family: 'Oswald';
+    font-family: "Oswald";
     text-transform: uppercase;
     font-size: 18px;
     line-height: 23px;
@@ -430,4 +425,16 @@ img {
 
 .recipe-modal-instructions {
     text-align: left;
+}
+
+.grocery-list-header {
+    font-family: "Oswald";
+}
+
+.grocery-list-table {
+    font-family: "Lato";
+}
+
+.grocery-list {
+    font-family: "Lato";
 }
