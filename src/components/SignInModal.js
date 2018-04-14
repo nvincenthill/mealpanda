@@ -28,14 +28,12 @@ class SignInModal extends React.Component {
     this.setState({ show: true });
   }
 
-  render() {
-    // const popover = (
-    //   <Popover id="modal-popover" title="popover">
-    //     very popover. such engagement
-    //   </Popover>
-    // );
-    // const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
+  componentWillMount() {
+    // console.log("MOUNTING SIGN IN MODAL");
+  }
 
+
+  render() {
     return (
       <div>
         <Button bsSize="large" onClick={this.handleShow}>
@@ -54,7 +52,7 @@ class SignInModal extends React.Component {
               className="signinbtn"
               bsStyle="success"
               bsSize="large"
-              onClick={this.handleShow}
+              onClick={() => this.props.authenticate('Google')}
             >
               Sign in
             </Button>

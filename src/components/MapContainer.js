@@ -5,17 +5,19 @@ import React from "react";
 export class MapContainer extends React.Component {
   render() {
     const style = {
-      width: "200px",
-      height: "200px"
-    };
+          width: '300px',
+          height: '300px',
+          position: "relative",
+          align: "center"
+        }
     if (!this.props.loaded) {
       return <div>Loading...</div>;
     }
     return (
-      <div style={style}>
-        <GoogleMap google={this.props.google} />
+      <div className="map-container" style={style}>
+        <GoogleMap recipeData={this.props.recipeData} google={this.props.google} />
       </div>
-    );
+    )
   }
 }
 

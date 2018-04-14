@@ -1520,6 +1520,8 @@ const recipes =
     "datePublished": "2018-22-2018",
     "description": "A rustic neighborhood restaurant serving the American brasserie experience",
     "image": "wtavern.jpg",
+    "address": "6317 College Ave, Oakland, CA 94618",
+    "website": "https://www.woodtavern.net/",
     "recipeIngredient": [
       
     ],
@@ -1552,6 +1554,8 @@ const recipes =
     "datePublished": "2018-22-2018",
     "description": "Neighborhood bistro offering modern & classic Italian cuisine served in a cozy space",
     "image": "belotti.jpg",
+    "address": "5403 College Ave, Oakland, CA 94618",
+    "website": "http://belottirb.com/",
     "recipeIngredient": [
       
     ],

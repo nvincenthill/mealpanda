@@ -1,11 +1,14 @@
+// gSec j5G60cS8im1NfBxNO4WO4-ab
+
 import React from "react";
 // import PropTypes from "prop-types";
 import Menu from "./Menu";
 import Header from "./Header";
 import Footer from "./Footer";
-import base from "../base";
+import base, { firebaseApp } from "../base";
+import firebase from "firebase";
 import data from "../recipes.js";
-import { shuffle } from "../helpers";
+import { shuffle, preloadImages } from "../helpers";
 
 class App extends React.Component {
   state = {
@@ -16,7 +19,9 @@ class App extends React.Component {
     generateButtonHidden: false,
     groceryButtonHidden: true,
     HideGroceryListButtonHidden: true,
-    groceryListHidden: true
+    groceryListHidden: true,
+    userAuthenticated: false,
+    uid: null
   };
 
   loadMenu = () => {
@@ -28,35 +33,89 @@ class App extends React.Component {
   loadGroceryList = () => {
     this.setState({ groceryListHidden: false });
     this.setState({ groceryButtonHidden: true });
+    this.setState({ HideGroceryListButtonHidden: false });
   };
+
+  hideGroceryList = () => {
+    this.setState({ groceryListHidden: true });
+    this.setState({ groceryButtonHidden: false });
+    this.setState({ HideGroceryListButtonHidden: true });
+  }
 
   changeRecipe = key => {
     const randomRecipes = this.state.randomRecipes;
     const oldRecipe = randomRecipes[key];
     let newRecipe = oldRecipe;
+    // TBD fix algo // compare id's
     while (newRecipe === oldRecipe || randomRecipes.includes(newRecipe)) {
       let i = 0;
       const mixed = shuffle(this.state.recipeData);
       newRecipe = mixed[i];
       i++;
-    }
+    };
 
     randomRecipes.splice(key, 1, newRecipe);
     this.setState({ randomRecipes: randomRecipes });
   };
+ 
+  authHandler = async authData => {
+    // Look up current owner
+    const userRecipes = await base.fetch(`/randomRecipes`, {
+      context: this
+    });
+    // set the state of randomRecipes to reflect current user
+    if (!userRecipes.owner) {
+      await base.post(`/owner`, {
+        data: authData.user.uid
+      })
+    }
+
+    this.setState({
+      uid: authData.user.uid,
+      owner: this.state.owner,
+      userAuthenticated: true
+    })
+    console.log(authData);
+    console.log(userRecipes);
+  };
+
+  authenticate = (provider) => {
+    const authProvider = new firebase.auth[`${provider}AuthProvider`]();
+    firebaseApp.auth().signInWithPopup(authProvider).then(this.authHandler);
+  };
+
+  logOut = async () => {
+    await firebase.auth().signOut();
+    this.setState({
+      uid: null,
+      userAuthenticated: false
+    })
+  }
 
   componentWillMount() {
     // console.log("MOUNTING APP");
+
+    //sync state with firebase
+    this.ref = base.syncState(`/randomRecipes`, {
+      context: this,
+      state: 'randomRecipes'
+    });
+    
+    // TBD fix this
+    for (let i = 0; i < this.state.recipeData.length; i++)
+    preloadImages(this.state.recipeData[i].image);
   }
 
+
   componentDidMount() {
+    setTimeout(() => this.setState({ loading: false }), 750);
     const randomRecipes = [];
     const mixed = shuffle(this.state.recipeData);
     for (let i = 0; i < 6; i++) {
       randomRecipes.push(mixed[i]);
     }
     this.setState({ randomRecipes: randomRecipes });
-    setTimeout(() => this.setState({ loading: false }), 750);
+
     // console.log("APP MOUNTED!");
   }
 
@@ -81,15 +140,20 @@ class App extends React.Component {
           generateButtonHidden={this.state.generateButtonHidden}
           groceryButtonHidden={this.state.groceryButtonHidden}
           groceryListHidden={this.state.groceryListHidden}
-          recipeData={this.state.randomRecipes}
+          randomRecipes={this.state.randomRecipes}
           HideGroceryListButtonHidden={this.state.HideGroceryListButtonHidden}
+          hideGroceryList={this.hideGroceryList}
         />
         <Menu
           menuHidden={this.state.menuHidden}
           recipeData={this.state.randomRecipes}
           changeRecipe={this.changeRecipe}
         />
-        <Footer />
+        <Footer 
+          authenticate={this.authenticate}
+          userAuthenticated={this.state.userAuthenticated}
+          logOut={this.logOut}
+        />
       </React.Fragment>
     );
   }

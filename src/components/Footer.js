@@ -1,9 +1,14 @@
 import React from "react";
 // import PropTypes from "prop-types";
 import SignInModal from "./SignInModal";
+import { Button } from "react-bootstrap";
 
 class Footer extends React.Component {
   render() {
+    const logOutButton =
+      <Button bsSize="large" onClick={this.props.logOut}> Log Out </Button>
+    const signInModal =
+      <SignInModal authenticate={this.props.authenticate} />
     return (
       <React.Fragment>
         <div className="footer">
@@ -18,7 +23,8 @@ class Footer extends React.Component {
             in &nbsp;
             <b>2018</b>
           </h4>
-          <SignInModal />
+          {this.props.userAuthenticated ? null : signInModal}
+          {this.props.userAuthenticated ? logOutButton : null}
         </div>
       </React.Fragment>
     );

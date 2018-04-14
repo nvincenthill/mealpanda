@@ -1,12 +1,12 @@
 import React from "react";
-// import MapContainer from "./MapContainer";
+import MapContainer from "./MapContainer";
 
 import {
-  Popover,
-  Tooltip,
+  // Popover,
+  // Tooltip,
   Button,
-  Modal,
-  OverlayTrigger
+  Modal
+  // OverlayTrigger
   // Well
 } from "react-bootstrap";
 
@@ -31,12 +31,6 @@ class RestaurantModal extends React.Component {
   }
 
   render() {
-    const popover = (
-      <Popover id="modal-popover" title="popover">
-        very popover. such engagement
-      </Popover>
-    );
-    const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
     const instructionsOrDirections =
       this.props.recipeData["@type"] === "Recipe"
         ? "Instructions"
@@ -57,30 +51,19 @@ class RestaurantModal extends React.Component {
             <Modal.Title>{instructionsOrDirections}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>{name}</h4>
+            <a href={this.props.recipeData.website}><h4>{name}</h4></a>
             <p>{this.props.recipeData.description}</p>
-            <div />
-            <h4>Popover in a modal</h4>
-            <p>
-              there is a{" "}
-              <OverlayTrigger overlay={popover}>
-                <a href="#popover">popover</a>
-              </OverlayTrigger>{" "}
-              here
-            </p>
-
-            <h4>Tooltips in a modal</h4>
-            <p>
-              there is a{" "}
-              <OverlayTrigger overlay={tooltip}>
-                <a href="#tooltip">tooltip</a>
-              </OverlayTrigger>{" "}
-              here
-            </p>
-
+            <MapContainer recipeData={this.props.recipeData}/>
             <hr />
+            <h4>Address</h4>
+            <p>{this.props.recipeData.address}</p>
           </Modal.Body>
-          <Modal.Footer />
+          <Modal.Footer className="recipe-modal-footer">
+            {" "}
+            <Button className="btn-modal-close" onClick={this.handleClose}>
+              Close
+            </Button>{" "}
+          </Modal.Footer>
         </Modal>
       </div>
     );
