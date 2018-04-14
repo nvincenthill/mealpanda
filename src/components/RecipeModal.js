@@ -1,11 +1,11 @@
 import React from "react";
 
 import {
-  Popover,
-  Tooltip,
+  // Popover,
+  // Tooltip,
   Button,
-  Modal,
-  OverlayTrigger
+  Modal
+  // OverlayTrigger
   // Well
 } from "react-bootstrap";
 
@@ -30,12 +30,6 @@ class RecipeModal extends React.Component {
   }
 
   render() {
-    const popover = (
-      <Popover id="modal-popover" title="popover">
-        very popover. such engagement
-      </Popover>
-    );
-    const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
     const instructionsOrDirections =
       this.props.recipeData["@type"] === "Recipe"
         ? "Instructions"
@@ -46,9 +40,13 @@ class RecipeModal extends React.Component {
       key => <li key={key}>{key}</li>
     );
 
-    const recipeIngredients = this.props.recipeData.recipeIngredient.map(
-      key => <li key={key}>{key}</li>
-    );
+    let recipeIngredients = this.props.recipeData.recipeIngredient.map(key => (
+      <tr key={`${key.name}`} className="ingredients-list-table-row">
+        <td key={`${key.name}4`}>{key.name}</td>
+        <td key={`${key.quantity}5`}>{key.quantity}</td>
+        <td key={`${key.uom}6`}>{key.uom}</td>
+      </tr>
+    ));
 
     return (
       <div>
@@ -65,15 +63,29 @@ class RecipeModal extends React.Component {
             <Modal.Title>{name}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>Ingredients</h4>
-            <h4>Instructions</h4>
+            <div className="ingredients-list">
+              <h2 className="ingredients-list-header">Ingredients</h2>
+
+              <table className="ingredients-list-table" align="center">
+                <tbody className="ingredients-list-table-body" align="left">
+                  <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Units</th>
+                  </tr>
+                  {recipeIngredients}
+                </tbody>
+              </table>
+            </div>
+            <hr />
+            <h2 className="instructions-list-header">Instructions</h2>
             <div className="recipe-modal-instructions">
               {recipeInstructions}
             </div>
 
-            <hr />
+
           </Modal.Body>
-          <Modal.Footer />
+          <Modal.Footer className="recipe-modal-footer"> <Button className="btn-modal-close" onClick={this.handleClose}>Close</Button> </Modal.Footer>
         </Modal>
       </div>
     );

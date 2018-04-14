@@ -30,35 +30,56 @@ export function shuffle(array) {
 }
 
 export function createGroceryList(arrayOfRecipes) {
-  console.log("Creating GroceryList...");
   let inventory = [];
   for (let i = 0; i < arrayOfRecipes.length; i++) {
-    inventory.push(arrayOfRecipes[i].recipeIngredient);
+    if (arrayOfRecipes[i].recipeIngredient) {
+      inventory.push(arrayOfRecipes[i].recipeIngredient);
+    }
   }
   
   let merged = [];
   for (let i = 0; i < inventory.length; i++) {
     merged = merged.concat(inventory[i]);
   }
-  console.log(merged);
 
   let helper = {};
 
-  let groceryList = merged.reduce(function(r, o) {
-    let key = o.name;
+  let groceryList = merged.reduce(function(acc, el) {
+    let key = el.name;
     if (!helper[key]) {
-      helper[key] = Object.assign({}, o); // create a copy of o
-      r.push(helper[key]);
+      helper[key] = Object.assign({}, el); // create a copy of el
+      acc.push(helper[key]);
     } else {
-      helper[key].quantity += o.quantity;
+      helper[key].quantity += el.quantity;
     }
-    return r;
+    return acc;
   }, []);
 
-  console.log(groceryList);
+  return groceryList;
 
-  groceryList = groceryList.sort(function(a, b) {
-    return a.type.toLowerCase().localeCompare(b.type.toLowerCase());
-  });
+  // groceryList = groceryList.sort(function(a, b) {
+  //   console.log("returning completed list");
+  //   return a.type.toLowerCase().localeCompare(b.type.toLowerCase());
+  // });
 
+}
+
+export function preloadImages(array) {
+    if (!preloadImages.list) {
+        preloadImages.list = [];
+    }
+    var list = preloadImages.list;
+    for (var i = 0; i < array.length; i++) {
+        var img = new Image();
+        img.onload = function() {
+            var index = list.indexOf(this);
+            if (index !== -1) {
+                // remove image from the array once it's loaded
+                // for memory consumption reasons
+                list.splice(index, 1);
+            }
+        }
+        list.push(img);
+        img.src = array[i];
+    }
 }

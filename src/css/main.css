@@ -103,7 +103,6 @@
 /*.btn-default:hover {-webkit-filter: sepia(100%);}*/
 
 .btn-default {
-    margin-top: 5pt;
     font-family: "Oswald";
     text-transform: uppercase;
     font-size: 18px;
@@ -425,16 +424,73 @@ img {
 
 .recipe-modal-instructions {
     text-align: left;
+    margin: 0 15%;
 }
 
 .grocery-list-header {
     font-family: "Oswald";
 }
 
+.grocery-list-table-header {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: lighter;
+}
+
 .grocery-list-table {
     font-family: "Lato";
+    padding: 500px;
+    width: 50%;
 }
+
+.ingredients-list-table {
+    font-family: "Lato";
+    padding: 15px;
+    width: 60%;
+}
+
+.ingredients-list-header {
+    margin-top: 0;
+}
+
+.instructions-list-header {
+    margin-top: 0;
+}
+
+.grocery-list-table-row:nth-child(even) {
+    background-color: #1c1c1c;
+}
+/*.grocery-list-table-row:hover {
+    background-color: white;
+    color: black;
+}*/
+/*.ingredients-list-table-row:hover {
+    background-color: black;
+    color: white;
+}*/
 
 .grocery-list {
     font-family: "Lato";
+}
+
+.grocery-list-table-header {
+    font-size: 1.25em;
+}
+
+.recipe-modal-footer {
+    padding: 1em 0px 1em 0px;
+}
+
+.map {
+
+}
+
+.map-container {
+    margin: auto;
+    box-shadow: 0 5px 10px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.map-holder {
+
 }
