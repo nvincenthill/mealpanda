@@ -7,6 +7,7 @@ const firebaseApp = firebase.initializeApp({
   databaseURL: process.env.databaseURL
 });
 
+console.log(process.env);
 const base = Rebase.createClass(firebaseApp.database());
 
 // This is a named export
