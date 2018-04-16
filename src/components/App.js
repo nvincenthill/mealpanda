@@ -65,7 +65,9 @@ class App extends React.Component {
   };
  
   authHandler = async authData => {
-    // Look up current owner
+    // Look up current user
+      // if no user - create new user
+      // if user - find correct data and serve
     const userRecipes = await base.fetch(`/randomRecipes`, {
       context: this
     });
