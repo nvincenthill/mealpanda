@@ -6,17 +6,6 @@
     margin-bottom: 0;
 }
 
-.tab-content {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
-}
-
-.nav-tabs {
-    margin-bottom: 0;
-}
-
 .page-header {
     text-align: center;
     font-family: "Lato";
@@ -44,10 +33,6 @@
 .caption {
     text-align: center;
     font-family: "Lato";
-}
-
-#ingfunctions {
-    text-align: center;
 }
 
 .day {
@@ -88,18 +73,6 @@
     height: 100%;
 }
 
-#inglistheader {
-    text-align: left;
-}
-
-#inglist {
-    text-align: left;
-}
-
-.image {
-    transition: filter 1s ease-in;
-}
-
 /*.btn-default:hover {-webkit-filter: sepia(100%);}*/
 
 .btn-default {
@@ -109,6 +82,8 @@
     line-height: 23px;
     letter-spacing: 1px;
     outline: none !important;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .btn-default:focus {
@@ -120,9 +95,8 @@
     letter-spacing: 1px;
     outline: none !important;
     background-color: white;
-}
-
-#rbutton {
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 #maintitle {
@@ -424,7 +398,7 @@ img {
 
 .recipe-modal-instructions {
     text-align: left;
-    margin: 0 15%;
+    margin: 0 1em;
 }
 
 .grocery-list-header {
@@ -440,14 +414,20 @@ img {
 
 .grocery-list-table {
     font-family: "Lato";
-    padding: 500px;
-    width: 50%;
+    width: 85%;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    overflow-y:auto;
+    border-spacing: 2em 0;
 }
 
 .ingredients-list-table {
     font-family: "Lato";
-    padding: 15px;
-    width: 60%;
+    padding: 1em;
+    width: 100%;
+    border-spacing: 0.5em 0;
+    border-collapse: separate;
+    margin: 0 0 0 0;
 }
 
 .ingredients-list-header {
@@ -458,9 +438,9 @@ img {
     margin-top: 0;
 }
 
-.grocery-list-table-row:nth-child(even) {
+/*.grocery-list-table-row:nth-child(even) {
     background-color: #1c1c1c;
-}
+}*/
 /*.grocery-list-table-row:hover {
     background-color: white;
     color: black;
@@ -493,4 +473,56 @@ img {
 
 .map-holder {
 
+}
+
+.show-grocery-list {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 2px;
+    background-color: white;
+    color: black;
+    outline: none !important;
+    margin-bottom: 1em;
+    margin-top: 0;
+    outline-offset: 0px;
+}
+
+.show-grocery-list:hover {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 2px;
+    background-color: black;
+    color: white;
+    outline: none !important;
+    margin-bottom: 1em;
+    margin-top: 0;
+    outline-offset: 0px;
+}
+
+.show-grocery-list:focus {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 2px;
+    background-color: white;
+    color: black;
+    outline: none !important;
+    margin-bottom: 1em;
+    margin-top: 0;
+    outline-offset: 0px;
+}
+
+.recipe-modal-picture {
+    height: 100%;
+    width: 100%;
+}
+
+.ingredients-list {
+    margin-left: 0;
+    margin-right: 0;
 }

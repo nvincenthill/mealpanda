@@ -108,6 +108,12 @@ class App extends React.Component {
       context: this,
       state: 'randomRecipes'
     });
+
+    for (let j = 0; j < this.state.recipeData.length; j++) {
+      let sortedIngredients = this.state.recipeData[j].recipeIngredient.sort(function(a,b) {return (a.type > b.type) ? 1 : ((b.type > a.type) ? -1 : 0);} );
+      this.state.recipeData[j].recipeIngredient = sortedIngredients;
+    }
+    
     
     // TBD fix this
     for (let i = 0; i < this.state.recipeData.length; i++)
