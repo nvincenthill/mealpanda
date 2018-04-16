@@ -43,16 +43,22 @@ class App extends React.Component {
   }
 
   changeRecipe = key => {
+    const mixed = shuffle(this.state.recipeData);
     const randomRecipes = this.state.randomRecipes;
     const oldRecipe = randomRecipes[key];
     let newRecipe = oldRecipe;
-    // TBD fix algo // compare id's
-    while (newRecipe === oldRecipe || randomRecipes.includes(newRecipe)) {
-      let i = 0;
-      const mixed = shuffle(this.state.recipeData);
-      newRecipe = mixed[i];
-      i++;
-    };
+    let usedNames = [];
+
+    for (let j = 0; j < this.state.randomRecipes.length; j++) {
+      usedNames.push(this.state.randomRecipes[j].name)
+    }
+
+    for (let k = 0; k < mixed.length; k++) {
+      newRecipe = mixed[k]
+      if (!usedNames.includes(newRecipe.name)) {
+        break;
+      }
+    }
 
     randomRecipes.splice(key, 1, newRecipe);
     this.setState({ randomRecipes: randomRecipes });
