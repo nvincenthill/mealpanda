@@ -40,7 +40,7 @@ class App extends React.Component {
     this.setState({ groceryListHidden: true });
     this.setState({ groceryButtonHidden: false });
     this.setState({ HideGroceryListButtonHidden: true });
-  }
+  };
 
   changeRecipe = key => {
     const mixed = shuffle(this.state.recipeData);
@@ -50,11 +50,11 @@ class App extends React.Component {
     let usedNames = [];
 
     for (let j = 0; j < this.state.randomRecipes.length; j++) {
-      usedNames.push(this.state.randomRecipes[j].name)
+      usedNames.push(this.state.randomRecipes[j].name);
     }
 
     for (let k = 0; k < mixed.length; k++) {
-      newRecipe = mixed[k]
+      newRecipe = mixed[k];
       if (!usedNames.includes(newRecipe.name)) {
         break;
       }
@@ -63,33 +63,49 @@ class App extends React.Component {
     randomRecipes.splice(key, 1, newRecipe);
     this.setState({ randomRecipes: randomRecipes });
   };
- 
+
   authHandler = async authData => {
-    // Look up current user
-      // if no user - create new user
-      // if user - find correct data and serve
-    const userRecipes = await base.fetch(`/randomRecipes`, {
-      context: this
-    });
-    // set the state of randomRecipes to reflect current user
-    if (!userRecipes.owner) {
-      await base.post(`/owner`, {
-        data: authData.user.uid
-      })
-    }
 
     this.setState({
       uid: authData.user.uid,
-      owner: this.state.owner,
       userAuthenticated: true
-    })
+    });
+
+    // if (this.state.uid) {
+    //   this.ref = base.syncState(`users/${this.state.uid}/userRecipes`, {
+    //     context: this,
+    //     state: "randomRecipes"
+    //   });
+    // }
+    let userRecipes;
+
+    if (this.checkIfUserExists(this.state.uid)) {
+      userRecipes = await base.fetch(
+        `users/${this.state.uid}/userRecipes`,
+        {
+          context: this
+        }
+      );
+    } else {
+      userRecipes = this.state.randomRecipes
+    }
+
+
+    this.writeUserData(this.state.uid, userRecipes);
+    this.ref = base.syncState(`users/${this.state.uid}/userRecipes`, {
+      context: this,
+      state: "randomRecipes"
+    });
     console.log(authData);
     console.log(userRecipes);
   };
 
-  authenticate = (provider) => {
+  authenticate = provider => {
     const authProvider = new firebase.auth[`${provider}AuthProvider`]();
-    firebaseApp.auth().signInWithPopup(authProvider).then(this.authHandler);
+    firebaseApp
+      .auth()
+      .signInWithPopup(authProvider)
+      .then(this.authHandler);
   };
 
   logOut = async () => {
@@ -97,29 +113,37 @@ class App extends React.Component {
     this.setState({
       uid: null,
       userAuthenticated: false
-    })
+    });
+  };
+
+  writeUserData = (userId, userRecipes) => {
+    firebase
+      .database()
+      .ref("users/" + userId)
+      .set({
+        uid: userId,
+        userRecipes: userRecipes
+      });
+  };
+
+  checkIfUserExists = (userId) => {
+    var usersRef = firebase.database().ref(`users/`);
+    usersRef.child(userId).once('value', function(snapshot) {
+      var exists = (snapshot.val() !== null);
+      console.log(exists);
+    });
   }
 
   componentWillMount() {
-    // console.log("MOUNTING APP");
-
-    //sync state with firebase
-    this.ref = base.syncState(`/randomRecipes`, {
-      context: this,
-      state: 'randomRecipes'
-    });
-
     for (let j = 0; j < this.state.recipeData.length; j++) {
-      let sortedIngredients = this.state.recipeData[j].recipeIngredient.sort(function(a,b) {return (a.type > b.type) ? 1 : ((b.type > a.type) ? -1 : 0);} );
+      let sortedIngredients = this.state.recipeData[j].recipeIngredient.sort(
+        function(a, b) {
+          return a.type > b.type ? 1 : b.type > a.type ? -1 : 0;
+        }
+      );
       this.state.recipeData[j].recipeIngredient = sortedIngredients;
     }
-    
-    
-    // TBD fix this
-    for (let i = 0; i < this.state.recipeData.length; i++)
-    preloadImages(this.state.recipeData[i].image);
   }
-
 
   componentDidMount() {
     setTimeout(() => this.setState({ loading: false }), 750);
@@ -130,7 +154,12 @@ class App extends React.Component {
     }
     this.setState({ randomRecipes: randomRecipes });
 
-    // console.log("APP MOUNTED!");
+    if (this.state.uid) {
+      this.ref = base.syncState(`users/${this.state.uid}/userRecipes`, {
+        context: this,
+        state: "randomRecipes"
+      });
+    }
   }
 
   componentWillUnmount() {
@@ -163,7 +192,7 @@ class App extends React.Component {
           recipeData={this.state.randomRecipes}
           changeRecipe={this.changeRecipe}
         />
-        <Footer 
+        <Footer
           authenticate={this.authenticate}
           userAuthenticated={this.state.userAuthenticated}
           logOut={this.logOut}
