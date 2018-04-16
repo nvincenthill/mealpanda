@@ -154,12 +154,6 @@ const recipes =
         "type": "Produce"
       },
       {
-        "quantity": 0.5,
-        "uom": "cu",
-        "name": "Butter",
-        "type": "Dairy, Eggs, & Cheese"
-      },
-      {
         "quantity": 8,
         "uom": "oz",
         "name": "Onion",
