@@ -5,7 +5,7 @@ import firebase from "firebase";
 const databaseURL = "https://mealplanner-196022.firebaseio.com"
 
 const firebaseApp = firebase.initializeApp({
-  apiKey: process.env.apiKey,
+  apiKey: process.env.API,
   authDomain: process.env.authDomain,
   databaseURL: databaseURL
 });
