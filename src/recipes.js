@@ -1,85 +1,84 @@
-const recipes = 
-
-[
+const recipes = [
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
-    "author": "Nicholas Vincent-Hill",
-    "cookTime": "PT1H",
-    "datePublished": "2018-02-19",
-    "description": "A simple, fresh, garlicy basil pesto",
-    "image": "pesto.jpg",
-    "recipeIngredient": [
+    author: "Nicholas Vincent-Hill",
+    cookTime: "PT1H",
+    datePublished: "2018-02-19",
+    description: "A simple, fresh, garlicy basil pesto",
+    image: "pesto.png",
+    recipeIngredient: [
       {
-        "quantity": 4,
-        "uom": "oz",
-        "name": "Basil",
-        "type": "Spices & Herbs"
+        quantity: 4,
+        uom: "oz",
+        name: "Basil",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 4,
-        "uom": "tbsp",
-        "name": "Olive oil",
-        "type": "Condiments"
+        quantity: 4,
+        uom: "tbsp",
+        name: "Olive oil",
+        type: "Condiments"
       },
       {
-        "quantity": 3,
-        "uom": "tbsp",
-        "name": "Lemon juice",
-        "type": "Produce"
+        quantity: 3,
+        uom: "tbsp",
+        name: "Lemon juice",
+        type: "Produce"
       },
       {
-        "quantity": 0.5,
-        "uom": "cup",
-        "name": "Parmesean Reggiano",
-        "type": "Dairy, Eggs, & Cheese"
+        quantity: 0.5,
+        uom: "cup",
+        name: "Parmesean Reggiano",
+        type: "Dairy, Eggs, & Cheese"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Kosher salt",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Kosher salt",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Black pepper",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Black pepper",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 8,
-        "uom": "oz",
-        "name": "Pasta",
-        "type": "Grains, Pastas, & Sides"
+        quantity: 8,
+        uom: "oz",
+        name: "Pasta",
+        type: "Grains, Pastas, & Sides"
       },
       {
-        "quantity": 4,
-        "uom": "clvs",
-        "name": "Garlic",
-        "type": "Produce"
+        quantity: 4,
+        uom: "clvs",
+        name: "Garlic",
+        type: "Produce"
       },
       {
-        "quantity": 0.25,
-        "uom": "cu",
-        "name": "Pine nuts",
-        "type": "Produce"
+        quantity: 0.25,
+        uom: "cu",
+        name: "Pine nuts",
+        type: "Produce"
       }
     ],
-    "interactionStatistic": {
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Nick's Basil Pesto",
-    "nutrition": {
+    name: "Nick's Basil Pesto",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT30M",
-    "recipeInstructions": [
+    prepTime: "PT30M",
+    recipeInstructions: [
       "Wash and de-stem basil",
       "Blend pine nuts, parmesean, and garlic in food processor",
       "Add basil and lemon juice while blending",
@@ -88,114 +87,115 @@ const recipes =
       "Serve topped with grated parmsean reggiano",
       "Enjoy!"
     ],
-    "recipeYield": "Two servings"
+    recipeYield: "Two servings"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
-    "author": "Nicholas Vincent-Hill",
-    "cookTime": "PT2H",
-    "datePublished": "2015-05-18",
-    "description": "A homemade chicken pot pie seasoned with sage and thyme",
-    "image": "pie.jpg",
-    "recipeIngredient": [
+    author: "Nicholas Vincent-Hill",
+    cookTime: "PT2H",
+    datePublished: "2015-05-18",
+    description: "A homemade chicken pot pie seasoned with sage and thyme",
+    image: "pie.png",
+    recipeIngredient: [
       {
-        "quantity": 3,
-        "uom": "cu",
-        "name": "Flour",
-        "type": "Grains, Pastas, & Sides"
+        quantity: 3,
+        uom: "cu",
+        name: "Flour",
+        type: "Grains, Pastas, & Sides"
       },
       {
-        "quantity": 9,
-        "uom": "oz",
-        "name": "Chicken thighs",
-        "type": "Meat & Seafood"
+        quantity: 9,
+        uom: "oz",
+        name: "Chicken thighs",
+        type: "Meat & Seafood"
       },
       {
-        "quantity": 2,
-        "uom": "cu",
-        "name": "Chicken broth",
-        "type": "Misc."
+        quantity: 2,
+        uom: "cu",
+        name: "Chicken broth",
+        type: "Misc."
       },
       {
-        "quantity": 1,
-        "uom": "cup",
-        "name": "Corn",
-        "type": "Frozen Foods"
+        quantity: 1,
+        uom: "cup",
+        name: "Corn",
+        type: "Frozen Foods"
       },
       {
-        "quantity": 1.5,
-        "uom": "tsp",
-        "name": "Kosher salt",
-        "type": "Spices & Herbs"
+        quantity: 1.5,
+        uom: "tsp",
+        name: "Kosher salt",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Black pepper",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Black pepper",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 0.5,
-        "uom": "cu",
-        "name": "Vegetable shortening",
-        "type": "Misc."
+        quantity: 0.5,
+        uom: "cu",
+        name: "Vegetable shortening",
+        type: "Misc."
       },
       {
-        "quantity": 0.5,
-        "uom": "cu",
-        "name": "Butter",
-        "type": "Dairy, Eggs, & Cheese"
+        quantity: 0.5,
+        uom: "cu",
+        name: "Butter",
+        type: "Dairy, Eggs, & Cheese"
       },
       {
-        "quantity": 8,
-        "uom": "oz",
-        "name": "Celery",
-        "type": "Produce"
+        quantity: 8,
+        uom: "oz",
+        name: "Celery",
+        type: "Produce"
       },
       {
-        "quantity": 8,
-        "uom": "oz",
-        "name": "Onion",
-        "type": "Produce"
+        quantity: 8,
+        uom: "oz",
+        name: "Onion",
+        type: "Produce"
       },
       {
-        "quantity": 3,
-        "uom": "clvs",
-        "name": "Garlic",
-        "type": "Produce"
+        quantity: 3,
+        uom: "clvs",
+        name: "Garlic",
+        type: "Produce"
       },
       {
-        "quantity": 1,
-        "uom": "tbsp",
-        "name": "Sage",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tbsp",
+        name: "Sage",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "White Pepper",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "White Pepper",
+        type: "Spices & Herbs"
       }
     ],
-    "interactionStatistic": {
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Chicken Pot Pie",
-    "nutrition": {
+    name: "Chicken Pot Pie",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT15M",
-    "recipeInstructions": [
+    prepTime: "PT15M",
+    recipeInstructions: [
       "Preheat oven to 425°F.",
       "Cut off the woody bottom part of the asparagus spears and discard.",
-      "With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.\",string.\", and if you eat asparagus you know what I mean by that).",
+      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
       "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
       "Sprinkle with salt.",
       "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
@@ -204,90 +204,177 @@ const recipes =
       "The tips of the spears will get very brown but watch them to prevent burning.",
       "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
     ],
-    "recipeYield": "Four servings"
+    recipeYield: "Four servings"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
-    "author": "Nicholas Vincent-Hill",
-    "cookTime": "PT2H",
-    "datePublished": "2015-05-18",
-    "description": "Chicken in a mildly spiced, buttery curry sauce",
-    "image": "bchicken.jpg",
-    "recipeIngredient": [
+    author: "Nicholas Vincent-Hill",
+    cookTime: "PT2H",
+    datePublished: "2018-04-16",
+    description: "Chicken in a spiced, buttery curry sauce",
+    image: "bchicken.png",
+    recipeIngredient: [
       {
-        "quantity": 4,
-        "uom": "oz",
-        "name": "Basil",
-        "type": "Spices & Herbs"
+        name: "Greek yogurt",
+        quantity: 1,
+        type: "Dairy, Eggs, & Cheese",
+        uom: "cu"
+      },
+      { name: "Garlic", quantity: 4, type: "Produce", uom: "clvs" },
+      {
+        name: "Chili powder",
+        quantity: 4,
+        type: "Spices & Herbs",
+        uom: "tbsp"
       },
       {
-        "quantity": 4,
-        "uom": "tbsp",
-        "name": "Olive oil",
-        "type": "Condiments"
+        name: "Garam Masala",
+        quantity: 2,
+        type: "Spices & Herbs",
+        uom: "tbsp"
+      },
+      { name: "Kosher Salt", quantity: 1, type: "Spices & Herbs", uom: "tbsp" },
+      { name: "Tumeric", quantity: 2, type: "Spices & Herbs", uom: "tbsp" },
+      { name: "Cumin", quantity: 1, type: "Spices & Herbs", uom: "tbsp" },
+      {
+        name: "Chicken thighs",
+        quantity: 10,
+        type: "Meat & Seafood",
+        uom: "oz"
+      },
+      { name: "Butter", quantity: 1, type: "Dairy, Eggs, & Cheese", uom: "cu" },
+      { name: "Tomato sauce", quantity: 1, type: "Canned Goods", uom: "cu" },
+      {
+        name: "Cardamom, ground",
+        quantity: 0.25,
+        type: "Spices & Herbs",
+        uom: "tsp"
       },
       {
-        "quantity": 3,
-        "uom": "tbsp",
-        "name": "Lemon juice",
-        "type": "Produce"
+        name: "Cloves, ground",
+        quantity: 0.25,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      { name: "Coriander", quantity: 1, type: "Spices & Herbs", uom: "tbsp" },
+      { name: "Cream", quantity: 2, type: "Dairy, Eggs, & Cheese", uom: "cu" },
+      { name: "Cilantro", quantity: 0.25, type: "Spices & Herbs", uom: "oz" },
+      { name: "Onion", quantity: 1, type: "Produce", uom: "cu" }
+    ],
+    interactionStatistic: {
+      "@type": "InteractionCounter",
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
+    },
+    name: "Melody's Butter Chicken",
+    nutrition: {
+      "@type": "NutritionInformation",
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
+    },
+    prepTime: "PT30M",
+    recipeInstructions: [
+      "Combine cubed chicken thighs and marinade ingredients (yogurt, four cloves of garlic, 1 tbsp ginger, 2 tbsp chili powder, 1 tbsp garam masala, 1 tbsp salt, 1 tbsp tumeric, 1 tbsp cumin) in a large bowl and mix well",
+      "Cover chicken and refrigerate for one to three hours",
+      "Pre-heat oven to 425F and loosely skewer chicken on wet bamboo skewers",
+      "Broil chicken skewers for 20-25 minutes",
+      "Add diced onion, butter to saucepan and caramelize ",
+      "Add garlic after onions are caramelized, stir for one to two minutes",
+      "Add tomato sauce and remaining ginger, cook until mostly dehydrated paste forms",
+      "Add remaining spices, cook until fragrant and mixture becomes a deep, brown paste",
+      "Add cream and simmer, add chicken and season with salt and pepper to taste",
+      "Serve on Basmati rice or with Naan, garnish with cilantro",
+      "Enjoy!"
+    ],
+    recipeYield: "Four Servings"
+  },
+  {
+    "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
+    "@type": "Recipe",
+    author: "Nicholas Vincent-Hill",
+    cookTime: "PT2H",
+    datePublished: "2015-05-18",
+    description: "Deep fried panko-battered shimp with a homemade garlic aioli",
+    image: "pshrimp.png",
+    recipeIngredient: [
+      {
+        quantity: 4,
+        uom: "oz",
+        name: "Basil",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 0.5,
-        "uom": "cup",
-        "name": "Parmesean Reggiano",
-        "type": "Dairy, Eggs, & Cheese"
+        quantity: 4,
+        uom: "tbsp",
+        name: "Olive oil",
+        type: "Condiments"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Kosher salt",
-        "type": "Spices & Herbs"
+        quantity: 3,
+        uom: "tbsp",
+        name: "Lemon juice",
+        type: "Produce"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Black pepper",
-        "type": "Spices & Herbs"
+        quantity: 0.5,
+        uom: "cup",
+        name: "Parmesean Reggiano",
+        type: "Dairy, Eggs, & Cheese"
       },
       {
-        "quantity": 8,
-        "uom": "oz",
-        "name": "Pasta",
-        "type": "Grains, Pastas, & Sides"
+        quantity: 1,
+        uom: "tsp",
+        name: "Kosher salt",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 4,
-        "uom": "clvs",
-        "name": "Garlic",
-        "type": "Produce"
+        quantity: 1,
+        uom: "tsp",
+        name: "Black pepper",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 0.25,
-        "uom": "cu",
-        "name": "Pine nuts",
-        "type": "Produce"
+        quantity: 8,
+        uom: "oz",
+        name: "Pasta",
+        type: "Grains, Pastas, & Sides"
+      },
+      {
+        quantity: 4,
+        uom: "clvs",
+        name: "Garlic",
+        type: "Produce"
+      },
+      {
+        quantity: 0.25,
+        uom: "cu",
+        name: "Pine nuts",
+        type: "Produce"
       }
     ],
-    "interactionStatistic": {
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Melody's Butter Chicken",
-    "nutrition": {
+    name: "Panko Shrimp with Garlic Aioli",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT15M",
-    "recipeInstructions": [
+    prepTime: "PT15M",
+    recipeInstructions: [
       "Preheat oven to 425°F.",
       "Cut off the woody bottom part of the asparagus spears and discard.",
-      "With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.\",string.\", and if you eat asparagus you know what I mean by that).",
+      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
       "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
       "Sprinkle with salt.",
       "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
@@ -296,90 +383,91 @@ const recipes =
       "The tips of the spears will get very brown but watch them to prevent burning.",
       "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
     ],
-    "recipeYield": "12 cookies"
+    recipeYield: "12 cookies"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
-    "author": "Nicholas Vincent-Hill",
-    "cookTime": "PT2H",
-    "datePublished": "2015-05-18",
-    "description": "Deep fried panko-battered shimp with a homemade garlic aioli",
-    "image": "pshrimp.jpg",
-    "recipeIngredient": [
+    author: "Nicholas Vincent-Hill",
+    cookTime: "PT2H",
+    datePublished: "2015-05-18",
+    description: "Ribs with a Kansas City style dry rub",
+    image: "kribs.png",
+    recipeIngredient: [
       {
-        "quantity": 4,
-        "uom": "oz",
-        "name": "Basil",
-        "type": "Spices & Herbs"
+        quantity: 4,
+        uom: "oz",
+        name: "Basil",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 4,
-        "uom": "tbsp",
-        "name": "Olive oil",
-        "type": "Condiments"
+        quantity: 4,
+        uom: "tbsp",
+        name: "Olive oil",
+        type: "Condiments"
       },
       {
-        "quantity": 3,
-        "uom": "tbsp",
-        "name": "Lemon juice",
-        "type": "Produce"
+        quantity: 3,
+        uom: "tbsp",
+        name: "Lemon juice",
+        type: "Produce"
       },
       {
-        "quantity": 0.5,
-        "uom": "cup",
-        "name": "Parmesean Reggiano",
-        "type": "Dairy, Eggs, & Cheese"
+        quantity: 0.5,
+        uom: "cup",
+        name: "Parmesean Reggiano",
+        type: "Dairy, Eggs, & Cheese"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Kosher salt",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Kosher salt",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Black pepper",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Black pepper",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 8,
-        "uom": "oz",
-        "name": "Pasta",
-        "type": "Grains, Pastas, & Sides"
+        quantity: 8,
+        uom: "oz",
+        name: "Pasta",
+        type: "Grains, Pastas, & Sides"
       },
       {
-        "quantity": 4,
-        "uom": "clvs",
-        "name": "Garlic",
-        "type": "Produce"
+        quantity: 4,
+        uom: "clvs",
+        name: "Garlic",
+        type: "Produce"
       },
       {
-        "quantity": 0.25,
-        "uom": "cu",
-        "name": "Pine nuts",
-        "type": "Produce"
+        quantity: 0.25,
+        uom: "cu",
+        name: "Pine nuts",
+        type: "Produce"
       }
     ],
-    "interactionStatistic": {
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Panko Shrimp with Garlic Aioli",
-    "nutrition": {
+    name: "Nick's Kansas City Style Ribs",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT15M",
-    "recipeInstructions": [
+    prepTime: "PT15M",
+    recipeInstructions: [
       "Preheat oven to 425°F.",
       "Cut off the woody bottom part of the asparagus spears and discard.",
-      "With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.\",string.\", and if you eat asparagus you know what I mean by that).",
+      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
       "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
       "Sprinkle with salt.",
       "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
@@ -388,90 +476,92 @@ const recipes =
       "The tips of the spears will get very brown but watch them to prevent burning.",
       "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
     ],
-    "recipeYield": "12 cookies"
+    recipeYield: "12 cookies"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
-    "author": "Nicholas Vincent-Hill",
-    "cookTime": "PT2H",
-    "datePublished": "2015-05-18",
-    "description": "Ribs with a Kansas City style dry rub",
-    "image": "kribs.jpg",
-    "recipeIngredient": [
+    author: "Nicholas Vincent-Hill",
+    cookTime: "PT2H",
+    datePublished: "2015-05-18",
+    description:
+      "Filet mignon coated with cracked black pepper and twice-cooked potatoes",
+    image: "steak.png",
+    recipeIngredient: [
       {
-        "quantity": 4,
-        "uom": "oz",
-        "name": "Basil",
-        "type": "Spices & Herbs"
+        quantity: 4,
+        uom: "oz",
+        name: "Basil",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 4,
-        "uom": "tbsp",
-        "name": "Olive oil",
-        "type": "Condiments"
+        quantity: 4,
+        uom: "tbsp",
+        name: "Olive oil",
+        type: "Condiments"
       },
       {
-        "quantity": 3,
-        "uom": "tbsp",
-        "name": "Lemon juice",
-        "type": "Produce"
+        quantity: 3,
+        uom: "tbsp",
+        name: "Lemon juice",
+        type: "Produce"
       },
       {
-        "quantity": 0.5,
-        "uom": "cup",
-        "name": "Parmesean Reggiano",
-        "type": "Dairy, Eggs, & Cheese"
+        quantity: 0.5,
+        uom: "cup",
+        name: "Parmesean Reggiano",
+        type: "Dairy, Eggs, & Cheese"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Kosher salt",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Kosher salt",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Black pepper",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Black pepper",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 8,
-        "uom": "oz",
-        "name": "Pasta",
-        "type": "Grains, Pastas, & Sides"
+        quantity: 8,
+        uom: "oz",
+        name: "Pasta",
+        type: "Grains, Pastas, & Sides"
       },
       {
-        "quantity": 4,
-        "uom": "clvs",
-        "name": "Garlic",
-        "type": "Produce"
+        quantity: 4,
+        uom: "clvs",
+        name: "Garlic",
+        type: "Produce"
       },
       {
-        "quantity": 0.25,
-        "uom": "cu",
-        "name": "Pine nuts",
-        "type": "Produce"
+        quantity: 0.25,
+        uom: "cu",
+        name: "Pine nuts",
+        type: "Produce"
       }
     ],
-    "interactionStatistic": {
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Nick's Kansas City Style Ribs",
-    "nutrition": {
+    name: "Steak Au Poivre and Tarragon Potatoes",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT15M",
-    "recipeInstructions": [
+    prepTime: "PT15M",
+    recipeInstructions: [
       "Preheat oven to 425°F.",
       "Cut off the woody bottom part of the asparagus spears and discard.",
-      "With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.\",string.\", and if you eat asparagus you know what I mean by that).",
+      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
       "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
       "Sprinkle with salt.",
       "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
@@ -480,90 +570,91 @@ const recipes =
       "The tips of the spears will get very brown but watch them to prevent burning.",
       "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
     ],
-    "recipeYield": "12 cookies"
+    recipeYield: "12 cookies"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
-    "author": "Nicholas Vincent-Hill",
-    "cookTime": "PT2H",
-    "datePublished": "2015-05-18",
-    "description": "Filet mignon coated with cracked black pepper and twice-cooked potatoes",
-    "image": "steak.jpg",
-    "recipeIngredient": [
+    author: "Nicholas Vincent-Hill",
+    cookTime: "PT2H",
+    datePublished: "2015-05-18",
+    description: "Thin-crust Italian style pizza",
+    image: "pizza.png",
+    recipeIngredient: [
       {
-        "quantity": 4,
-        "uom": "oz",
-        "name": "Basil",
-        "type": "Spices & Herbs"
+        quantity: 4,
+        uom: "oz",
+        name: "Basil",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 4,
-        "uom": "tbsp",
-        "name": "Olive oil",
-        "type": "Condiments"
+        quantity: 4,
+        uom: "tbsp",
+        name: "Olive oil",
+        type: "Condiments"
       },
       {
-        "quantity": 3,
-        "uom": "tbsp",
-        "name": "Lemon juice",
-        "type": "Produce"
+        quantity: 3,
+        uom: "tbsp",
+        name: "Lemon juice",
+        type: "Produce"
       },
       {
-        "quantity": 0.5,
-        "uom": "cup",
-        "name": "Parmesean Reggiano",
-        "type": "Dairy, Eggs, & Cheese"
+        quantity: 0.5,
+        uom: "cup",
+        name: "Parmesean Reggiano",
+        type: "Dairy, Eggs, & Cheese"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Kosher salt",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Kosher salt",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Black pepper",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Black pepper",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 8,
-        "uom": "oz",
-        "name": "Pasta",
-        "type": "Grains, Pastas, & Sides"
+        quantity: 8,
+        uom: "oz",
+        name: "Pasta",
+        type: "Grains, Pastas, & Sides"
       },
       {
-        "quantity": 4,
-        "uom": "clvs",
-        "name": "Garlic",
-        "type": "Produce"
+        quantity: 4,
+        uom: "clvs",
+        name: "Garlic",
+        type: "Produce"
       },
       {
-        "quantity": 0.25,
-        "uom": "cu",
-        "name": "Pine nuts",
-        "type": "Produce"
+        quantity: 0.25,
+        uom: "cu",
+        name: "Pine nuts",
+        type: "Produce"
       }
     ],
-    "interactionStatistic": {
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Steak Au Poivre and Tarragon Potatoes",
-    "nutrition": {
+    name: "Nick's Pizza",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT15M",
-    "recipeInstructions": [
+    prepTime: "PT15M",
+    recipeInstructions: [
       "Preheat oven to 425°F.",
       "Cut off the woody bottom part of the asparagus spears and discard.",
-      "With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.\",string.\", and if you eat asparagus you know what I mean by that).",
+      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
       "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
       "Sprinkle with salt.",
       "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
@@ -572,90 +663,91 @@ const recipes =
       "The tips of the spears will get very brown but watch them to prevent burning.",
       "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
     ],
-    "recipeYield": "12 cookies"
+    recipeYield: "12 cookies"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
-    "author": "Nicholas Vincent-Hill",
-    "cookTime": "PT2H",
-    "datePublished": "2015-05-18",
-    "description": "Thin-crust Italian style pizza",
-    "image": "pizza.jpg",
-    "recipeIngredient": [
+    author: "Nicholas Vincent-Hill",
+    cookTime: "PT2H",
+    datePublished: "2015-05-18",
+    description: "Thai stir-fried rice noodles",
+    image: "pthai.png",
+    recipeIngredient: [
       {
-        "quantity": 4,
-        "uom": "oz",
-        "name": "Basil",
-        "type": "Spices & Herbs"
+        quantity: 4,
+        uom: "oz",
+        name: "Basil",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 4,
-        "uom": "tbsp",
-        "name": "Olive oil",
-        "type": "Condiments"
+        quantity: 4,
+        uom: "tbsp",
+        name: "Olive oil",
+        type: "Condiments"
       },
       {
-        "quantity": 3,
-        "uom": "tbsp",
-        "name": "Lemon juice",
-        "type": "Produce"
+        quantity: 3,
+        uom: "tbsp",
+        name: "Lemon juice",
+        type: "Produce"
       },
       {
-        "quantity": 0.5,
-        "uom": "cup",
-        "name": "Parmesean Reggiano",
-        "type": "Dairy, Eggs, & Cheese"
+        quantity: 0.5,
+        uom: "cup",
+        name: "Parmesean Reggiano",
+        type: "Dairy, Eggs, & Cheese"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Kosher salt",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Kosher salt",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Black pepper",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Black pepper",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 8,
-        "uom": "oz",
-        "name": "Pasta",
-        "type": "Grains, Pastas, & Sides"
+        quantity: 8,
+        uom: "oz",
+        name: "Pasta",
+        type: "Grains, Pastas, & Sides"
       },
       {
-        "quantity": 4,
-        "uom": "clvs",
-        "name": "Garlic",
-        "type": "Produce"
+        quantity: 4,
+        uom: "clvs",
+        name: "Garlic",
+        type: "Produce"
       },
       {
-        "quantity": 0.25,
-        "uom": "cu",
-        "name": "Pine nuts",
-        "type": "Produce"
+        quantity: 0.25,
+        uom: "cu",
+        name: "Pine nuts",
+        type: "Produce"
       }
     ],
-    "interactionStatistic": {
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Nick's Pizza",
-    "nutrition": {
+    name: "Melody's Pad Thai",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT15M",
-    "recipeInstructions": [
+    prepTime: "PT15M",
+    recipeInstructions: [
       "Preheat oven to 425°F.",
       "Cut off the woody bottom part of the asparagus spears and discard.",
-      "With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.\",string.\", and if you eat asparagus you know what I mean by that).",
+      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
       "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
       "Sprinkle with salt.",
       "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
@@ -664,90 +756,92 @@ const recipes =
       "The tips of the spears will get very brown but watch them to prevent burning.",
       "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
     ],
-    "recipeYield": "12 cookies"
+    recipeYield: "12 cookies"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
-    "author": "Nicholas Vincent-Hill",
-    "cookTime": "PT2H",
-    "datePublished": "2015-05-18",
-    "description": "Thai stir-fried rice noodles",
-    "image": "pthai.jpg",
-    "recipeIngredient": [
+    author: "Nicholas Vincent-Hill",
+    cookTime: "PT2H",
+    datePublished: "2015-05-18",
+    description:
+      "A popular Thai dish consisting of red curry paste cooked in coconut milk",
+    image: "rcurry.png",
+    recipeIngredient: [
       {
-        "quantity": 4,
-        "uom": "oz",
-        "name": "Basil",
-        "type": "Spices & Herbs"
+        quantity: 4,
+        uom: "oz",
+        name: "Basil",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 4,
-        "uom": "tbsp",
-        "name": "Olive oil",
-        "type": "Condiments"
+        quantity: 4,
+        uom: "tbsp",
+        name: "Olive oil",
+        type: "Condiments"
       },
       {
-        "quantity": 3,
-        "uom": "tbsp",
-        "name": "Lemon juice",
-        "type": "Produce"
+        quantity: 3,
+        uom: "tbsp",
+        name: "Lemon juice",
+        type: "Produce"
       },
       {
-        "quantity": 0.5,
-        "uom": "cup",
-        "name": "Parmesean Reggiano",
-        "type": "Dairy, Eggs, & Cheese"
+        quantity: 0.5,
+        uom: "cup",
+        name: "Parmesean Reggiano",
+        type: "Dairy, Eggs, & Cheese"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Kosher salt",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Kosher salt",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Black pepper",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Black pepper",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 8,
-        "uom": "oz",
-        "name": "Pasta",
-        "type": "Grains, Pastas, & Sides"
+        quantity: 8,
+        uom: "oz",
+        name: "Pasta",
+        type: "Grains, Pastas, & Sides"
       },
       {
-        "quantity": 4,
-        "uom": "clvs",
-        "name": "Garlic",
-        "type": "Produce"
+        quantity: 4,
+        uom: "clvs",
+        name: "Garlic",
+        type: "Produce"
       },
       {
-        "quantity": 0.25,
-        "uom": "cu",
-        "name": "Pine nuts",
-        "type": "Produce"
+        quantity: 0.25,
+        uom: "cu",
+        name: "Pine nuts",
+        type: "Produce"
       }
     ],
-    "interactionStatistic": {
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Melody's Pad Thai",
-    "nutrition": {
+    name: "Melody's Favorite Thai Red Curry",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT15M",
-    "recipeInstructions": [
+    prepTime: "PT15M",
+    recipeInstructions: [
       "Preheat oven to 425°F.",
       "Cut off the woody bottom part of the asparagus spears and discard.",
-      "With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.\",string.\", and if you eat asparagus you know what I mean by that).",
+      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
       "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
       "Sprinkle with salt.",
       "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
@@ -756,90 +850,91 @@ const recipes =
       "The tips of the spears will get very brown but watch them to prevent burning.",
       "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
     ],
-    "recipeYield": "12 cookies"
+    recipeYield: "12 cookies"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
-    "author": "Nicholas Vincent-Hill",
-    "cookTime": "PT2H",
-    "datePublished": "2015-05-18",
-    "description": "A popular Thai dish consisting of red curry paste cooked in coconut milk",
-    "image": "rcurry.jpg",
-    "recipeIngredient": [
+    author: "Nicholas Vincent-Hill",
+    cookTime: "PT2H",
+    datePublished: "2015-05-18",
+    description: "Mexicali burrito with all the fixins",
+    image: "burrito.png",
+    recipeIngredient: [
       {
-        "quantity": 4,
-        "uom": "oz",
-        "name": "Basil",
-        "type": "Spices & Herbs"
+        quantity: 4,
+        uom: "oz",
+        name: "Basil",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 4,
-        "uom": "tbsp",
-        "name": "Olive oil",
-        "type": "Condiments"
+        quantity: 4,
+        uom: "tbsp",
+        name: "Olive oil",
+        type: "Condiments"
       },
       {
-        "quantity": 3,
-        "uom": "tbsp",
-        "name": "Lemon juice",
-        "type": "Produce"
+        quantity: 3,
+        uom: "tbsp",
+        name: "Lemon juice",
+        type: "Produce"
       },
       {
-        "quantity": 0.5,
-        "uom": "cup",
-        "name": "Parmesean Reggiano",
-        "type": "Dairy, Eggs, & Cheese"
+        quantity: 0.5,
+        uom: "cup",
+        name: "Parmesean Reggiano",
+        type: "Dairy, Eggs, & Cheese"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Kosher salt",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Kosher salt",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Black pepper",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Black pepper",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 8,
-        "uom": "oz",
-        "name": "Pasta",
-        "type": "Grains, Pastas, & Sides"
+        quantity: 8,
+        uom: "oz",
+        name: "Pasta",
+        type: "Grains, Pastas, & Sides"
       },
       {
-        "quantity": 4,
-        "uom": "clvs",
-        "name": "Garlic",
-        "type": "Produce"
+        quantity: 4,
+        uom: "clvs",
+        name: "Garlic",
+        type: "Produce"
       },
       {
-        "quantity": 0.25,
-        "uom": "cu",
-        "name": "Pine nuts",
-        "type": "Produce"
+        quantity: 0.25,
+        uom: "cu",
+        name: "Pine nuts",
+        type: "Produce"
       }
     ],
-    "interactionStatistic": {
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Melody's Favorite Thai Red Curry",
-    "nutrition": {
+    name: "Shrimp or Chicken Burritos",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT15M",
-    "recipeInstructions": [
+    prepTime: "PT15M",
+    recipeInstructions: [
       "Preheat oven to 425°F.",
       "Cut off the woody bottom part of the asparagus spears and discard.",
-      "With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.\",string.\", and if you eat asparagus you know what I mean by that).",
+      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
       "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
       "Sprinkle with salt.",
       "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
@@ -848,90 +943,92 @@ const recipes =
       "The tips of the spears will get very brown but watch them to prevent burning.",
       "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
     ],
-    "recipeYield": "12 cookies"
+    recipeYield: "12 cookies"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
-    "author": "Nicholas Vincent-Hill",
-    "cookTime": "PT2H",
-    "datePublished": "2015-05-18",
-    "description": "Mexicali burrito with all the fixins",
-    "image": "burrito.jpg",
-    "recipeIngredient": [
+    author: "Nicholas Vincent-Hill",
+    cookTime: "PT2H",
+    datePublished: "2015-05-18",
+    description:
+      "Braised pork belly - one of the most popular comfort foods in Taiwan",
+    image: "pbelly.png",
+    recipeIngredient: [
       {
-        "quantity": 4,
-        "uom": "oz",
-        "name": "Basil",
-        "type": "Spices & Herbs"
+        quantity: 4,
+        uom: "oz",
+        name: "Basil",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 4,
-        "uom": "tbsp",
-        "name": "Olive oil",
-        "type": "Condiments"
+        quantity: 4,
+        uom: "tbsp",
+        name: "Olive oil",
+        type: "Condiments"
       },
       {
-        "quantity": 3,
-        "uom": "tbsp",
-        "name": "Lemon juice",
-        "type": "Produce"
+        quantity: 3,
+        uom: "tbsp",
+        name: "Lemon juice",
+        type: "Produce"
       },
       {
-        "quantity": 0.5,
-        "uom": "cup",
-        "name": "Parmesean Reggiano",
-        "type": "Dairy, Eggs, & Cheese"
+        quantity: 0.5,
+        uom: "cup",
+        name: "Parmesean Reggiano",
+        type: "Dairy, Eggs, & Cheese"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Kosher salt",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Kosher salt",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Black pepper",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Black pepper",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 8,
-        "uom": "oz",
-        "name": "Pasta",
-        "type": "Grains, Pastas, & Sides"
+        quantity: 8,
+        uom: "oz",
+        name: "Pasta",
+        type: "Grains, Pastas, & Sides"
       },
       {
-        "quantity": 4,
-        "uom": "clvs",
-        "name": "Garlic",
-        "type": "Produce"
+        quantity: 4,
+        uom: "clvs",
+        name: "Garlic",
+        type: "Produce"
       },
       {
-        "quantity": 0.25,
-        "uom": "cu",
-        "name": "Pine nuts",
-        "type": "Produce"
+        quantity: 0.25,
+        uom: "cu",
+        name: "Pine nuts",
+        type: "Produce"
       }
     ],
-    "interactionStatistic": {
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Shrimp or Chicken Burritos",
-    "nutrition": {
+    name: "Taiwanese Pork Belly Buns",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT15M",
-    "recipeInstructions": [
+    prepTime: "PT15M",
+    recipeInstructions: [
       "Preheat oven to 425°F.",
       "Cut off the woody bottom part of the asparagus spears and discard.",
-      "With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.\",string.\", and if you eat asparagus you know what I mean by that).",
+      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
       "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
       "Sprinkle with salt.",
       "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
@@ -940,90 +1037,176 @@ const recipes =
       "The tips of the spears will get very brown but watch them to prevent burning.",
       "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
     ],
-    "recipeYield": "12 cookies"
+    recipeYield: "12 cookies"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
-    "author": "Nicholas Vincent-Hill",
-    "cookTime": "PT2H",
-    "datePublished": "2015-05-18",
-    "description": "Braised pork belly - one of the most popular comfort foods in Taiwan",
-    "image": "pbelly.jpg",
-    "recipeIngredient": [
+    author: "Debbi Snook",
+    cookTime: "PT1H",
+    datePublished: "2013-12-02",
+    description: "Homeroom's famous garlic mac & cheese",
+    image: "mcheese.png",
+    recipeIngredient: [
       {
-        "quantity": 4,
-        "uom": "oz",
-        "name": "Basil",
-        "type": "Spices & Herbs"
+        name: "Milk",
+        quantity: 3,
+        type: "Dairy, Eggs, & Cheese",
+        uom: "cu"
       },
       {
-        "quantity": 4,
-        "uom": "tbsp",
-        "name": "Olive oil",
-        "type": "Condiments"
+        name: "Butter",
+        quantity: 8,
+        type: "Dairy, Eggs, & Cheese",
+        uom: "tbsp"
       },
       {
-        "quantity": 3,
-        "uom": "tbsp",
-        "name": "Lemon juice",
-        "type": "Produce"
+        name: "Flour",
+        quantity: 6,
+        type: "Grains, Pastas, & Sides",
+        uom: "tbsp"
       },
       {
-        "quantity": 0.5,
-        "uom": "cup",
-        "name": "Parmesean Reggiano",
-        "type": "Dairy, Eggs, & Cheese"
+        name: "Kosher salt",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tsp"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Kosher salt",
-        "type": "Spices & Herbs"
+        name: "Garlic",
+        quantity: 5,
+        type: "Produce",
+        uom: "clvs"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Black pepper",
-        "type": "Spices & Herbs"
+        name: "Pasta",
+        quantity: 8,
+        type: "Grains, Pastas, & Sides",
+        uom: "oz"
       },
       {
-        "quantity": 8,
-        "uom": "oz",
-        "name": "Pasta",
-        "type": "Grains, Pastas, & Sides"
+        name: "Gouda cheese",
+        quantity: 1,
+        type: "Dairy, Eggs, & Cheese",
+        uom: "cu"
       },
       {
-        "quantity": 4,
-        "uom": "clvs",
-        "name": "Garlic",
-        "type": "Produce"
-      },
-      {
-        "quantity": 0.25,
-        "uom": "cu",
-        "name": "Pine nuts",
-        "type": "Produce"
+        name: "Pecorino Romano cheese",
+        quantity: 0.5,
+        type: "Dairy, Eggs, & Cheese",
+        uom: "cu"
       }
     ],
-    "interactionStatistic": {
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Taiwanese Pork Belly Buns",
-    "nutrition": {
+    name: "Homeroom's Gilroy Mac & Cheese",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT15M",
-    "recipeInstructions": [
+    prepTime: "PT30M",
+    recipeInstructions: [
+      "Heat half a stick of butter (4 tbsp) on medium heat until melted.",
+      "Add flour and whisk until lightly brown.",
+      "Pour in milk, one cup at a time, until sauce is thick and silky.",
+      "Add salt and grated cheeses, mix well, and add garlic.",
+      "Boil pasta in salted water until very al dente.",
+      "Combine pasta with sauce, stir on low heat for 2-3 minutes until to desired consistency.",
+      "Garnish with freshly ground pepper and serve. ",
+      "Enjoy!"
+    ],
+    recipeYield: "4 servings"
+  },
+  {
+    "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
+    "@type": "Recipe",
+    author: "Nicholas Vincent-Hill",
+    cookTime: "PT2H",
+    datePublished: "2015-05-18",
+    description: "Hawaiian marinated chicken - served with rice",
+    image: "hchicken.png",
+    recipeIngredient: [
+      {
+        quantity: 4,
+        uom: "oz",
+        name: "Basil",
+        type: "Spices & Herbs"
+      },
+      {
+        quantity: 4,
+        uom: "tbsp",
+        name: "Olive oil",
+        type: "Condiments"
+      },
+      {
+        quantity: 3,
+        uom: "tbsp",
+        name: "Lemon juice",
+        type: "Produce"
+      },
+      {
+        quantity: 0.5,
+        uom: "cup",
+        name: "Parmesean Reggiano",
+        type: "Dairy, Eggs, & Cheese"
+      },
+      {
+        quantity: 1,
+        uom: "tsp",
+        name: "Kosher salt",
+        type: "Spices & Herbs"
+      },
+      {
+        quantity: 1,
+        uom: "tsp",
+        name: "Black pepper",
+        type: "Spices & Herbs"
+      },
+      {
+        quantity: 8,
+        uom: "oz",
+        name: "Pasta",
+        type: "Grains, Pastas, & Sides"
+      },
+      {
+        quantity: 4,
+        uom: "clvs",
+        name: "Garlic",
+        type: "Produce"
+      },
+      {
+        quantity: 0.25,
+        uom: "cu",
+        name: "Pine nuts",
+        type: "Produce"
+      }
+    ],
+    interactionStatistic: {
+      "@type": "InteractionCounter",
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
+    },
+    name: "Hawaiian Pineapple Grilled Chicken",
+    nutrition: {
+      "@type": "NutritionInformation",
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
+    },
+    prepTime: "PT15M",
+    recipeInstructions: [
       "Preheat oven to 425°F.",
       "Cut off the woody bottom part of the asparagus spears and discard.",
-      "With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.\",string.\", and if you eat asparagus you know what I mean by that).",
+      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
       "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
       "Sprinkle with salt.",
       "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
@@ -1032,165 +1215,91 @@ const recipes =
       "The tips of the spears will get very brown but watch them to prevent burning.",
       "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
     ],
-    "recipeYield": "12 cookies"
+    recipeYield: "12 cookies"
   },
-  {  
-   "@context":"https://github.com/nvincenthill/nvincenthill.github.io",
-   "@type":"Recipe",
-   "author":"Debbi Snook",
-   "cookTime":"PT1H",
-   "datePublished":"2013-12-02",
-   "description":"Homeroom's famous garlic mac & cheese",
-   "image":"mcheese.jpg",
-   "recipeIngredient":[  
-      {  
-         "name":"Milk",
-         "quantity":3,
-         "type":"Dairy, Eggs, & Cheese",
-         "uom":"cu"
-      },
-      {  
-         "name":"Butter",
-         "quantity":8,
-         "type":"Dairy, Eggs, & Cheese",
-         "uom":"tbsp"
-      },
-      {  
-         "name":"Flour",
-         "quantity":6,
-         "type":"Grains, Pastas, & Sides",
-         "uom":"tbsp"
-      },
-      {  
-         "name":"Kosher salt",
-         "quantity":1,
-         "type":"Spices & Herbs",
-         "uom":"tsp"
-      },
-      {  
-         "name":"Garlic",
-         "quantity":5,
-         "type":"Produce",
-         "uom":"clvs"
-      },
-      {  
-         "name":"Pasta",
-         "quantity":8,
-         "type":"Grains, Pastas, & Sides",
-         "uom":"oz"
-      },
-      {  
-         "name":"Gouda cheese",
-         "quantity":1,
-         "type":"Dairy, Eggs, & Cheese",
-         "uom":"cu"
-      },
-      {  
-         "name":"Pecorino Romano cheese",
-         "quantity":0.5,
-         "type":"Dairy, Eggs, & Cheese",
-         "uom":"cu"
-      }
-   ],
-   "interactionStatistic":{  
-      "@type":"InteractionCounter",
-      "interactionType":"https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount":"5"
-   },
-   "name":"Homeroom's Gilroy Mac & Cheese",
-   "nutrition":{  
-      "@type":"NutritionInformation",
-      "calories":"1200 calories",
-      "carbohydrateContent":"12 carbs",
-      "proteinContent":"9 grams of protein",
-      "fatContent":"9 grams fat"
-   },
-   "prepTime":"PT30M",
-   "recipeInstructions":[ "Heat half a stick of butter (4 tbsp) on medium heat until melted.", "Add flour and whisk until lightly brown.", "Pour in milk, one cup at a time, until sauce is thick and silky.", "Add salt and grated cheeses, mix well, and add garlic.", "Boil pasta in salted water until very al dente.", "Combine pasta with sauce, stir on low heat for 2-3 minutes until to desired consistency.", "Garnish with freshly ground pepper and serve. ", "Enjoy!" ],
-   "recipeYield":"4 servings"
-},
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
-    "author": "Nicholas Vincent-Hill",
-    "cookTime": "PT2H",
-    "datePublished": "2015-05-18",
-    "description": "Hawaiian marinated chicken - served with rice",
-    "image": "hchicken.jpg",
-    "recipeIngredient": [
+    author: "Nicholas Vincent-Hill",
+    cookTime: "PT2H",
+    datePublished: "2015-05-18",
+    description: "A simple red sauce with rosemary and garlic",
+    image: "rmpasta.png",
+    recipeIngredient: [
       {
-        "quantity": 4,
-        "uom": "oz",
-        "name": "Basil",
-        "type": "Spices & Herbs"
+        quantity: 4,
+        uom: "oz",
+        name: "Basil",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 4,
-        "uom": "tbsp",
-        "name": "Olive oil",
-        "type": "Condiments"
+        quantity: 4,
+        uom: "tbsp",
+        name: "Olive oil",
+        type: "Condiments"
       },
       {
-        "quantity": 3,
-        "uom": "tbsp",
-        "name": "Lemon juice",
-        "type": "Produce"
+        quantity: 3,
+        uom: "tbsp",
+        name: "Lemon juice",
+        type: "Produce"
       },
       {
-        "quantity": 0.5,
-        "uom": "cup",
-        "name": "Parmesean Reggiano",
-        "type": "Dairy, Eggs, & Cheese"
+        quantity: 0.5,
+        uom: "cup",
+        name: "Parmesean Reggiano",
+        type: "Dairy, Eggs, & Cheese"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Kosher salt",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Kosher salt",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Black pepper",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Black pepper",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 8,
-        "uom": "oz",
-        "name": "Pasta",
-        "type": "Grains, Pastas, & Sides"
+        quantity: 8,
+        uom: "oz",
+        name: "Pasta",
+        type: "Grains, Pastas, & Sides"
       },
       {
-        "quantity": 4,
-        "uom": "clvs",
-        "name": "Garlic",
-        "type": "Produce"
+        quantity: 4,
+        uom: "clvs",
+        name: "Garlic",
+        type: "Produce"
       },
       {
-        "quantity": 0.25,
-        "uom": "cu",
-        "name": "Pine nuts",
-        "type": "Produce"
+        quantity: 0.25,
+        uom: "cu",
+        name: "Pine nuts",
+        type: "Produce"
       }
     ],
-    "interactionStatistic": {
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Hawaiian Pineapple Grilled Chicken",
-    "nutrition": {
+    name: "Rosemary Marinara Pasta",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT15M",
-    "recipeInstructions": [
+    prepTime: "PT15M",
+    recipeInstructions: [
       "Preheat oven to 425°F.",
       "Cut off the woody bottom part of the asparagus spears and discard.",
-      "With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.\",string.\", and if you eat asparagus you know what I mean by that).",
+      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
       "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
       "Sprinkle with salt.",
       "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
@@ -1199,209 +1308,118 @@ const recipes =
       "The tips of the spears will get very brown but watch them to prevent burning.",
       "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
     ],
-    "recipeYield": "12 cookies"
+    recipeYield: "12 cookies"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
-    "author": "Nicholas Vincent-Hill",
-    "cookTime": "PT2H",
-    "datePublished": "2015-05-18",
-    "description": "A simple red sauce with rosemary and garlic",
-    "image": "rmpasta.jpg",
-    "recipeIngredient": [
+    author: "Nicholas Vincent-Hill",
+    cookTime: "PT2H",
+    datePublished: "2018-02-25",
+    description: "A savory chicken salad with celery and toasted almonds",
+    image: "csalad.png",
+    recipeIngredient: [
       {
-        "quantity": 4,
-        "uom": "oz",
-        "name": "Basil",
-        "type": "Spices & Herbs"
+        name: "Chicken thighs",
+        quantity: 20,
+        type: "Meat & Seafood",
+        uom: "oz"
       },
       {
-        "quantity": 4,
-        "uom": "tbsp",
-        "name": "Olive oil",
-        "type": "Condiments"
+        name: "Green onions",
+        quantity: 0.5,
+        type: "Produce",
+        uom: "cu"
       },
       {
-        "quantity": 3,
-        "uom": "tbsp",
-        "name": "Lemon juice",
-        "type": "Produce"
+        name: "Celery",
+        quantity: 0.5,
+        type: "Produce",
+        uom: "cu"
       },
       {
-        "quantity": 0.5,
-        "uom": "cup",
-        "name": "Parmesean Reggiano",
-        "type": "Dairy, Eggs, & Cheese"
+        name: "Shallot",
+        quantity: 0.25,
+        type: "Produce",
+        uom: "cu"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Kosher salt",
-        "type": "Spices & Herbs"
+        name: "Olive oil",
+        quantity: 2,
+        type: "Condiments",
+        uom: "tbsp"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Black pepper",
-        "type": "Spices & Herbs"
+        name: "Oregano",
+        quantity: 0.5,
+        type: "Spices & Herbs",
+        uom: "tbsp"
       },
       {
-        "quantity": 8,
-        "uom": "oz",
-        "name": "Pasta",
-        "type": "Grains, Pastas, & Sides"
+        name: "Dried basil",
+        quantity: 0.5,
+        type: "Spices & Herbs",
+        uom: "tbsp"
       },
       {
-        "quantity": 4,
-        "uom": "clvs",
-        "name": "Garlic",
-        "type": "Produce"
+        name: "Thyme",
+        quantity: 0.25,
+        type: "Spices & Herbs",
+        uom: "tbsp"
       },
       {
-        "quantity": 0.25,
-        "uom": "cu",
-        "name": "Pine nuts",
-        "type": "Produce"
+        name: "Sliced almonds",
+        quantity: 0.33,
+        type: "Grains, Pastas, & Sides",
+        uom: "cu"
+      },
+      {
+        name: "Mayonnaise",
+        quantity: 0.5,
+        type: "Condiments",
+        uom: "cu"
+      },
+      {
+        name: "Lowry's seasoned salt",
+        quantity: 0.5,
+        type: "Spices & Herbs",
+        uom: "tbsp"
+      },
+      {
+        name: "Kosher salt",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Black pepper",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Garlic",
+        quantity: 3,
+        type: "Produce",
+        uom: "clvs"
       }
     ],
-    "interactionStatistic": {
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Rosemary Marinara Pasta",
-    "nutrition": {
+    name: "The Vincent's Chicken Salad",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT15M",
-    "recipeInstructions": [
-      "Preheat oven to 425°F.",
-      "Cut off the woody bottom part of the asparagus spears and discard.",
-      "With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.\",string.\", and if you eat asparagus you know what I mean by that).",
-      "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
-      "Sprinkle with salt.",
-      "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
-      "Roast for 10-15 minutes, depending on the thickness of your stalks and how tender you like them.",
-      "They should be tender when pierced with the tip of a knife.",
-      "The tips of the spears will get very brown but watch them to prevent burning.",
-      "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
-    ],
-    "recipeYield": "12 cookies"
-  },
-  {  
-   "@context":"https://github.com/nvincenthill/nvincenthill.github.io",
-   "@type":"Recipe",
-   "author":"Nicholas Vincent-Hill",
-   "cookTime":"PT2H",
-   "datePublished":"2018-02-25",
-   "description":"A savory chicken salad with celery and toasted almonds",
-   "image":"csalad.jpg",
-   "recipeIngredient":[  
-      {  
-         "name":"Chicken thighs",
-         "quantity":20,
-         "type":"Meat & Seafood",
-         "uom":"oz"
-      },
-      {  
-         "name":"Green onions",
-         "quantity":0.5,
-         "type":"Produce",
-         "uom":"cu"
-      },
-      {  
-         "name":"Celery",
-         "quantity":0.5,
-         "type":"Produce",
-         "uom":"cu"
-      },
-      {  
-         "name":"Shallot",
-         "quantity":0.25,
-         "type":"Produce",
-         "uom":"cu"
-      },
-      {  
-         "name":"Olive oil",
-         "quantity":2,
-         "type":"Condiments",
-         "uom":"tbsp"
-      },
-      {  
-         "name":"Oregano",
-         "quantity":0.5,
-         "type":"Spices & Herbs",
-         "uom":"tbsp"
-      },
-      {  
-         "name":"Dried basil",
-         "quantity":0.5,
-         "type":"Spices & Herbs",
-         "uom":"tbsp"
-      },
-      {  
-         "name":"Thyme",
-         "quantity":0.25,
-         "type":"Spices & Herbs",
-         "uom":"tbsp"
-      },
-      {  
-         "name":"Sliced almonds",
-         "quantity":0.33,
-         "type":"Grains, Pastas, & Sides",
-         "uom":"cu"
-      },
-      {  
-         "name":"Mayonnaise",
-         "quantity":0.5,
-         "type":"Condiments",
-         "uom":"cu"
-      },
-      {  
-         "name":"Lowry's seasoned salt",
-         "quantity":0.5,
-         "type":"Spices & Herbs",
-         "uom":"tbsp"
-      },
-      {  
-         "name":"Kosher salt",
-         "quantity":1,
-         "type":"Spices & Herbs",
-         "uom":"tsp"
-      },
-      {  
-         "name":"Black pepper",
-         "quantity":1,
-         "type":"Spices & Herbs",
-         "uom":"tsp"
-      },
-      {  
-         "name":"Garlic",
-         "quantity":3,
-         "type":"Produce",
-         "uom":"clvs"
-      }
-   ],
-   "interactionStatistic":{  
-      "@type":"InteractionCounter",
-      "interactionType":"https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount":"5"
-   },
-   "name":"The Vincent's Chicken Salad",
-   "nutrition":{  
-      "@type":"NutritionInformation",
-      "calories":"1200 calories",
-      "carbohydrateContent":"12 carbs",
-      "proteinContent":"9 grams of protein",
-      "fatContent":"9 grams fat"
-   },
-   "prepTime":"PT45M",
-   "recipeInstructions":[  
+    prepTime: "PT45M",
+    recipeInstructions: [
       "Sear chicken in olive oil and season with salt, pepper, and Italian herbs.",
       "Chop shallots, celery, and green onions.",
       "Add garlic to chicken and finish searing.",
@@ -1411,91 +1429,92 @@ const recipes =
       "Stir in mayo until desired consistency and season with Lowry's salt.",
       "Serve on sandwiches or lettuce wraps.",
       "Enjoy!"
-   ],
-   "recipeYield":"4 servings"
-},
+    ],
+    recipeYield: "4 servings"
+  },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
-    "author": "Nicholas Vincent-Hill",
-    "cookTime": "PT2H",
-    "datePublished": "2015-05-18",
-    "description": "Slow-cooked pork served with BBQ sauce and coleslaw",
-    "image": "bpork.jpeg",
-    "recipeIngredient": [
+    author: "Nicholas Vincent-Hill",
+    cookTime: "PT2H",
+    datePublished: "2015-05-18",
+    description: "Slow-cooked pork served with BBQ sauce and coleslaw",
+    image: "bpork.jpeg",
+    recipeIngredient: [
       {
-        "quantity": 4,
-        "uom": "oz",
-        "name": "Basil",
-        "type": "Spices & Herbs"
+        quantity: 4,
+        uom: "oz",
+        name: "Basil",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 4,
-        "uom": "tbsp",
-        "name": "Olive oil",
-        "type": "Condiments"
+        quantity: 4,
+        uom: "tbsp",
+        name: "Olive oil",
+        type: "Condiments"
       },
       {
-        "quantity": 3,
-        "uom": "tbsp",
-        "name": "Lemon juice",
-        "type": "Produce"
+        quantity: 3,
+        uom: "tbsp",
+        name: "Lemon juice",
+        type: "Produce"
       },
       {
-        "quantity": 0.5,
-        "uom": "cup",
-        "name": "Parmesean Reggiano",
-        "type": "Dairy, Eggs, & Cheese"
+        quantity: 0.5,
+        uom: "cup",
+        name: "Parmesean Reggiano",
+        type: "Dairy, Eggs, & Cheese"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Kosher salt",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Kosher salt",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 1,
-        "uom": "tsp",
-        "name": "Black pepper",
-        "type": "Spices & Herbs"
+        quantity: 1,
+        uom: "tsp",
+        name: "Black pepper",
+        type: "Spices & Herbs"
       },
       {
-        "quantity": 8,
-        "uom": "oz",
-        "name": "Pasta",
-        "type": "Grains, Pastas, & Sides"
+        quantity: 8,
+        uom: "oz",
+        name: "Pasta",
+        type: "Grains, Pastas, & Sides"
       },
       {
-        "quantity": 4,
-        "uom": "clvs",
-        "name": "Garlic",
-        "type": "Produce"
+        quantity: 4,
+        uom: "clvs",
+        name: "Garlic",
+        type: "Produce"
       },
       {
-        "quantity": 0.25,
-        "uom": "cu",
-        "name": "Pine nuts",
-        "type": "Produce"
+        quantity: 0.25,
+        uom: "cu",
+        name: "Pine nuts",
+        type: "Produce"
       }
     ],
-    "interactionStatistic": {
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Braised Pork Shoulder",
-    "nutrition": {
+    name: "Braised Pork Shoulder",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT15M",
-    "recipeInstructions": [
+    prepTime: "PT15M",
+    recipeInstructions: [
       "Preheat oven to 425°F.",
       "Cut off the woody bottom part of the asparagus spears and discard.",
-      "With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.\",string.\", and if you eat asparagus you know what I mean by that).",
+      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
       "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
       "Sprinkle with salt.",
       "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
@@ -1504,76 +1523,72 @@ const recipes =
       "The tips of the spears will get very brown but watch them to prevent burning.",
       "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
     ],
-    "recipeYield": "12 cookies"
+    recipeYield: "12 cookies"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Restaurant",
-    "author": "Nicholas Vincent-Hill",
-    "cookTime": "",
-    "datePublished": "2018-22-2018",
-    "description": "A rustic neighborhood restaurant serving the American brasserie experience",
-    "image": "wtavern.jpg",
-    "address": "6317 College Ave, Oakland, CA 94618",
-    "website": "https://www.woodtavern.net/",
-    "recipeIngredient": [
-      
-    ],
-    "interactionStatistic": {
+    author: "Nicholas Vincent-Hill",
+    cookTime: "",
+    datePublished: "2018-22-2018",
+    description:
+      "A rustic neighborhood restaurant serving the American brasserie experience",
+    image: "wtavern.png",
+    address: "6317 College Ave, Oakland, CA 94618",
+    website: "https://www.woodtavern.net/",
+    recipeIngredient: [],
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Wood Tavern",
-    "nutrition": {
+    name: "Wood Tavern",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT15M",
-    "recipeInstructions": [
-      
-    ],
-    "recipeYield": "",
-    "lat": 37.85,
-    "lng": -122.25
+    prepTime: "PT15M",
+    recipeInstructions: [],
+    recipeYield: "",
+    lat: 37.85,
+    lng: -122.25
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Restaurant",
-    "author": "Nicholas Vincent-Hill",
-    "cookTime": "",
-    "datePublished": "2018-22-2018",
-    "description": "Neighborhood bistro offering modern & classic Italian cuisine served in a cozy space",
-    "image": "belotti.jpg",
-    "address": "5403 College Ave, Oakland, CA 94618",
-    "website": "http://belottirb.com/",
-    "recipeIngredient": [
-      
-    ],
-    "interactionStatistic": {
+    author: "Nicholas Vincent-Hill",
+    cookTime: "",
+    datePublished: "2018-22-2018",
+    description:
+      "Neighborhood bistro offering modern & classic Italian cuisine served in a cozy space",
+    image: "belotti.png",
+    address: "5403 College Ave, Oakland, CA 94618",
+    website: "http://belottirb.com/",
+    recipeIngredient: [],
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Belotti Ristorante",
-    "nutrition": {
+    name: "Belotti Ristorante",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT15M",
-    "recipeInstructions": [
-      
-    ],
-    "recipeYield": "",
-    "lat": 37.84,
-    "lng": -122.25
+    prepTime: "PT15M",
+    recipeInstructions: [],
+    recipeYield: "",
+    lat: 37.84,
+    lng: -122.25
   }
-]
+];
 
 export default recipes;

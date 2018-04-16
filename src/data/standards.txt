@@ -34,3 +34,18 @@ Cookies, Snacks, & Candy
 Dairy, Eggs, & Cheese
 Spices & Herbs
 Grains, Pastas, & Sides
+
+To add to recipes.js:
+
+Shrimp or Chicken Burritos
+Rosemary Marinara Pasta
+Melody's Pad Thai
+Melody's Favorite Thai Red Curry
+Nick's Kansas City Style Ribs
+Panko Shrimp with Garlic Aioli
+Taiwanese Pork Belly Buns
+Hawaiian Pineapple Grilled Chicken
+Braised Pork Shoulder
+Chicken Pot Pie (instructions)
+Steak Au Poivre and Tarragon Potatoes
+Nick's Pizza
