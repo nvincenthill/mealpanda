@@ -1,6 +1,9 @@
 import React from "react";
 
 import {
+  Grid,
+  Col,
+  Row,
   // Popover,
   // Tooltip,
   Button,
@@ -39,12 +42,12 @@ class RecipeModal extends React.Component {
     const recipeInstructions = this.props.recipeData.recipeInstructions.map(
       key => <li key={key}>{key}</li>
     );
-
+    
     let recipeIngredients = this.props.recipeData.recipeIngredient.map(key => (
       <tr key={`${key.name}`} className="ingredients-list-table-row">
-        <td key={`${key.name}4`}>{key.name}</td>
         <td key={`${key.quantity}5`}>{key.quantity}</td>
         <td key={`${key.uom}6`}>{key.uom}</td>
+        <td key={`${key.name}4`}>{key.name}</td>
       </tr>
     ));
 
@@ -63,29 +66,36 @@ class RecipeModal extends React.Component {
             <Modal.Title>{name}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <div className="ingredients-list">
-              <h2 className="ingredients-list-header">Ingredients</h2>
-
-              <table className="ingredients-list-table" align="center">
-                <tbody className="ingredients-list-table-body" align="left">
-                  <tr>
-                    <th>Name</th>
-                    <th>Quantity</th>
-                    <th>Units</th>
-                  </tr>
-                  {recipeIngredients}
-                </tbody>
-              </table>
-            </div>
+            <Row>
+              <Col xs={4} sm={4} md={6}>
+                <div className="ingredients-list">
+                  <table className="ingredients-list-table" align="center">
+                    <tbody className="ingredients-list-table-body" align="left">
+                      {recipeIngredients}
+                    </tbody>
+                  </table>
+                </div>
+              </Col>
+              <Col className="recipe-modal-picture-container" xs={8} sm={8} md={6}>
+                <img
+                  className="recipe-modal-picture"
+                  src={`/images/${this.props.recipeData.image}`}
+                  alt={this.props.recipeData.name}
+                />
+              </Col>
+            </Row>
             <hr />
             <h2 className="instructions-list-header">Instructions</h2>
             <div className="recipe-modal-instructions">
-              {recipeInstructions}
+              <ol>{recipeInstructions}</ol>
             </div>
-
-
           </Modal.Body>
-          <Modal.Footer className="recipe-modal-footer"> <Button className="btn-modal-close" onClick={this.handleClose}>Close</Button> </Modal.Footer>
+          <Modal.Footer className="recipe-modal-footer">
+            {" "}
+            <Button className="btn-modal-close" onClick={this.handleClose}>
+              Close
+            </Button>{" "}
+          </Modal.Footer>
         </Modal>
       </div>
     );

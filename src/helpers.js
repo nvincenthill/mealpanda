@@ -55,12 +55,8 @@ export function createGroceryList(arrayOfRecipes) {
     return acc;
   }, []);
 
+  groceryList = groceryList.sort(function(a,b) {return (a.type > b.type) ? 1 : ((b.type > a.type) ? -1 : 0);} ); 
   return groceryList;
-
-  // groceryList = groceryList.sort(function(a, b) {
-  //   console.log("returning completed list");
-  //   return a.type.toLowerCase().localeCompare(b.type.toLowerCase());
-  // });
 
 }
 

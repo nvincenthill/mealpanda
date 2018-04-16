@@ -1,5 +1,5 @@
 import React from "react";
-import GroceryList from "./GroceryList";
+import GroceryListModal from "./GroceryListModal";
 
 class Header extends React.Component {
   componentWillMount() {
@@ -39,31 +39,31 @@ class Header extends React.Component {
       </p>
     );
 
-    const HideGroceryListButton = (
-      <p>
-        <button type="submit" className="btn btn-hide btn-lg" id="hbutton" onClick={this.props.hideGroceryList}>
-          {" "}
-          Hide Grocery List{" "}
-        </button>
-      </p>
-    );
+    // const HideGroceryListButton = (
+    //   <p>
+    //     <button type="submit" className="btn btn-hide btn-lg" id="hbutton" onClick={this.props.hideGroceryList}>
+    //       {" "}
+    //       Hide Grocery List{" "}
+    //     </button>
+    //   </p>
+    // );
 
     return (
       <div className="jumbotron">
         <h1 id="maintitle">{this.props.title}</h1>
         {this.props.generateButtonHidden ? null : generateButton}
-        <div>{this.props.groceryButtonHidden ? null : groceryListButton}</div>
+        {/* <div>{this.props.groceryButtonHidden ? null : groceryListButton}</div> */}
 
-        <div>
-          {this.props.groceryListHidden ? null : (
-            <GroceryList randomRecipes={this.props.randomRecipes} />
+        <div> 
+          {this.props.groceryButtonHidden ? null : (
+            <GroceryListModal randomRecipes={this.props.randomRecipes} />
           )}
         </div>
-        <div>
+        {/* <div>
           {this.props.HideGroceryListButtonHidden
             ? null
             : HideGroceryListButton}
-        </div>
+        </div> */}
       </div>
     );
   }
