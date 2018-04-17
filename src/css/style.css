@@ -1,27 +1,3 @@
-.item-enter {
-  color: #f00;
-  -webkit-transition: 5s;
-  transition: 5s;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-}
-.item-enter.item-enter-active {
-  color: #ff0;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-.item-exit {
-  background: #f00;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: 5s;
-  transition: 5s;
-}
-.item-exit.order-exit-active {
-  background: #ff0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-}
 @font-face {
   font-family: "haymakerregular";
   src: url("./fonts/haymaker-webfont.eot");
