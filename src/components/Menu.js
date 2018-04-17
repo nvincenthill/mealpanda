@@ -4,11 +4,11 @@ import { Grid, Row } from "react-bootstrap";
 
 class Menu extends React.Component {
   componentWillMount() {
-    console.log("MOUNTING MENU");
+    // console.log("MOUNTING MENU");
   }
 
   componentDidMount() {
-    console.log("MENU MOUNTED!");
+    // console.log("MENU MOUNTED!");
   }
 
   render() {

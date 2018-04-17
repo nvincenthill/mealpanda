@@ -23,7 +23,7 @@ class Footer extends React.Component {
                 Nicholas Vincent-Hill &nbsp;
               </a>
             </b>
-            with contributions from &nbsp;
+            and &nbsp;
             <b>
               <a className="myname" href="https://avhdesign.win/">
                 Alexander Vincent-Hill &nbsp;

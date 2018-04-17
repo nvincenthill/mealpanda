@@ -1,6 +1,7 @@
 import React from "react";
 // import PropTypes from "prop-types";
 import Menu from "./Menu";
+import MealPanda from "./MealPanda";
 import Header from "./Header";
 import Footer from "./Footer";
 import base, { firebaseApp } from "../base";
@@ -79,7 +80,12 @@ class App extends React.Component {
       userRecipes = this.state.randomRecipes;
     }
 
-    this.writeUserData(this.state.uid, userRecipes, authData.user.displayName, authData.user.email);
+    this.writeUserData(
+      this.state.uid,
+      userRecipes,
+      authData.user.displayName,
+      authData.user.email
+    );
     this.ref = base.syncState(`users/${this.state.uid}/userRecipes`, {
       context: this,
       state: "randomRecipes"
@@ -168,8 +174,11 @@ class App extends React.Component {
       return null; // render null when app is not ready
     }
 
+    const pandaLogo = <MealPanda />;
+
     return (
       <React.Fragment>
+        {this.state.generateButtonHidden ? null : pandaLogo}
         <Header
           title="Hey Mel ... What do you want for dinner this week?"
           loadMenu={this.loadMenu}

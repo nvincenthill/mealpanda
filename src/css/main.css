@@ -99,6 +99,16 @@
     margin-top: 0;
 }
 
+.btn-success:focus {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 2px;
+    outline: none !important;
+    background-color: black;
+}
+
 #maintitle {
     font-size: 4em;
     font-family: "Dancing Script", cursive;
@@ -525,4 +535,19 @@ img {
 .ingredients-list {
     margin-left: 0;
     margin-right: 0;
+}
+
+#logo {
+    width: 50%;
+    height: 50%;
+    box-shadow: 0 0 0 0;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.generate-button-container {
+    width: 75%;
+    margin: auto;
 }
