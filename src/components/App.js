@@ -9,6 +9,7 @@ import firebase from "firebase";
 import data from "../recipes.js";
 import { shuffle } from "../helpers";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import update from 'immutability-helper';
 
 class App extends React.Component {
   state = {
@@ -23,7 +24,7 @@ class App extends React.Component {
     HideGroceryListButtonHidden: true,
     groceryListHidden: true,
     userAuthenticated: false,
-    uid: null
+    uid: null,
   };
 
   loadMenu = () => {
@@ -50,6 +51,7 @@ class App extends React.Component {
   };
 
   changeRecipe = key => {
+    console.log(key);
     const mixed = shuffle(this.state.recipeData);
     const randomRecipes = this.state.randomRecipes;
     const oldRecipe = randomRecipes[key];
@@ -68,8 +70,11 @@ class App extends React.Component {
     }
 
     randomRecipes.splice(key, 1, newRecipe);
-    this.setState({ randomRecipes: randomRecipes });
-  };
+    this.setState({ 
+      randomRecipes: update(this.state.randomRecipes, {$splice: [[key, newRecipe]] })
+  });
+    console.log(this.state.randomRecipes);
+  }
 
   authHandler = async authData => {
     this.setState({
@@ -215,9 +220,9 @@ class App extends React.Component {
         <ReactCSSTransitionGroup
           transitionName="footer-animation"
           transitionAppear={true}
-          transitionAppearTimeout={2000}
-          transitionEnterTimeout={2000}
-          transitionLeaveTimeout={1500}
+          transitionAppearTimeout={4000}
+          transitionEnterTimeout={4000}
+          transitionLeaveTimeout={4000}
         >
           <Footer
             authenticate={this.authenticate}
