@@ -15,9 +15,6 @@ class MealPanda extends React.Component {
         <img
           id="logo"
           src="/images/mealpanda.png"
-          alt="Smiley face"
-          height="42"
-          width="42"
         />
       </div>
     );
