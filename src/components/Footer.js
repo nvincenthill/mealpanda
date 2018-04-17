@@ -23,12 +23,12 @@ class Footer extends React.Component {
                 Nicholas Vincent-Hill &nbsp;
               </a>
             </b>
-            {/* and &nbsp;
+            with contributions from &nbsp;
             <b>
               <a className="myname" href="https://avhdesign.win/">
                 Alexander Vincent-Hill &nbsp;
               </a>
-            </b> */}
+            </b> 
             in &nbsp; 
             <b>2018</b>
           </h4>

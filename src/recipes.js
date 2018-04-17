@@ -5,7 +5,7 @@ const recipes = [
     author: "Nicholas Vincent-Hill",
     cookTime: "PT1H",
     datePublished: "2018-02-19",
-    description: "A simple, fresh, garlicy basil pesto",
+    description: "A simple, fresh, garlicky basil pesto",
     image: "pesto.png",
     recipeIngredient: [
       {

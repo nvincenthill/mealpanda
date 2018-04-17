@@ -65,39 +65,28 @@ class App extends React.Component {
   };
 
   authHandler = async authData => {
-
     this.setState({
       uid: authData.user.uid,
       userAuthenticated: true
     });
 
-    // if (this.state.uid) {
-    //   this.ref = base.syncState(`users/${this.state.uid}/userRecipes`, {
-    //     context: this,
-    //     state: "randomRecipes"
-    //   });
-    // }
+    console.log(authData.user);
     let userRecipes;
 
-    if (this.checkIfUserExists(this.state.uid)) {
-      userRecipes = await base.fetch(
-        `users/${this.state.uid}/userRecipes`,
-        {
-          context: this
-        }
-      );
+    if (!authData.additionalUserInfo.isNewUser) {
+      userRecipes = await base.fetch(`users/${this.state.uid}/userRecipes`, {
+        context: this
+      });
     } else {
-      userRecipes = this.state.randomRecipes
+      this.generateRandomRecipes();
+      userRecipes = this.state.randomRecipes;
     }
 
-
-    this.writeUserData(this.state.uid, userRecipes);
+    this.writeUserData(this.state.uid, userRecipes, authData.user.displayName, authData.user.email);
     this.ref = base.syncState(`users/${this.state.uid}/userRecipes`, {
       context: this,
       state: "randomRecipes"
     });
-    console.log(authData);
-    console.log(userRecipes);
   };
 
   authenticate = provider => {
@@ -116,23 +105,36 @@ class App extends React.Component {
     });
   };
 
-  writeUserData = (userId, userRecipes) => {
+  writeUserData = (userId, userRecipes, name, email) => {
     firebase
       .database()
       .ref("users/" + userId)
       .set({
         uid: userId,
-        userRecipes: userRecipes
+        userRecipes: userRecipes,
+        name: name,
+        email: email
       });
   };
 
-  checkIfUserExists = (userId) => {
+  generateRandomRecipes = () => {
+    const randomRecipes = [];
+    const mixed = shuffle(this.state.recipeData);
+    for (let i = 0; i < 6; i++) {
+      randomRecipes.push(mixed[i]);
+    }
+    this.setState({ randomRecipes: randomRecipes });
+  };
+
+  checkIfUserExists = userId => {
     var usersRef = firebase.database().ref(`users/`);
-    usersRef.child(userId).once('value', function(snapshot) {
-      var exists = (snapshot.val() !== null);
-      console.log(exists);
+    usersRef.child(userId).once("value", function(snapshot) {
+      var exists = snapshot.val() !== null;
+      if (exists) {
+        console.log(` ${userId} exists!`);
+      }
     });
-  }
+  };
 
   componentWillMount() {
     for (let j = 0; j < this.state.recipeData.length; j++) {
@@ -147,12 +149,7 @@ class App extends React.Component {
 
   componentDidMount() {
     setTimeout(() => this.setState({ loading: false }), 750);
-    const randomRecipes = [];
-    const mixed = shuffle(this.state.recipeData);
-    for (let i = 0; i < 6; i++) {
-      randomRecipes.push(mixed[i]);
-    }
-    this.setState({ randomRecipes: randomRecipes });
+    this.generateRandomRecipes();
 
     if (this.state.uid) {
       this.ref = base.syncState(`users/${this.state.uid}/userRecipes`, {
