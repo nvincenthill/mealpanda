@@ -1,10 +1,27 @@
 import React from "react";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import { Col, Image, Thumbnail } from "react-bootstrap";
 import RecipeModal from "./RecipeModal";
 import RestaurantModal from "./RestaurantModal";
 
 class MenuItem extends React.Component {
+  componentWillMount() {
+    console.log("MOUNTING ITEM");
+  }
+
+  componentDidMount() {
+    console.log("ITEM MOUNTED!");
+  }
+
+  componentDidUpdate() {
+    console.log("ITEM CHANGED!");
+  }
+
+  componentWillUnmount() {
+    console.log("ITEM KILLED!");
+  }
+
+
   render() {
     const recipeOrRestaurantModal =
       this.props.recipeData["@type"] === "Recipe" ? (
@@ -13,12 +30,6 @@ class MenuItem extends React.Component {
         <RestaurantModal recipeData={this.props.recipeData} />
       );
     return (
-      <TransitionGroup component="div">
-        <CSSTransition
-          classNames="item"
-          key={1}
-          timeout={{ enter: 5000, exit: 5000 }}
-        >
           <Col xs={12} sm={12} md={2}>
             <Thumbnail className="menu-item">
               <h2 className="day">{this.props.week}</h2>
@@ -45,8 +56,6 @@ class MenuItem extends React.Component {
               </div>
             </Thumbnail>
           </Col>
-        </CSSTransition>
-      </TransitionGroup>
     );
   }
 }

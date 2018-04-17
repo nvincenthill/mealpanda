@@ -18,6 +18,8 @@ class App extends React.Component {
     menuHidden: true,
     generateButtonHidden: false,
     groceryButtonHidden: true,
+    titleHidden: false,
+    footerHidden: false,
     HideGroceryListButtonHidden: true,
     groceryListHidden: true,
     userAuthenticated: false,
@@ -25,10 +27,15 @@ class App extends React.Component {
   };
 
   loadMenu = () => {
-    this.setState({ menuHidden: false });
+    setTimeout(this.showMenu, 750);
     this.setState({ generateButtonHidden: true });
     this.setState({ groceryButtonHidden: false });
+    this.setState({ footerHidden: true });
   };
+
+  showMenu = () => {
+    this.setState({ menuHidden: false });
+  }
 
   loadGroceryList = () => {
     this.setState({ groceryListHidden: false });
@@ -175,18 +182,10 @@ class App extends React.Component {
       return null; // render null when app is not ready
     }
 
-    const pandaLogo = <MealPanda />;
+    const pandaLogo = <MealPanda generateButtonHidden={this.state.generateButtonHidden} />;
     return (
       <React.Fragment>
-        <ReactCSSTransitionGroup
-          transitionName="logo-animation"
-          transitionAppear={true}
-          transitionAppearTimeout={1000}
-          transitionEnterTimeout={1000}
-          transitionLeaveTimeout={1000}
-        >
-          {this.state.generateButtonHidden ? null : pandaLogo}
-        </ReactCSSTransitionGroup>
+          {pandaLogo}
         <ReactCSSTransitionGroup
           transitionName="header-animation"
           transitionAppear={true}
@@ -204,22 +203,14 @@ class App extends React.Component {
             randomRecipes={this.state.randomRecipes}
             HideGroceryListButtonHidden={this.state.HideGroceryListButtonHidden}
             hideGroceryList={this.hideGroceryList}
+            titleHidden={this.state.titleHidden}
           />
         </ReactCSSTransitionGroup>
-
-        <ReactCSSTransitionGroup
-          transitionName="menu-animation"
-          transitionAppear={true}
-          transitionAppearTimeout={500}
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={500}
-        >
           <Menu
             menuHidden={this.state.menuHidden}
             recipeData={this.state.randomRecipes}
             changeRecipe={this.changeRecipe}
           />
-        </ReactCSSTransitionGroup>
 
         <ReactCSSTransitionGroup
           transitionName="footer-animation"
@@ -231,6 +222,7 @@ class App extends React.Component {
           <Footer
             authenticate={this.authenticate}
             userAuthenticated={this.state.userAuthenticated}
+            footerHidden={this.state.footerHidden}
             logOut={this.logOut}
           />
         </ReactCSSTransitionGroup>

@@ -1,6 +1,8 @@
 import React from "react";
 import GroceryListModal from "./GroceryListModal";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import { Collapse } from "react-collapse";
+
 import {
   // Popover,
   // Tooltip,
@@ -21,13 +23,7 @@ class Header extends React.Component {
 
   render() {
     const generateButton = (
-      <ReactCSSTransitionGroup
-        transitionName="generate-button-animation"
-        transitionAppear={true}
-        transitionAppearTimeout={1500}
-        transitionEnterTimeout={1500}
-        transitionLeaveTimeout={1500}
-      >
+      <Collapse isOpened={!this.props.generateButtonHidden}>
         <div className="generate-button-container">
           <p>
             <Button
@@ -41,21 +37,12 @@ class Header extends React.Component {
             </Button>
           </p>
         </div>
-      </ReactCSSTransitionGroup>
+      </Collapse>
     );
-
-    // const HideGroceryListButton = (
-    //   <p>
-    //     <button type="submit" className="btn btn-hide btn-lg" id="hbutton" onClick={this.props.hideGroceryList}>
-    //       {" "}
-    //       Hide Grocery List{" "}
-    //     </button>
-    //   </p>
-    // );
 
     return (
       <div className="jumbotron">
-        
+        <Collapse isOpened={!this.props.titleHidden}>
           <ReactCSSTransitionGroup
             transitionName="title-animation"
             transitionAppear={true}
@@ -67,8 +54,9 @@ class Header extends React.Component {
               Hey Mel ... <br />What do you want for dinner this week?
             </h1>
           </ReactCSSTransitionGroup>
+        </Collapse>
           <div className="generate-button-container">
-          {this.props.generateButtonHidden ? null : generateButton}
+          {generateButton}
           </div>
           <div>
             {this.props.groceryButtonHidden ? null : (

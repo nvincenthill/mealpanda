@@ -2,6 +2,7 @@ import React from "react";
 // import PropTypes from "prop-types";
 import SignInModal from "./SignInModal";
 import { Button } from "react-bootstrap";
+import { Collapse } from "react-collapse";
 
 class Footer extends React.Component {
   render() {
@@ -13,7 +14,7 @@ class Footer extends React.Component {
     );
     const signInModal = <SignInModal authenticate={this.props.authenticate} />;
     return (
-      <React.Fragment>
+      <Collapse isOpened={!this.props.footerHidden}>
         <div className="footer">
           <h4>
             {" "}
@@ -35,7 +36,7 @@ class Footer extends React.Component {
           {this.props.userAuthenticated ? null : signInModal}
           {this.props.userAuthenticated ? logOutButton : null}
         </div>
-      </React.Fragment>
+      </Collapse>
     );
   }
 }

@@ -1,4 +1,6 @@
 import React from "react";
+import { Collapse } from "react-collapse";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 class MealPanda extends React.Component {
   componentWillMount() {
@@ -20,7 +22,19 @@ class MealPanda extends React.Component {
   render() {
     let panda = <img id="logo" src="/images/mealpanda.png" alt="logo" />;
 
-    return <div className="logo-container">{panda}</div>;
+    return (
+      <Collapse isOpened={!this.props.generateButtonHidden}>
+        <ReactCSSTransitionGroup
+          transitionName="logo-animation"
+          transitionAppear={true}
+          transitionAppearTimeout={1000}
+          transitionEnterTimeout={1000}
+          transitionLeaveTimeout={1000}
+        >
+        <div className="logo-container">{panda}</div>
+        </ReactCSSTransitionGroup>
+      </Collapse>
+    );
   }
 }
 export default MealPanda;
