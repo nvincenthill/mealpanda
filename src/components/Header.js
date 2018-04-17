@@ -1,5 +1,13 @@
 import React from "react";
 import GroceryListModal from "./GroceryListModal";
+import {
+  // Popover,
+  // Tooltip,
+  Button,
+  Modal
+  // OverlayTrigger
+  // Well
+} from "react-bootstrap";
 
 class Header extends React.Component {
   componentWillMount() {
@@ -12,17 +20,19 @@ class Header extends React.Component {
 
   render() {
     const generateButton = (
+    <div className="generate-button-container"> 
       <p>
-        <button
+        <Button
           onClick={this.props.loadMenu}
           type="submit"
-          className="btn btn-danger btn-lg"
-          id="generate"
+          className="btn-success btn-block"
+          bsSize="large"
         >
           {" "}
-          Let the robots decide...{" "}
-        </button>
+          Let the panda decide...{" "}
+        </Button>
       </p>
+      </div>
     );
 
     const groceryListButton = (
@@ -50,7 +60,7 @@ class Header extends React.Component {
 
     return (
       <div className="jumbotron">
-        <h1 id="maintitle">{this.props.title}</h1>
+        <h1 id="maintitle">Hey Mel ... <br/>What do you want for dinner this week?</h1>
         {this.props.generateButtonHidden ? null : generateButton}
         {/* <div>{this.props.groceryButtonHidden ? null : groceryListButton}</div> */}
 
