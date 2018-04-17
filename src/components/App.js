@@ -7,7 +7,8 @@ import Footer from "./Footer";
 import base, { firebaseApp } from "../base";
 import firebase from "firebase";
 import data from "../recipes.js";
-import { shuffle, preloadImages } from "../helpers";
+import { shuffle } from "../helpers";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 class App extends React.Component {
   state = {
@@ -175,31 +176,64 @@ class App extends React.Component {
     }
 
     const pandaLogo = <MealPanda />;
-
     return (
       <React.Fragment>
-        {this.state.generateButtonHidden ? null : pandaLogo}
-        <Header
-          title="Hey Mel ... What do you want for dinner this week?"
-          loadMenu={this.loadMenu}
-          loadGroceryList={this.loadGroceryList}
-          generateButtonHidden={this.state.generateButtonHidden}
-          groceryButtonHidden={this.state.groceryButtonHidden}
-          groceryListHidden={this.state.groceryListHidden}
-          randomRecipes={this.state.randomRecipes}
-          HideGroceryListButtonHidden={this.state.HideGroceryListButtonHidden}
-          hideGroceryList={this.hideGroceryList}
-        />
-        <Menu
-          menuHidden={this.state.menuHidden}
-          recipeData={this.state.randomRecipes}
-          changeRecipe={this.changeRecipe}
-        />
-        <Footer
-          authenticate={this.authenticate}
-          userAuthenticated={this.state.userAuthenticated}
-          logOut={this.logOut}
-        />
+        <ReactCSSTransitionGroup
+          transitionName="logo-animation"
+          transitionAppear={true}
+          transitionAppearTimeout={1000}
+          transitionEnterTimeout={1000}
+          transitionLeaveTimeout={1000}
+        >
+          {this.state.generateButtonHidden ? null : pandaLogo}
+        </ReactCSSTransitionGroup>
+        <ReactCSSTransitionGroup
+          transitionName="header-animation"
+          transitionAppear={true}
+          transitionAppearTimeout={500}
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={500}
+        >
+          <Header
+            title="Hey Mel ... What do you want for dinner this week?"
+            loadMenu={this.loadMenu}
+            loadGroceryList={this.loadGroceryList}
+            generateButtonHidden={this.state.generateButtonHidden}
+            groceryButtonHidden={this.state.groceryButtonHidden}
+            groceryListHidden={this.state.groceryListHidden}
+            randomRecipes={this.state.randomRecipes}
+            HideGroceryListButtonHidden={this.state.HideGroceryListButtonHidden}
+            hideGroceryList={this.hideGroceryList}
+          />
+        </ReactCSSTransitionGroup>
+
+        <ReactCSSTransitionGroup
+          transitionName="menu-animation"
+          transitionAppear={true}
+          transitionAppearTimeout={500}
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={500}
+        >
+          <Menu
+            menuHidden={this.state.menuHidden}
+            recipeData={this.state.randomRecipes}
+            changeRecipe={this.changeRecipe}
+          />
+        </ReactCSSTransitionGroup>
+
+        <ReactCSSTransitionGroup
+          transitionName="footer-animation"
+          transitionAppear={true}
+          transitionAppearTimeout={2000}
+          transitionEnterTimeout={2000}
+          transitionLeaveTimeout={1500}
+        >
+          <Footer
+            authenticate={this.authenticate}
+            userAuthenticated={this.state.userAuthenticated}
+            logOut={this.logOut}
+          />
+        </ReactCSSTransitionGroup>
       </React.Fragment>
     );
   }

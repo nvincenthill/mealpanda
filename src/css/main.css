@@ -427,7 +427,7 @@ img {
     width: 85%;
     margin-top: 1em;
     margin-bottom: 0.5em;
-    overflow-y:auto;
+    overflow-y: auto;
     border-spacing: 2em 0;
 }
 
@@ -473,7 +473,6 @@ img {
 }
 
 .map {
-
 }
 
 .map-container {
@@ -482,13 +481,13 @@ img {
 }
 
 .map-holder {
-
 }
 
 .show-grocery-list {
     font-family: "Oswald";
     text-transform: uppercase;
     font-size: 18px;
+    font-weight: 600;
     line-height: 23px;
     letter-spacing: 2px;
     background-color: white;
@@ -548,6 +547,76 @@ img {
 }
 
 .generate-button-container {
-    width: 60%;
+    width: 50%;
     margin: auto;
 }
+
+.logo-animation-appear {
+    opacity: 0;
+}
+
+.logo-animation-appear.logo-animation-appear-active {
+    opacity: 1;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.logo-animation-leave {
+/*    opacity: 1;*/
+    transform: translateY(0%);
+}
+
+.logo-animation-leave.logo-animation-leave-active {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: 1000ms ease-in;
+}
+
+.header-animation-appear {
+    opacity: 0;
+}
+
+.header-animation-appear.header-animation-appear-active {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
+
+.footer-animation-appear {
+    opacity: 0;
+}
+
+.footer-animation-appear.footer-animation-appear-active {
+    opacity: 1;
+    transition: 2s;
+    transition-delay: 1s;
+}
+
+.title-animation-appear {
+    opacity: 0;
+}
+
+.title-animation-appear.title-animation-appear-active {
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 0.25s;
+}
+
+.generate-button-animation-appear {
+    opacity: 0;
+}
+
+.generate-button-animation-appear.generate-button-animation-appear-active {
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 1s;
+}
+
+.menu-item-animation-appear {
+    opacity: 0;
+}
+
+.menu-item-animation-appear.menu-item-animation-appear-active {
+    opacity: 1;
+    transition: 1s;
+}
+

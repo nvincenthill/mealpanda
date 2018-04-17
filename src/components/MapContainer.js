@@ -1,4 +1,4 @@
-import { InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
+import { GoogleApiWrapper } from "google-maps-react";
 import GoogleMap from "./GoogleMap";
 import React from "react";
 

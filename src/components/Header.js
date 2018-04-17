@@ -1,10 +1,11 @@
 import React from "react";
 import GroceryListModal from "./GroceryListModal";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import {
   // Popover,
   // Tooltip,
-  Button,
-  Modal
+  Button
+  // Modal
   // OverlayTrigger
   // Well
 } from "react-bootstrap";
@@ -20,33 +21,27 @@ class Header extends React.Component {
 
   render() {
     const generateButton = (
-    <div className="generate-button-container"> 
-      <p>
-        <Button
-          onClick={this.props.loadMenu}
-          type="submit"
-          className="btn-success btn-block"
-          bsSize="large"
-        >
-          {" "}
-          Let the panda decide...{" "}
-        </Button>
-      </p>
-      </div>
-    );
-
-    const groceryListButton = (
-      <p>
-        <button
-          onClick={this.props.loadGroceryList}
-          type="submit"
-          className="btn btn-success btn-lg"
-          id="ibutton"
-        >
-          {" "}
-          What do we need?{" "}
-        </button>
-      </p>
+      <ReactCSSTransitionGroup
+        transitionName="generate-button-animation"
+        transitionAppear={true}
+        transitionAppearTimeout={1500}
+        transitionEnterTimeout={1500}
+        transitionLeaveTimeout={1500}
+      >
+        <div className="generate-button-container">
+          <p>
+            <Button
+              onClick={this.props.loadMenu}
+              type="submit"
+              className="btn-success btn-block"
+              bsSize="large"
+            >
+              {" "}
+              Let the panda decide...{" "}
+            </Button>
+          </p>
+        </div>
+      </ReactCSSTransitionGroup>
     );
 
     // const HideGroceryListButton = (
@@ -60,20 +55,27 @@ class Header extends React.Component {
 
     return (
       <div className="jumbotron">
-        <h1 id="maintitle">Hey Mel ... <br/>What do you want for dinner this week?</h1>
-        {this.props.generateButtonHidden ? null : generateButton}
-        {/* <div>{this.props.groceryButtonHidden ? null : groceryListButton}</div> */}
-
-        <div> 
-          {this.props.groceryButtonHidden ? null : (
-            <GroceryListModal randomRecipes={this.props.randomRecipes} />
-          )}
+        
+          <ReactCSSTransitionGroup
+            transitionName="title-animation"
+            transitionAppear={true}
+            transitionAppearTimeout={1000}
+            transitionEnterTimeout={1000}
+            transitionLeaveTimeout={1000}
+          >
+            <h1 id="maintitle">
+              Hey Mel ... <br />What do you want for dinner this week?
+            </h1>
+          </ReactCSSTransitionGroup>
+          <div className="generate-button-container">
+          {this.props.generateButtonHidden ? null : generateButton}
+          </div>
+          <div>
+            {this.props.groceryButtonHidden ? null : (
+              <GroceryListModal randomRecipes={this.props.randomRecipes} />
+            )}
+          
         </div>
-        {/* <div>
-          {this.props.HideGroceryListButtonHidden
-            ? null
-            : HideGroceryListButton}
-        </div> */}
       </div>
     );
   }

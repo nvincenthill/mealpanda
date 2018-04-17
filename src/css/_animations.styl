@@ -4,19 +4,3 @@
   exit
   appear Must set transitionAppear={true} on animation component
 */
-
-.item-enter
-  color red
-  transition 5s
-  transform translateY(-100%)
-  &.item-enter-active
-    color yellow
-    transform translateY(0)
-
-.item-exit
-  background red
-  transform translateY(0)
-  transition 5s
-  &.order-exit-active
-    background yellow
-    transform translateY(-100%)
