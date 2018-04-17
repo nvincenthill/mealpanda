@@ -78,7 +78,6 @@ class App extends React.Component {
         context: this
       });
     } else {
-      this.generateRandomRecipes();
       userRecipes = this.state.randomRecipes;
     }
 
