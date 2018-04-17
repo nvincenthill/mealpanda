@@ -1,5 +1,3 @@
-// gSec j5G60cS8im1NfBxNO4WO4-ab
-
 import React from "react";
 // import PropTypes from "prop-types";
 import Menu from "./Menu";
