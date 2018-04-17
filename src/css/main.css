@@ -106,6 +106,7 @@
     padding: 0px 0px 5px 0px;
     margin-left: 10px;
     margin-right: 10px;
+    opacity: 0.95;
 }
 
 .name {
@@ -129,7 +130,7 @@
     text-transform: uppercase;
     color: white;
     font-size: 18px;
-    font-weight: 600;
+/*    font-weight: 600;*/
     line-height: 23px;
     letter-spacing: 2px;
     outline: none !important;
@@ -145,7 +146,7 @@
     transition: 1s ease-in-out;
     line-height: 23px;
     letter-spacing: 2px;
-    background-color: green;
+    background-color: white;
     outline: none !important;
     border-width: 0;
 }
@@ -550,19 +551,38 @@ img {
 }
 
 .generate-button-container {
-    width: 50%;
+    width: 100%;
     margin: auto;
 }
 
-/*.logo-animation-appear {
-    opacity: 0;
+#generate-button-new {
+    font: 700 6em "Oswald", sans-serif;
+    text-transform: uppercase;
+    transition: 1s ease-in-out;
+    text-shadow: 0px 2px 5px grey;
+    opacity: 1;
+}
+
+#generate-button-new:hover {
+    -webkit-transform: scale(1.15);
+    
+    transition: 1s ease-in-out;
+}
+
+#generate-button-new-panda:hover {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2d95, 0 0 30px #ff2d95, 0 0 40px #ff2d95, 0 0 50px #ff2d95, 0 0 60px #ff2d95;
+}
+
+.logo-animation-appear {
+    opacity: 1;
+    transform: translateY(-200%);
 }
 
 .logo-animation-appear.logo-animation-appear-active {
     opacity: 1;
+    transform: translateY(0);
     transition: 1s;
-    transition-delay: 0.5s;
-}*/
+}
 
 .logo-animation-leave {
     opacity: 1;
@@ -592,8 +612,8 @@ img {
 
 .footer-animation-appear.footer-animation-appear-active {
     opacity: 1;
-    transition: 2s;
-    transition-delay: 1s;
+    transition: 1.5s ease-in;
+    transition-delay: 2s;
 }
 
 .title-animation-appear {
@@ -602,8 +622,8 @@ img {
 
 .title-animation-appear.title-animation-appear-active {
     opacity: 1;
-    transition: 0.5s;
-    transition-delay: 0.25s;
+    transition: 1s ease-in-out;
+    transition-delay: .75s;
 }
 
 .generate-button-animation-appear {
@@ -612,8 +632,8 @@ img {
 
 .generate-button-animation-appear.generate-button-animation-appear-active {
     opacity: 1;
-    transition: 0.5s;
-    transition-delay: 1s;
+    transition: 1s ease-in-out;
+    transition-delay: 1.5s;
 }
 
 .menu-items-animation-appear {
@@ -647,5 +667,13 @@ img {
 
 .show-grid {
     max-width: 100%;
+}
+
+.test {
+    color:red;
+}
+
+.menu-items-animation-updated {
+    transform: scale(0.5);
 }
 

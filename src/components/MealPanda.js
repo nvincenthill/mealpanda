@@ -24,13 +24,13 @@ class MealPanda extends React.Component {
 
     return (
       <Collapse isOpened={!this.props.generateButtonHidden}>
-        <ReactCSSTransitionGroup
-          transitionName="logo-animation"
-          transitionAppear={true}
-          transitionAppearTimeout={1000}
-          transitionEnterTimeout={1000}
-          transitionLeaveTimeout={1000}
-        >
+      <ReactCSSTransitionGroup
+        transitionName="logo-animation"
+        transitionAppear={true}
+        transitionAppearTimeout={1000}
+        transitionEnterTimeout={1000}
+        transitionLeaveTimeout={1000}
+      >
         <div className="logo-container">{panda}</div>
         </ReactCSSTransitionGroup>
       </Collapse>
