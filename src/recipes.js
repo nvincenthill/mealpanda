@@ -1588,6 +1588,92 @@ const recipes = [
     recipeYield: "",
     lat: 37.84,
     lng: -122.25
+  },
+  {
+    "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
+    "@type": "Recipe",
+    "author": "Don Hill",
+    "cookTime": "PT2H",
+    "datePublished": "2018-04-18",
+    "description": "A spicy and refreshing seafood snack",
+    "image": "tunatartare.png",
+    "recipeIngredient": [{
+      "name": "Sushi grade tuna",
+      "quantity": 12,
+      "type": "Meat & Seafood",
+      "uom": "oz"
+    }, {
+      "name": "Olive oil",
+      "quantity": 4,
+      "type": "Condiments",
+      "uom": "tbsp"
+    }, {
+      "name": "Lime juice",
+      "quantity": 3,
+      "type": "Produce",
+      "uom": "tbsp"
+    }, {
+      "name": "Wasabi powder",
+      "quantity": 0.5,
+      "type": "Spices & Herbs",
+      "uom": "tsp"
+    }, {
+      "name": "Soy sauce",
+      "quantity": 1,
+      "type": "Condiments",
+      "uom": "tsp"
+    }, {
+      "name": "Tabasco sauce",
+      "quantity": 0.5,
+      "type": "Condiments",
+      "uom": "tsp"
+    }, {
+      "name": "Kosher salt",
+      "quantity": 1.25,
+      "type": "Spices & Herbs",
+      "uom": "tsp"
+    }, {
+      "name": "Black pepper",
+      "quantity": 0.25,
+      "type": "Spices & Herbs",
+      "uom": "tsp"
+    }, {
+      "name": "Green onions",
+      "quantity": 0.25,
+      "type": "Produce",
+      "uom": "cu"
+    }, {
+      "name": "Avocado",
+      "quantity": 4,
+      "type": "Produce",
+      "uom": "oz"
+    }, {
+      "name": "Sesame seeds",
+      "quantity": 1,
+      "type": "Spices & Herbs",
+      "uom": "tsp"
+    }, {
+      "name": "Serrano pepper",
+      "quantity": 1,
+      "type": "Produce",
+      "uom": "oz"
+    }],
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      "userInteractionCount": "5"
+    },
+    "name": "Tuna Tartare",
+    "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": "1200 calories",
+      "carbohydrateContent": "12 carbs",
+      "proteinContent": "9 grams of protein",
+      "fatContent": "9 grams fat"
+    },
+    "prepTime": "PT1H",
+    "recipeInstructions": ["\nCut the tuna into 1/4-inch dice and place it in a medium bowl", "In a small bowl, combine the olive oil, lime zest, lime juice, wasabi, soy sauce, Tabasco, salt, and pepper", "Pour over the tuna, add the green onions and Serrano pepper and mix well", "Dice avocado and carefully mix the avocado into the tuna", "Add toasted sesame seeds", "Allow the mixture to sit in the refrigerator for at least an hour for the flavors to blend", "Enjoy!"],
+    "recipeYield": "Six servings"
   }
 ];
 

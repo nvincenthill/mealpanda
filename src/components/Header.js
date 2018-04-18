@@ -32,14 +32,14 @@ class Header extends React.Component {
           transitionLeaveTimeout={3000}
         >
           <div className="generate-button-container">
-            <p
+            <Button
               onClick={this.props.loadMenu}
               type="submit"
               id="generate-button-new"
             >
               {" "}
               Let the <span id="generate-button-new-panda">panda</span> decide...{" "}
-            </p>
+            </Button>
           </div>
         </ReactCSSTransitionGroup>
       </Collapse>
