@@ -89,6 +89,9 @@ class RecipeModal extends React.Component {
             <div className="recipe-modal-instructions">
               <ol>{recipeInstructions}</ol>
             </div>
+            <div className="recipe-yield"> 
+              {`Yield: ${this.props.recipeData.recipeYield}`}
+            </div>
           </Modal.Body>
           <Modal.Footer className="recipe-modal-footer">
             {" "}
