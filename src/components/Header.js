@@ -49,7 +49,6 @@ class Header extends React.Component {
 
     const oldTitle = (
       <Collapse isOpened={!this.props.titleHidden}>
-        <div className="no-margin">
           <ReactCSSTransitionGroup
             transitionName="title-animation"
             transitionAppear={true}
@@ -57,11 +56,12 @@ class Header extends React.Component {
             transitionEnterTimeout={2000}
             transitionLeaveTimeout={2000}
           >
+          <div className="no-margin">
             <h1 id="maintitle">
               Hey Mel ... <br />What do you want for dinner this week?
             </h1>
+            </div>
           </ReactCSSTransitionGroup>
-        </div>
       </Collapse>
     );
 

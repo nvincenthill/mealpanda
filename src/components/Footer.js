@@ -15,26 +15,28 @@ class Footer extends React.Component {
     const signInModal = <SignInModal authenticate={this.props.authenticate} />;
     return (
       <Collapse isOpened={!this.props.footerHidden}>
-        <div className="footer">
-          <h4>
+        <div className="no-margin">
+          <h4 className="footer">
             {" "}
             Created by &nbsp;
             <b>
-              <a className="myname" href="https://nvincenthill.github.io/">
+              <a href="https://nvincenthill.github.io/">
                 Nicholas Vincent-Hill &nbsp;
               </a>
             </b>
             and &nbsp;
             <b>
-              <a className="myname" href="https://avhdesign.win/">
+              <a href="https://avhdesign.win/">
                 Alexander Vincent-Hill &nbsp;
               </a>
             </b> 
             in &nbsp; 
             <b>2018</b>
           </h4>
+        <div className="footer-buttons">
           {this.props.userAuthenticated ? null : signInModal}
           {this.props.userAuthenticated ? logOutButton : null}
+        </div>
         </div>
       </Collapse>
     );
