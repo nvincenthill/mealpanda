@@ -6,7 +6,7 @@ import RestaurantModal from "./RestaurantModal";
 
 class MenuItem extends React.Component {
   state = {
-    className: "menu-items-animation",
+    className: "menu-items-animation"
     // meal1: this.props.recipeData[0],
     // meal2: this.props.recipeData[1],
     // meal3: this.props.recipeData[2],

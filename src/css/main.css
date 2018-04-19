@@ -103,9 +103,11 @@
     font-size: 4em;
     font-family: "Dancing Script", cursive;
     font-weight: 600;
-    padding: 0px 0px 5px 0px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding: 0px 0px 0px 0px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     opacity: 1;
 }
 
@@ -494,7 +496,7 @@ img {
     font-family: "Oswald";
     text-transform: uppercase;
     font-size: 18px;
-    font-weight: 600;
+/*    font-weight: 600;*/
     line-height: 23px;
     letter-spacing: 2px;
     background-color: white;
@@ -555,6 +557,7 @@ img {
 
 .generate-button-container {
     margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 #generate-button-new {
@@ -570,7 +573,6 @@ img {
     -webkit-transform: scale(1.15);
     transition: 1s ease-in-out;
     opacity: 1;
-    /*text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px black, 0 0 20px white, 0 0 30px black, 0 0 40px white, 0 0 50px black, 0 0 75px white;*/
 }
 
 #generate-button-new-panda {
@@ -578,26 +580,24 @@ img {
 }
 
 .logo-animation-appear {
-    opacity: 1;
-    transform: translateY(-200%);
+    opacity: 0;
 }
 
 .logo-animation-appear.logo-animation-appear-active {
     opacity: 1;
-    transform: translateY(0);
     transition: 1s;
 }
 
 .logo-animation-leave {
     opacity: 1;
     height: 100%;
-    transform: scale(1, 1) translateY(0);
+    transform: scale(1, 1);
 }
 
 .logo-animation-leave.logo-animation-leave-active {
     opacity: 0;
     height: 0;
-    transform: scale(0, 0) translateY(-200%);
+    transform: scale(0, 0);
     transition: 1000ms ease-in;
 }
 
@@ -694,4 +694,9 @@ img {
     font-size: 1.25em;
     opacity: .85;
     margin-bottom: 10px;
+}
+
+.no-margin {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
 }
