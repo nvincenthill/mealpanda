@@ -56,17 +56,18 @@ class Header extends React.Component {
             transitionEnterTimeout={2000}
             transitionLeaveTimeout={2000}
           >
-          <div className="no-margin">
             <h1 id="maintitle">
               Hey Mel ... <br />What do you want for dinner this week?
             </h1>
-            </div>
           </ReactCSSTransitionGroup>
       </Collapse>
     );
 
-    return (
-      <div className="jumbotron">
+    const groceryListModal = (this.props.groceryButtonHidden ? null : (
+            <GroceryListModal randomRecipes={this.props.randomRecipes} />
+          ))
+
+    const signInModal = (
         <Collapse isOpened={this.props.titleHidden}>
           <div className="no-margin">
             <div>
@@ -74,12 +75,15 @@ class Header extends React.Component {
             </div>
           </div>
         </Collapse>
+      )
+
+    return (
+      <div className="jumbotron">
+        {signInModal}
         {oldTitle}
-        <div className="generate-button-container">{generateButton}</div>
+        <div className="divider">{generateButton}</div>
         <div>
-          {this.props.groceryButtonHidden ? null : (
-            <GroceryListModal randomRecipes={this.props.randomRecipes} />
-          )}
+        {groceryListModal}
         </div>
       </div>
     );
