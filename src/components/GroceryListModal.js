@@ -1,6 +1,6 @@
 import React from "react";
 import GroceryList from "./GroceryList";
-
+import { createGroceryList, downloadCSV } from "../helpers";
 
 import {
   // Popover,
@@ -32,6 +32,8 @@ class GroceryListModal extends React.Component {
   }
 
   render() {
+    let groceryList = createGroceryList(this.props.randomRecipes);
+
     return (
       <div>
         <Button
@@ -51,7 +53,8 @@ class GroceryListModal extends React.Component {
           </Modal.Body>
           <Modal.Footer className="recipe-modal-footer"> 
           <div className="export-grocery-list"> 
-            Download | Email
+            <Button>Download CSV</Button>
+            <Button>Email</Button>
           </div>
           <Button className="btn-modal-close" onClick={this.handleClose}>Close</Button> </Modal.Footer>
         </Modal>

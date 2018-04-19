@@ -156,7 +156,7 @@ class GroceryList extends React.Component {
   render() {
     let groceryList = createGroceryList(this.props.randomRecipes);
     let sortedGroceries = groupBy(groceryList, "type");
-
+    
     let beveragesArray = sortedGroceries["Beverages"];
     let cannedArray = sortedGroceries["Canned Goods"];
     let frozenArray = sortedGroceries["Frozen Foods"];
