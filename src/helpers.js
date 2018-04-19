@@ -36,7 +36,7 @@ export function createGroceryList(arrayOfRecipes) {
       inventory.push(arrayOfRecipes[i].recipeIngredient);
     }
   }
-  
+
   let merged = [];
   for (let i = 0; i < inventory.length; i++) {
     merged = merged.concat(inventory[i]);
@@ -55,35 +55,93 @@ export function createGroceryList(arrayOfRecipes) {
     return acc;
   }, []);
 
-  groceryList = groceryList.sort(function(a,b) {return (a.type > b.type) ? 1 : ((b.type > a.type) ? -1 : 0);} ); 
+  groceryList = groceryList.sort(function(a, b) {
+    return a.type > b.type ? 1 : b.type > a.type ? -1 : 0;
+  });
   return groceryList;
-
 }
 
 export function preloadImages(array) {
-    if (!preloadImages.list) {
-        preloadImages.list = [];
-    }
-    var list = preloadImages.list;
-    for (var i = 0; i < array.length; i++) {
-        var img = new Image();
-        img.onload = function() {
-            var index = list.indexOf(this);
-            if (index !== -1) {
-                // remove image from the array once it's loaded
-                // for memory consumption reasons
-                list.splice(index, 1);
-            }
-        }
-        list.push(img);
-        img.src = array[i];
-    }
+  if (!preloadImages.list) {
+    preloadImages.list = [];
+  }
+  var list = preloadImages.list;
+  for (var i = 0; i < array.length; i++) {
+    var img = new Image();
+    img.onload = function() {
+      var index = list.indexOf(this);
+      if (index !== -1) {
+        // remove image from the array once it's loaded
+        // for memory consumption reasons
+        list.splice(index, 1);
+      }
+    };
+    list.push(img);
+    img.src = array[i];
+  }
 }
 
 export function groupBy(arr, property) {
   return arr.reduce(function(memo, x) {
-    if (!memo[x[property]]) { memo[x[property]] = []; }
+    if (!memo[x[property]]) {
+      memo[x[property]] = [];
+    }
     memo[x[property]].push(x);
     return memo;
   }, {});
+}
+
+export function convertArrayOfObjectsToCSV(args) {
+  var result, ctr, keys, columnDelimiter, lineDelimiter, data;
+
+  data = args.data || null;
+  if (data == null || !data.length) {
+    return null;
+  }
+
+  columnDelimiter = args.columnDelimiter || ",";
+  lineDelimiter = args.lineDelimiter || "\n";
+
+  keys = Object.keys(data[0]);
+
+  result = "";
+  result += keys.join(columnDelimiter);
+  result += lineDelimiter;
+
+  data.forEach(function(item) {
+    ctr = 0;
+    keys.forEach(function(key) {
+      if (ctr > 0) result += columnDelimiter;
+
+      result += item[key];
+      ctr++;
+    });
+    result += lineDelimiter;
+  });
+
+  return result;
+}
+
+export function downloadCSV(args, groceryList) {
+  alert("Function called!");
+  let data, filename, link;
+
+  let csv = convertArrayOfObjectsToCSV({
+    data: groceryList
+  });
+  if (csv == null) return;
+
+  console.log(csv);
+
+  filename = args.filename || "export.csv";
+
+  if (!csv.match(/^data:text\/csv/i)) {
+    csv = "data:text/csv;charset=utf-8," + csv;
+  }
+  data = encodeURI(csv);
+
+  link = document.createElement("a");
+  link.setAttribute("href", data);
+  link.setAttribute("download", filename);
+  link.click();
 }

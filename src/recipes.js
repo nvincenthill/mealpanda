@@ -485,7 +485,7 @@ const recipes = [
     cookTime: "PT2H",
     datePublished: "2015-05-18",
     description:
-      "Filet mignon coated with cracked black pepper and twice-cooked potatoes",
+      "Filet mignon and peppercorn cream sauce",
     image: "steak.png",
     recipeIngredient: [
       {
