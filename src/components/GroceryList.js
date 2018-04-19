@@ -156,7 +156,7 @@ class GroceryList extends React.Component {
   render() {
     let groceryList = createGroceryList(this.props.randomRecipes);
     let sortedGroceries = groupBy(groceryList, "type");
-    
+
     let beveragesArray = sortedGroceries["Beverages"];
     let cannedArray = sortedGroceries["Canned Goods"];
     let frozenArray = sortedGroceries["Frozen Foods"];
@@ -323,6 +323,7 @@ class GroceryList extends React.Component {
       <div className="grocery-list">
         <div>
           <Button
+            className="grocery-list-button"
             onClick={this.showOrHideProduce}
             bsStyle="default"
             bsSize="large"
@@ -332,19 +333,20 @@ class GroceryList extends React.Component {
           </Button>
           <Collapse isOpened={this.state.showProduce}>
             <div className="tempclass">
-            <div>
-            <table className="grocery-list-table" align="center">
-              <tbody className="grocery-list-table-body" align="left">
-                {header}
-                {produceArray ? produceArray : empty}
-              </tbody>
-            </table>
-            </div>
+              <div>
+                <table className="grocery-list-table" align="center">
+                  <tbody className="grocery-list-table-body" align="left">
+                    {header}
+                    {produceArray ? produceArray : empty}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </Collapse>
         </div>
         <div>
           <Button
+            className="grocery-list-button"
             onClick={this.showOrHideMeat}
             bsStyle="default"
             bsSize="large"
@@ -363,6 +365,7 @@ class GroceryList extends React.Component {
         </div>
         <div>
           <Button
+            className="grocery-list-button"
             onClick={this.showOrHideGrains}
             bsStyle="default"
             bsSize="large"
@@ -381,6 +384,7 @@ class GroceryList extends React.Component {
         </div>
         <div>
           <Button
+            className="grocery-list-button"
             onClick={this.showOrHideBread}
             bsStyle="default"
             bsSize="large"
@@ -399,6 +403,7 @@ class GroceryList extends React.Component {
         </div>
         <div>
           <Button
+            className="grocery-list-button"
             onClick={this.showOrHideDairy}
             bsStyle="default"
             bsSize="large"
@@ -417,6 +422,7 @@ class GroceryList extends React.Component {
         </div>
         <div>
           <Button
+            className="grocery-list-button"
             onClick={this.showOrHideBeverages}
             bsStyle="default"
             bsSize="large"
@@ -435,6 +441,7 @@ class GroceryList extends React.Component {
         </div>
         <div>
           <Button
+            className="grocery-list-button"
             onClick={this.showOrHideWine}
             bsStyle="default"
             bsSize="large"
@@ -453,6 +460,7 @@ class GroceryList extends React.Component {
         </div>
         <div>
           <Button
+            className="grocery-list-button"
             onClick={this.showOrHideCanned}
             bsStyle="default"
             bsSize="large"
@@ -471,6 +479,7 @@ class GroceryList extends React.Component {
         </div>
         <div>
           <Button
+            className="grocery-list-button"
             onClick={this.showOrHideFrozen}
             bsStyle="default"
             bsSize="large"
@@ -489,6 +498,7 @@ class GroceryList extends React.Component {
         </div>
         <div>
           <Button
+            className="grocery-list-button"
             onClick={this.showOrHideCookies}
             bsStyle="default"
             bsSize="large"
@@ -507,6 +517,7 @@ class GroceryList extends React.Component {
         </div>
         <div>
           <Button
+            className="grocery-list-button"
             onClick={this.showOrHideCondiments}
             bsStyle="default"
             bsSize="large"
@@ -525,6 +536,7 @@ class GroceryList extends React.Component {
         </div>
         <div>
           <Button
+            className="grocery-list-button"
             onClick={this.showOrHideSpices}
             bsStyle="default"
             bsSize="large"
