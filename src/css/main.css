@@ -168,6 +168,18 @@
     font-size: large;
 }
 
+.grocery-list-button:hover {
+    transition: 0.5s ease-in-out;
+    background-color: black;
+    color: white;
+    border-color: #ccc;
+}
+
+.grocery-list-button:focus {
+    border-color: #ccc;
+    transition: 0.5s ease-in-out;
+}
+
 #inglistbody {
     font-family: "Lato";
 }
