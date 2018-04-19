@@ -11,20 +11,49 @@ html {
   box-sizing: inherit;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+
+} 
+
 #maintitle {
     font-size: 7em;
     font-family: "Dancing Script", cursive;
     font-weight: bold;
     padding: 0;
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 4%;
+    margin-bottom: 4%;
     opacity: 1;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
 
 .jumbotron {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 4% 4%;
+    padding: 5px 0px 5px 0px;
     margin-bottom: 0;
 }
 
@@ -583,7 +612,7 @@ img {
 }
 
 .generate-button-container {
-    margin-bottom: 0;
+    margin-bottom: 4%;
     margin-top: 0;
 }
 
@@ -731,12 +760,4 @@ img {
 .footer-buttons {
     margin: auto;
     text-align: center;
-}
-
-.divider {
-    margin-top: 4%;
-}
-
-#signInButton {
-    font-size: 2em;
 }

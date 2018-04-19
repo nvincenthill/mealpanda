@@ -36,7 +36,7 @@ class SignInModal extends React.Component {
   render() {
     return (
       <div>
-        <Button bsSize="large" onClick={this.handleShow}>
+        <Button id="signInButton" bsSize="large" onClick={this.handleShow}>
           Sign in with Google
         </Button>
 
