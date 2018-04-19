@@ -290,7 +290,7 @@ const recipes = [
       "Serve on Basmati rice or with Naan, garnish with cilantro",
       "Enjoy!"
     ],
-    recipeYield: "Four Servings"
+    recipeYield: "Four servings"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
@@ -1122,7 +1122,7 @@ const recipes = [
       "Garnish with freshly ground pepper and serve. ",
       "Enjoy!"
     ],
-    recipeYield: "4 servings"
+    recipeYield: "Four servings"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
@@ -1221,29 +1221,11 @@ const recipes = [
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
     author: "Nicholas Vincent-Hill",
-    cookTime: "PT2H",
-    datePublished: "2015-05-18",
+    cookTime: "PT1H",
+    datePublished: "2018-04-18",
     description: "A simple red sauce with rosemary and garlic",
     image: "rmpasta.png",
     recipeIngredient: [
-      {
-        quantity: 4,
-        uom: "oz",
-        name: "Basil",
-        type: "Spices & Herbs"
-      },
-      {
-        quantity: 4,
-        uom: "tbsp",
-        name: "Olive oil",
-        type: "Condiments"
-      },
-      {
-        quantity: 3,
-        uom: "tbsp",
-        name: "Lemon juice",
-        type: "Produce"
-      },
       {
         quantity: 0.5,
         uom: "cup",
@@ -1251,34 +1233,46 @@ const recipes = [
         type: "Dairy, Eggs, & Cheese"
       },
       {
-        quantity: 1,
-        uom: "tsp",
-        name: "Kosher salt",
-        type: "Spices & Herbs"
+        name: "Olive oil",
+        quantity: 3,
+        type: "Condiments",
+        uom: "tbsp"
       },
       {
-        quantity: 1,
-        uom: "tsp",
-        name: "Black pepper",
-        type: "Spices & Herbs"
-      },
-      {
-        quantity: 8,
-        uom: "oz",
-        name: "Pasta",
-        type: "Grains, Pastas, & Sides"
-      },
-      {
-        quantity: 4,
-        uom: "clvs",
         name: "Garlic",
-        type: "Produce"
+        quantity: 5,
+        type: "Produce",
+        uom: "clvs"
       },
       {
+        name: "Red pepper flakes",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Rosemary, fresh",
         quantity: 0.25,
-        uom: "cu",
-        name: "Pine nuts",
-        type: "Produce"
+        type: "Spices & Herbs",
+        uom: "oz"
+      },
+      {
+        name: "Pasta sauce, unsalted",
+        quantity: 18,
+        type: "Canned Goods",
+        uom: "oz"
+      },
+      {
+        name: "Red wine",
+        quantity: 1,
+        type: "Wine, Beer, & Spirits",
+        uom: "cu"
+      },
+      {
+        name: "Pasta, penne",
+        quantity: 15,
+        type: "Grains, Pastas, & Sides",
+        uom: "oz"
       }
     ],
     interactionStatistic: {
@@ -1295,20 +1289,17 @@ const recipes = [
       proteinContent: "9 grams of protein",
       fatContent: "9 grams fat"
     },
-    prepTime: "PT15M",
+    prepTime: "PT20M",
     recipeInstructions: [
-      "Preheat oven to 425°F.",
-      "Cut off the woody bottom part of the asparagus spears and discard.",
-      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
-      "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
-      "Sprinkle with salt.",
-      "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
-      "Roast for 10-15 minutes, depending on the thickness of your stalks and how tender you like them.",
-      "They should be tender when pierced with the tip of a knife.",
-      "The tips of the spears will get very brown but watch them to prevent burning.",
-      "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
+      "Add the oil, garlic and pepper flakes to a medium sauce pan and warm over low heat until the garlic just starts to brown",
+      "Add the tomato sauce and red wine",
+      "Increase the heat to medium and bring the sauce to a slow simmer, stirring frequently to prevent scorching",
+      " Add rosemary and stir until well wilted, but not so long that the rosemary leaves fall off",
+      "Simmer over low heat for 45 minutes",
+      "Remove herbs and serve over pasta with grated Parmesan-reggiano and a nice Chianti Classico",
+      "Enjoy!"
     ],
-    recipeYield: "12 cookies"
+    recipeYield: "Four servings"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
@@ -1592,88 +1583,222 @@ const recipes = [
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
-    "author": "Don Hill",
-    "cookTime": "PT2H",
-    "datePublished": "2018-04-18",
-    "description": "A spicy and refreshing seafood snack",
-    "image": "tunatartare.png",
-    "recipeIngredient": [{
-      "name": "Sushi grade tuna",
-      "quantity": 12,
-      "type": "Meat & Seafood",
-      "uom": "oz"
-    }, {
-      "name": "Olive oil",
-      "quantity": 4,
-      "type": "Condiments",
-      "uom": "tbsp"
-    }, {
-      "name": "Lime juice",
-      "quantity": 3,
-      "type": "Produce",
-      "uom": "tbsp"
-    }, {
-      "name": "Wasabi powder",
-      "quantity": 0.5,
-      "type": "Spices & Herbs",
-      "uom": "tsp"
-    }, {
-      "name": "Soy sauce",
-      "quantity": 1,
-      "type": "Condiments",
-      "uom": "tsp"
-    }, {
-      "name": "Tabasco sauce",
-      "quantity": 0.5,
-      "type": "Condiments",
-      "uom": "tsp"
-    }, {
-      "name": "Kosher salt",
-      "quantity": 1.25,
-      "type": "Spices & Herbs",
-      "uom": "tsp"
-    }, {
-      "name": "Black pepper",
-      "quantity": 0.25,
-      "type": "Spices & Herbs",
-      "uom": "tsp"
-    }, {
-      "name": "Green onions",
-      "quantity": 0.25,
-      "type": "Produce",
-      "uom": "cu"
-    }, {
-      "name": "Avocado",
-      "quantity": 4,
-      "type": "Produce",
-      "uom": "oz"
-    }, {
-      "name": "Sesame seeds",
-      "quantity": 1,
-      "type": "Spices & Herbs",
-      "uom": "tsp"
-    }, {
-      "name": "Serrano pepper",
-      "quantity": 1,
-      "type": "Produce",
-      "uom": "oz"
-    }],
-    "interactionStatistic": {
+    author: "Don Hill",
+    cookTime: "PT2H",
+    datePublished: "2018-04-18",
+    description: "A spicy and refreshing seafood snack",
+    image: "tunatartare.png",
+    recipeIngredient: [
+      {
+        name: "Sushi grade tuna",
+        quantity: 12,
+        type: "Meat & Seafood",
+        uom: "oz"
+      },
+      {
+        name: "Olive oil",
+        quantity: 4,
+        type: "Condiments",
+        uom: "tbsp"
+      },
+      {
+        name: "Lime juice",
+        quantity: 3,
+        type: "Produce",
+        uom: "tbsp"
+      },
+      {
+        name: "Wasabi powder",
+        quantity: 0.5,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Soy sauce",
+        quantity: 1,
+        type: "Condiments",
+        uom: "tsp"
+      },
+      {
+        name: "Tabasco sauce",
+        quantity: 0.5,
+        type: "Condiments",
+        uom: "tsp"
+      },
+      {
+        name: "Kosher salt",
+        quantity: 1.25,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Black pepper",
+        quantity: 0.25,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Green onions",
+        quantity: 0.25,
+        type: "Produce",
+        uom: "cu"
+      },
+      {
+        name: "Avocado",
+        quantity: 4,
+        type: "Produce",
+        uom: "oz"
+      },
+      {
+        name: "Sesame seeds",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Serrano pepper",
+        quantity: 1,
+        type: "Produce",
+        uom: "oz"
+      }
+    ],
+    interactionStatistic: {
       "@type": "InteractionCounter",
-      "interactionType": "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      "userInteractionCount": "5"
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
     },
-    "name": "Tuna Tartare",
-    "nutrition": {
+    name: "Tuna Tartare",
+    nutrition: {
       "@type": "NutritionInformation",
-      "calories": "1200 calories",
-      "carbohydrateContent": "12 carbs",
-      "proteinContent": "9 grams of protein",
-      "fatContent": "9 grams fat"
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
     },
-    "prepTime": "PT1H",
-    "recipeInstructions": ["\nCut the tuna into 1/4-inch dice and place it in a medium bowl", "In a small bowl, combine the olive oil, lime zest, lime juice, wasabi, soy sauce, Tabasco, salt, and pepper", "Pour over the tuna, add the green onions and Serrano pepper and mix well", "Dice avocado and carefully mix the avocado into the tuna", "Add toasted sesame seeds", "Allow the mixture to sit in the refrigerator for at least an hour for the flavors to blend", "Enjoy!"],
-    "recipeYield": "Six servings"
+    prepTime: "PT1H",
+    recipeInstructions: [
+      "\nCut the tuna into 1/4-inch dice and place it in a medium bowl",
+      "In a small bowl, combine the olive oil, lime zest, lime juice, wasabi, soy sauce, Tabasco, salt, and pepper",
+      "Pour over the tuna, add the green onions and Serrano pepper and mix well",
+      "Dice avocado and carefully mix the avocado into the tuna",
+      "Add toasted sesame seeds",
+      "Allow the mixture to sit in the refrigerator for at least an hour for the flavors to blend",
+      "Enjoy!"
+    ],
+    recipeYield: "Six servings"
+  },
+  {
+    "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
+    "@type": "Recipe",
+    author: "Darina Allen",
+    cookTime: "PT1H",
+    datePublished: "2018-04-18",
+    description: "A traditional Irish stew just like Nan used to make",
+    image: "bstew.png",
+    recipeIngredient: [
+      {
+        name: "Beef, lean chuck",
+        quantity: 32,
+        type: "Meat & Seafood",
+        uom: "oz"
+      },
+      {
+        name: "Olive oil",
+        quantity: 3,
+        type: "Condiments",
+        uom: "tbsp"
+      },
+      {
+        name: "Flour",
+        quantity: 0.15,
+        type: "Grains, Pastas, & Sides",
+        uom: "cu"
+      },
+      {
+        name: "Kosher salt",
+        quantity: 0.5,
+        type: "Spices & Herbs",
+        uom: "tbsp"
+      },
+      {
+        name: "Black pepper",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Onion",
+        quantity: 3,
+        type: "Produce",
+        uom: "cu"
+      },
+      {
+        name: "Garlic",
+        quantity: 2,
+        type: "Produce",
+        uom: "clvs"
+      },
+      {
+        name: "Tomato sauce",
+        quantity: 0.5,
+        type: "Canned Goods",
+        uom: "cu"
+      },
+      {
+        name: "Guinness",
+        quantity: 8,
+        type: "Wine, Beer, & Spirits",
+        uom: "fl oz"
+      },
+      {
+        name: "Carrot",
+        quantity: 8,
+        type: "Produce",
+        uom: "oz"
+      },
+      {
+        name: "Thyme, fresh",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tbsp"
+      },
+      {
+        name: "Cayenne pepper",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      }
+    ],
+    interactionStatistic: {
+      "@type": "InteractionCounter",
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
+    },
+    name: "Beef & Guinness Stew",
+    nutrition: {
+      "@type": "NutritionInformation",
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
+    },
+    prepTime: "PT30M",
+    recipeInstructions: [
+      "Trim the meat of any fat or gristle, cut into cubes, and toss them in a large bowl with 1 tbsp olive oil",
+      "Trim the meat of any fat or gristle, cut into cubes, and toss them in a large bowl with 1 tbsp olive oil",
+      "Season the flour with salt, freshly ground pepper, and a pinch or two of cayenne",
+      "Toss the meat in the seasoned flour and brown the meat on all sides in a wide frying pan over a high heat",
+      "Add the onions, crushed garlic, and tomato sauce to the pan, cover and cook gently for five minutes",
+      "Transfer the contents of the pan to a stew pot and pour some of the Guinness into the frying pan to dissolve the fond on the pan",
+      "Add the carrots, thyme, and remaining Guinness",
+      "Stew for two to three hours or until the meat is tender on low heat",
+      "Taste and season with salt and pepper",
+      "Garnish with chopped parsley and serve with champ, colcannon, plain boiled or mashed potatoes",
+      "Enjoy!"
+    ],
+    recipeYield: "Eight servings"
   }
 ];
 

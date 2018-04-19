@@ -436,13 +436,20 @@ img {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: lighter;
+    font-size: 1em;
+}
+
+.grocery-list-table-empty {
+    font-weight: normal;
+
 }
 
 .grocery-list-table {
     font-family: "Lato";
+    table-layout: fixed;
     width: 85%;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+    margin-top: 0;
+    margin-bottom: 0;
     overflow-y: auto;
     border-spacing: 2em 0;
 }
@@ -466,10 +473,6 @@ img {
 
 .grocery-list {
     font-family: "Lato";
-}
-
-.grocery-list-table-header {
-    font-size: 1.25em;
 }
 
 .recipe-modal-footer {
@@ -683,4 +686,12 @@ img {
     font-family: "Lato";
     font-size: 1.25em;
     opacity: .85;
+}
+
+.export-grocery-list {
+/*    font-weight: bold;*/
+    font-family: "Lato";
+    font-size: 1.25em;
+    opacity: .85;
+    margin-bottom: 10px;
 }
