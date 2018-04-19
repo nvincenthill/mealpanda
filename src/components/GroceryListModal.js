@@ -1,6 +1,7 @@
 import React from "react";
 import GroceryList from "./GroceryList";
 
+
 import {
   // Popover,
   // Tooltip,
@@ -48,7 +49,11 @@ class GroceryListModal extends React.Component {
           <Modal.Body>
             <GroceryList randomRecipes={this.props.randomRecipes} />
           </Modal.Body>
-          <Modal.Footer className="recipe-modal-footer"> <Button className="btn-modal-close" onClick={this.handleClose}>Close</Button> </Modal.Footer>
+          <Modal.Footer className="recipe-modal-footer"> 
+          <div className="export-grocery-list"> 
+            Download | Email
+          </div>
+          <Button className="btn-modal-close" onClick={this.handleClose}>Close</Button> </Modal.Footer>
         </Modal>
       </div>
     );
