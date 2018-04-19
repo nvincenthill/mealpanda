@@ -1,6 +1,7 @@
 import React from "react";
 import Menu from "./Menu";
 import MealPanda from "./MealPanda";
+import MealPandaBottom from "./MealPandaBottom";
 import Header from "./Header";
 import Footer from "./Footer";
 import base, { firebaseApp } from "../base";
@@ -190,13 +191,6 @@ class App extends React.Component {
     return (
       <React.Fragment>
           {pandaLogo}
-        <ReactCSSTransitionGroup
-          transitionName="header-animation"
-          transitionAppear={true}
-          transitionAppearTimeout={500}
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={500}
-        >
           <Header
             title="Hey Mel ... What do you want for dinner this week?"
             loadMenu={this.loadMenu}
@@ -209,7 +203,6 @@ class App extends React.Component {
             hideGroceryList={this.hideGroceryList}
             titleHidden={this.state.titleHidden}
           />
-        </ReactCSSTransitionGroup>
           <Menu
             menuHidden={this.state.menuHidden}
             recipeData={this.state.randomRecipes}

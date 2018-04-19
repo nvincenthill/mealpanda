@@ -21,6 +21,7 @@ class MealPanda extends React.Component {
 
   render() {
     let pandaTop = <img id="logo" src="/images/mealpanda.png" alt="logo" />;
+    let pandaBottom = <img id="logo" src="/images/mealpandabottom.png" alt="logo" />;
 
     return (
       <Collapse isOpened={!this.props.generateButtonHidden}>
@@ -31,7 +32,7 @@ class MealPanda extends React.Component {
         transitionEnterTimeout={1000}
         transitionLeaveTimeout={1000}
       >
-        <div className="logo-container">{pandaTop}</div>
+        <div className="logo-container">{pandaBottom}</div>
         </ReactCSSTransitionGroup>
       </Collapse>
     );
