@@ -2,6 +2,7 @@ import React from "react";
 import GroceryListModal from "./GroceryListModal";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import { Collapse } from "react-collapse";
+import SignInModal from "./SignInModal";
 
 import {
   // Popover,
@@ -38,7 +39,8 @@ class Header extends React.Component {
               id="generate-button-new"
             >
               {" "}
-              Let the <span id="generate-button-new-panda">panda</span> decide...{" "}
+              Let the <span id="generate-button-new-panda">panda</span>{" "}
+              decide...{" "}
             </Button>
           </div>
         </ReactCSSTransitionGroup>
@@ -47,22 +49,31 @@ class Header extends React.Component {
 
     const oldTitle = (
       <Collapse isOpened={!this.props.titleHidden}>
-        <ReactCSSTransitionGroup
-          transitionName="title-animation"
-          transitionAppear={true}
-          transitionAppearTimeout={2000}
-          transitionEnterTimeout={2000}
-          transitionLeaveTimeout={2000}
-        >
-          <h1 id="maintitle">
-            Hey Mel ... <br />What do you want for dinner this week?
-          </h1>
-        </ReactCSSTransitionGroup>
+        <div className="no-margin">
+          <ReactCSSTransitionGroup
+            transitionName="title-animation"
+            transitionAppear={true}
+            transitionAppearTimeout={2000}
+            transitionEnterTimeout={2000}
+            transitionLeaveTimeout={2000}
+          >
+            <h1 id="maintitle">
+              Hey Mel ... <br />What do you want for dinner this week?
+            </h1>
+          </ReactCSSTransitionGroup>
+        </div>
       </Collapse>
     );
 
     return (
       <div className="jumbotron">
+        <Collapse isOpened={this.props.titleHidden}>
+          <div className="no-margin">
+            <div>
+              <SignInModal />
+            </div>
+          </div>
+        </Collapse>
         {oldTitle}
         <div className="generate-button-container">{generateButton}</div>
         <div>

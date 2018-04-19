@@ -1,5 +1,4 @@
 import React from "react";
-// import PropTypes from "prop-types";
 import Menu from "./Menu";
 import MealPanda from "./MealPanda";
 import Header from "./Header";
@@ -31,12 +30,13 @@ class App extends React.Component {
     setTimeout(this.showMenu, 750);
     this.setState({ generateButtonHidden: true });
     this.setState({ groceryButtonHidden: false });
-    this.setState({ footerHidden: true });
+    // this.setState({ footerHidden: true });
+    this.setState({ titleHidden: true });
   };
 
   showMenu = () => {
     this.setState({ menuHidden: false });
-  }
+  };
 
   loadGroceryList = () => {
     this.setState({ groceryListHidden: false });
@@ -71,9 +71,8 @@ class App extends React.Component {
 
     randomRecipes.splice(key, 1, newRecipe);
     this.setState({ 
-      randomRecipes: update(this.state.randomRecipes, {$splice: [[key, newRecipe]] })
+      randomRecipes: randomRecipes
   });
-    console.log(this.state.randomRecipes);
   }
 
   authHandler = async authData => {
