@@ -32,7 +32,7 @@ class App extends React.Component {
     this.setState({ generateButtonHidden: true });
     this.setState({ groceryButtonHidden: false });
     this.setState({ footerHidden: true });
-    this.setState({ titleHidden: true });
+    // this.setState({ titleHidden: true });
   };
 
   showMenu = () => {
