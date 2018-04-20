@@ -2,6 +2,7 @@
 https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 html {
     box-sizing: border-box;
+    overflow-y: scroll;
 }
 /* inherit border-box on all elements in the universe and before and after
  */
@@ -267,11 +268,11 @@ html {
     line-height: 1em;
     letter-spacing: 0.05em;
     outline: none !important;
-    color: grey;
+    color: black;
     background-color: white;
     padding: 0.5em;
     border-radius: 0.5em;
-    border-color: grey;
+    border-color: black;
 }
 
 #instructions-button:focus {
@@ -281,11 +282,11 @@ html {
     line-height: 1em;
     letter-spacing: 0.05em;
     outline: none !important;
-    color: grey;
+    color: black;
     background-color: white;
     padding: 0.5em;
     border-radius: 0.5em;
-    border-color: grey;
+    border-color: black;
 }
 
 #instructions-button:hover {
@@ -294,10 +295,10 @@ html {
     font-size: 1.5em;
     line-height: 1em;
     letter-spacing: 0.05em;
-    background-color: grey;
+    background-color: black;
     color: white;
     outline: none !important;
-    border-color: grey;
+    border-color: black;
 }
 
 .btn {
@@ -484,12 +485,6 @@ html {
 
 .col-md-2 .col-sm-12 .col-xs-12 {
     padding: 0;
-}
-
-img {
-    width: 100%;
-    height: auto;
-    box-shadow: 0 5px 10px 0 hsla(0, 0%, 0%, 0.2);
 }
 
 /*img:hover {
@@ -966,38 +961,66 @@ hr {
 
 #menu-items-static {
     opacity: 1;
-    transition: 1.5s ease-in-out;
+    transform: translateY(0) scale(1);
+    transition: 1s;
+    transition-timing-function: cubic-bezier(0.18, 1.5, 0.59, 0.84);
 }
 
-#menu-item-0-animation  {
+#menu-item-0-animation {
     opacity: 0;
-    transition: 1.5s ease-in-out;
+    transform: translateY(175%) scale(0.5);
+    transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
+    transition: 1s;
 }
 
-#menu-item-1-animation  {
+#menu-item-1-animation {
     opacity: 0;
-    transition: 1.5s ease-in-out;
+    transform: translateY(175%) scale(0.5);
+    transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
+    transition: 1s;
 }
 
-#menu-item-2-animation  {
+#menu-item-2-animation {
     opacity: 0;
-    transition: 1.5s ease-in-out;
+    transform: translateY(175%) scale(0.5);
+    transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
+    transition: 1s;
 }
 
-#menu-item-3-animation  {
+#menu-item-3-animation {
     opacity: 0;
-    transition: 1.5s ease-in-out;
+    transform: translateY(175%) scale(0.5);
+    transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
+    transition: 1s;
 }
 
-#menu-item-4-animation  {
+#menu-item-4-animation {
     opacity: 0;
-    transition: 1.5s ease-in-out;
+    transform: translateY(175%) scale(0.5);
+    transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
+    transition: 1s;
 }
 
-#menu-item-5-animation  {
+#menu-item-5-animation {
     opacity: 0;
-    transition: 1.5s ease-in-out;
+    transform: translateY(175%) scale(0.5);
+    transition: 1s;
+    transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
 }
 
 
+.menu-item-image {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 5px 10px 0 hsla(0, 0%, 0%, 0.2);
+    transition: .75s ease-in-out;
+}
 
+.menu-item-image:hover {
+    -webkit-filter: contrast(150%);
+/*    -webkit-filter: brightness(125%);*/
+    -webkit-filter: saturate(125%);
+/*    transform: scale(.95);*/
+border-radius: 50%;
+    transition: .25s ease-in-out;
+}

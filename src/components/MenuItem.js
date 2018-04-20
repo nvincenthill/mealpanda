@@ -13,12 +13,12 @@ class MenuItem extends React.PureComponent {
   handleClick = () => {
     this.setState({ activeIndex: this.props.index });
     this.setState({ isChanging: true });
-    setTimeout(this.changeClass, 1500);
+    setTimeout(this.changeClass, 800);
   };
 
   changeClass = () => {
     console.log("reverting to static");
-    this.props.changeRecipe(this.props.index)
+    this.props.changeRecipe(this.props.index);
     this.setState({ isChanging: false });
     this.setState({ activeIndex: null });
   };
@@ -60,7 +60,7 @@ class MenuItem extends React.PureComponent {
               <Image
                 src={`/images/${this.props.recipeData.image}`}
                 alt={this.props.recipeData.image}
-                className="img"
+                className="menu-item-image"
                 rounded
               />
               <h3 className="name">{this.props.recipeData.name}</h3>
