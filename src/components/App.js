@@ -15,7 +15,6 @@ class App extends React.Component {
   state = {
     randomRecipes: [],
     recipeData: data,
-    loading: true,
     menuHidden: true,
     generateButtonHidden: false,
     groceryButtonHidden: true,
@@ -32,7 +31,7 @@ class App extends React.Component {
     this.setState({ generateButtonHidden: true });
     this.setState({ groceryButtonHidden: false });
     this.setState({ footerHidden: true });
-    // this.setState({ titleHidden: true });
+    this.setState({ titleHidden: true });
   };
 
   showMenu = () => {
@@ -164,7 +163,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({ loading: false }), 750);
     this.generateRandomRecipes();
 
     if (this.state.uid) {
@@ -180,13 +178,6 @@ class App extends React.Component {
   }
 
   render() {
-    const { loading } = this.state;
-
-    if (loading) {
-      // if your component doesn't have to wait for an async action, remove this block
-      return null; // render null when app is not ready
-    }
-
     const pandaLogo = (
       <MealPanda generateButtonHidden={this.state.generateButtonHidden} />
     );
@@ -206,6 +197,7 @@ class App extends React.Component {
           titleHidden={this.state.titleHidden}
           authenticate={this.authenticate}
           userAuthenticated={this.state.userAuthenticated}
+          footerHidden={this.state.footerHidden}
         />
         <Menu
           menuHidden={this.state.menuHidden}
@@ -214,20 +206,12 @@ class App extends React.Component {
         />
         <div className="divider-small" />
 
-        <ReactCSSTransitionGroup
-          transitionName="footer-animation"
-          transitionAppear={true}
-          transitionAppearTimeout={4000}
-          transitionEnterTimeout={4000}
-          transitionLeaveTimeout={4000}
-        >
-          <Footer
-            authenticate={this.authenticate}
-            userAuthenticated={this.state.userAuthenticated}
-            footerHidden={this.state.footerHidden}
-            logOut={this.logOut}
-          />
-        </ReactCSSTransitionGroup>
+        <Footer
+          authenticate={this.authenticate}
+          userAuthenticated={this.state.userAuthenticated}
+          footerHidden={this.state.footerHidden}
+          logOut={this.logOut}
+        />
       </React.Fragment>
     );
   }

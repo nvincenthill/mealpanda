@@ -47,7 +47,7 @@ class Header extends React.Component {
       </Collapse>
     );
 
-    const oldTitle = (
+    const Title = (
       <Collapse isOpened={!this.props.titleHidden}>
           <ReactCSSTransitionGroup
             transitionName="title-animation"
@@ -68,7 +68,7 @@ class Header extends React.Component {
           ))
 
     const signInModal = (
-        <Collapse isOpened={!this.props.userAuthenticated && this.props.titleHidden}>
+        <Collapse isOpened={(!this.props.userAuthenticated && this.props.footerHidden)}>
           <div className="no-margin">
             <div>
               <SignInModal authenticate={this.props.authenticate} />
@@ -77,14 +77,23 @@ class Header extends React.Component {
         </Collapse>
       )
 
+    const pandaLogo = (
+      <Collapse isOpened={this.props.footerHidden}>
+      <div className="header-logo-container">
+        <img id="logo-header" src="/images/mealpanda.png" alt="logo"/>
+      </div>
+      </Collapse>
+      )
+
     return (
       <div className="jumbotron">
-        {oldTitle}
+        {Title}
         <div className="divider">{generateButton}</div>
         <div>
+
         {groceryListModal}
         </div>
-        <div> {this.props.userAuthenticated ? null : signInModal} </div>
+        <div className="sign-in-button-container-header"> {this.props.userAuthenticated ? null : signInModal} </div>
       </div>
     );
   }

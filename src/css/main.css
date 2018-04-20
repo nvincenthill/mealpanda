@@ -1,23 +1,38 @@
 /* Border box declaration 
 https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 /* inherit border-box on all elements in the universe and before and after
  */
-*, 
-*:before, 
+*,
+*:before,
 *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
-#maintitle {
-    font-size: 3em;
-    font-family: "Dancing Script", cursive;
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
-    opacity: 1;
+@media only screen and (max-width: 767px) {
+    /* For mobile: */
+    #maintitle {
+        font-size: 3em;
+        font-family: "Dancing Script", cursive;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    #maintitle {
+        font-size: 4em;
+        font-family: "Dancing Script", cursive;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+    }
 }
 
 .jumbotron {
@@ -26,6 +41,29 @@ html {
     text-align: center;
     padding: 4% 4%;
     margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .jumbotron {
+        padding: 2% 2%;
+    }
+}
+
+.sign-in-button-container-header {
+}
+
+.sign-in-modal-logo-container {
+    margin: auto;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .sign-in-button-container-header {
+        width: 35%;
+        margin: auto;
+    }
 }
 
 .page-header {
@@ -132,7 +170,6 @@ html {
     text-transform: uppercase;
     color: white;
     font-size: 18px;
-/*    font-weight: 600;*/
     line-height: 23px;
     letter-spacing: 2px;
     outline: none !important;
@@ -152,7 +189,7 @@ html {
 .definitions {
     font-family: "Lato";
     font-size: large;
-    opacity: .9;
+    opacity: 0.9;
 }
 
 .grocery-list-button:hover {
@@ -175,6 +212,11 @@ html {
     font-size: 1em;
     margin: 0;
     line-height: 1.5em;
+    color: black;
+}
+
+.link {
+    color: black;
 }
 
 #remove-recipe-button {
@@ -186,8 +228,8 @@ html {
     outline: none !important;
     color: #ff9800;
     background-color: white;
-    padding: .5em;
-    border-radius: .5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
 }
 
 #remove-recipe-button:focus {
@@ -199,8 +241,8 @@ html {
     outline: none !important;
     color: #ff9800;
     background-color: white;
-    padding: .5em;
-    border-radius: .5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
     border-color: #ff9800;
 }
 
@@ -224,8 +266,8 @@ html {
     outline: none !important;
     color: grey;
     background-color: white;
-    padding: .5em;
-    border-radius: .5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
     border-color: grey;
 }
 
@@ -238,8 +280,8 @@ html {
     outline: none !important;
     color: grey;
     background-color: white;
-    padding: .5em;
-    border-radius: .5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
     border-color: grey;
 }
 
@@ -490,12 +532,10 @@ img {
 
 .grocery-list-table-empty {
     font-weight: normal;
-
 }
 
 .grocery-list-table {
     font-family: "Lato";
-/*    table-layout: fixed;*/
     width: 90%;
     margin-bottom: 0;
     overflow-y: auto;
@@ -504,7 +544,7 @@ img {
 
 .ingredients-list-table {
     font-family: "Lato";
-    padding: 1em;
+    padding: 0;
     width: 100%;
     border-spacing: 0.5em 0;
     border-collapse: separate;
@@ -559,7 +599,7 @@ img {
     line-height: 1em;
     background-color: black;
     color: white;
-    border-color: black;
+    border-color: white;
     transition: 1s ease-in-out;
     outline: none !important;
     margin-bottom: 4%;
@@ -580,20 +620,43 @@ img {
     margin-top: 0;
 }
 
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .show-grocery-list {
+        font-size: 2.75em;
+        line-height: 1em;
+        margin-bottom: 2%;
+    }
+
+    .show-grocery-list:hover {
+        font-size: 2.75em;
+        line-height: 1em;
+        margin-bottom: 2%;
+    }
+
+    .show-grocery-list:focus {
+        font-size: 2.75em;
+        line-height: 1em;
+        margin-bottom: 2%;
+    }
+}
+
 .recipe-modal-picture {
     height: 100%;
     width: 100%;
 }
 
+.recipe-modal-picture-container {
+    padding-bottom: 1em;
+}
+
+hr {
+    margin: 1em;
+}
+
 .ingredients-list {
     margin-left: 0;
     margin-right: 0;
-}
-
-#logo {
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0 0 0;
 }
 
 .logo-container {
@@ -607,23 +670,36 @@ img {
 }
 
 #generate-button-new {
-    font: bold 1.85em "Oswald", sans-serif;
+    font: bold 2em "Oswald", sans-serif;
     text-transform: uppercase;
     transition: 1s ease-in-out;
     color: black;
     padding: 0.1em 0.5em;
-    border-radius: .5em;
+    border-radius: 0.5em;
 }
 
 #generate-button-new:hover {
-    -webkit-transform: scale(1.10);
     transition: 1s ease-in-out;
     opacity: 1;
-    background: white;
+    background: black;
+    color: white;
 }
 
-#generate-button-new-panda {
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    #generate-button-new {
+        font: bold 4em "Oswald", sans-serif;
+        text-transform: uppercase;
+        transition: 1s ease-in-out;
+        color: black;
+        padding: 0.1em 0.5em;
+        border-radius: 0.5em;
+    }
 
+    #generate-button-new:hover {
+        transition: 1s ease-in-out;
+        opacity: 1;
+    }
 }
 
 .logo-animation-appear {
@@ -663,7 +739,7 @@ img {
 
 .footer-animation-appear.footer-animation-appear-active {
     opacity: 1;
-    transition: 1.5s ease-in;
+    transition: 1s;
     transition-delay: 2s;
 }
 
@@ -674,7 +750,7 @@ img {
 .title-animation-appear.title-animation-appear-active {
     opacity: 1;
     transition: 1s ease-in-out;
-    transition-delay: .75s;
+    transition-delay: 0.75s;
 }
 
 .generate-button-animation-appear {
@@ -721,7 +797,7 @@ img {
 }
 
 .test {
-    color:red;
+    color: red;
 }
 
 .menu-items-animation-updated {
@@ -729,17 +805,17 @@ img {
 }
 
 .recipe-yield {
-/*    font-weight: bold;*/
+    /*    font-weight: bold;*/
     font-family: "Lato";
     font-size: 1.25em;
-    opacity: .85;
+    opacity: 0.85;
 }
 
 .export-grocery-list {
-/*    font-weight: bold;*/
+    /*    font-weight: bold;*/
     font-family: "Lato";
     font-size: 1.25em;
-    opacity: .85;
+    opacity: 0.85;
     margin-bottom: 10px;
 }
 
@@ -751,6 +827,14 @@ img {
 .footer-buttons {
     margin: auto;
     text-align: center;
+    width: 40%;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .footer-buttons {
+        width: 17%;
+    }
 }
 
 .divider {
@@ -761,9 +845,38 @@ img {
     margin-top: 2%;
 }
 
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .divider {
+        margin-top: 2%;
+    }
+    .divider-small {
+        margin-top: 1%;
+    }
+}
+
 #signInButton {
-    font-size: 1em;
-    border-radius: .5em;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 1em;
+    border-radius: 0.5em;
+    border-width: 1px;
+    border-color: green;
+    color: white;
+}
+
+#signInButton:hover {
+    color: white;
+    background-color: black;
+    border-color: green;
+    border-width: 1px;
+    transition: 1s ease-in-out;
+}
+
+#signInButton:focus {
+    border-color: green;
+    background-color: green;
+    color: white;
 }
 
 .row {
@@ -772,11 +885,78 @@ img {
 
 #logout-button {
     font-size: 1em;
-    border-radius: .5em;
+    border-radius: 0.5em;
 }
 
 .recipe-modal-title {
     font-size: 3em;
     font-family: "Dancing Script", cursive;
     font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .recipe-modal-title {
+        font-size: 4em;
+    }
+}
+
+.signInButtonHeader {
+    width: 75%;
+}
+
+@media only screen and (max-width: 767px) {
+    /* For mobile: */
+    #logo {
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 0 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    #logo {
+        width: 45%;
+        height: 45%;
+        box-shadow: 0 0 0 0;
+    }
+}
+
+.grocery-list-button-container {
+    margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .grocery-list-button-container {
+        width: 45%;
+    }
+}
+
+.header-logo-container {
+    width: 40%;
+    height: 40%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+#logo-header {
+    border-radius: 35%;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .header-logo-container {
+        width: 30%;
+        height: 30%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+
+    #logo-header {
+        border-radius: 50%;
+    }
 }

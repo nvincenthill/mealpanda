@@ -32,31 +32,37 @@ class SignInModal extends React.Component {
     // console.log("MOUNTING SIGN IN MODAL");
   }
 
-
   render() {
     return (
       <div>
-        <Button id="signInButton" bsSize="large" bsStyle="success" onClick={this.handleShow}>
-          Sign in with Google
+        <Button
+          id="signInButton"
+          bsSize="large"
+          bsStyle="success"
+          onClick={this.handleShow}
+          block
+        >
+          Sign in
         </Button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>
-              {" "}
-              <p>Plan smarter. Eat better.</p>
-            </Modal.Title>
+            <div className="sign-in-modal-logo-container">
+              <img id="logo" src="/images/mealpanda.png" alt="logo" />
+            </div>
           </Modal.Header>
           <Modal.Body>
             <Button
-              className="signinbtn"
+              id="signInButton"
               bsStyle="success"
               bsSize="large"
-              onClick={() => this.props.authenticate('Google')}
+              onClick={() => this.props.authenticate("Google")}
             >
               Sign in
             </Button>
-            <p className="sign-in-message">Sign in to save your menu and grocery list.</p>
+            <p className="sign-in-message">
+              Sign in to save your menu and grocery list.
+            </p>
             <hr />
 
             <h4>Privacy policy</h4>
@@ -64,7 +70,8 @@ class SignInModal extends React.Component {
               We respect your privacy, do not tolerate spam, and will never
               sell, rent, lease or give away your information (name, address,
               email, etc.) to any third party. We will not send you unsolicited
-              emails or collect your personal information for commercial purposes.
+              emails or collect your personal information for commercial
+              purposes.
             </Well>
           </Modal.Body>
         </Modal>
