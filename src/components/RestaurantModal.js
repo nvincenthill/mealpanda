@@ -39,6 +39,7 @@ class RestaurantModal extends React.Component {
     return (
       <div>
         <Button
+        id="instructions-button"
           className="btn btn-default"
           bsSize="large"
           onClick={this.handleShow}

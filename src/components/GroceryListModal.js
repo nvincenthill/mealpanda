@@ -40,21 +40,21 @@ class GroceryListModal extends React.Component {
           className="show-grocery-list"
           bsSize="large"
           onClick={this.handleShow}
+          block
         >
-          What do we need?
+          Show Ingredients
         </Button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Ingredients List</Modal.Title>
+            <Modal.Title>Ingredients</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <GroceryList randomRecipes={this.props.randomRecipes} />
           </Modal.Body>
           <Modal.Footer className="recipe-modal-footer"> 
           <div className="export-grocery-list"> 
-            <Button>Download CSV</Button>
-            <Button>Email</Button>
+            <Button>Email me my shopping list!</Button>
           </div>
           <Button className="btn-modal-close" onClick={this.handleClose}>Close</Button> </Modal.Footer>
         </Modal>

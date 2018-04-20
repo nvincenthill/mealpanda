@@ -28,13 +28,13 @@ class Footer extends React.Component {
             & &nbsp;
             <b>
               <a href="https://avhdesign.win/">Alexander Vincent-Hill &nbsp;</a>{" "}
-              <br />
             </b>
-            in <b> 2018 </b>
           </h4>
           <div className="footer-buttons">
+          <div className="divider">
             {this.props.userAuthenticated ? null : signInModal}
             {this.props.userAuthenticated ? logOutButton : null}
+            </div>
           </div>
         </div>
       </Collapse>

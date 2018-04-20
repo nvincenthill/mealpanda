@@ -31,7 +31,7 @@ class App extends React.Component {
     setTimeout(this.showMenu, 750);
     this.setState({ generateButtonHidden: true });
     this.setState({ groceryButtonHidden: false });
-    // this.setState({ footerHidden: true });
+    this.setState({ footerHidden: true });
     this.setState({ titleHidden: true });
   };
 
@@ -202,6 +202,8 @@ class App extends React.Component {
             HideGroceryListButtonHidden={this.state.HideGroceryListButtonHidden}
             hideGroceryList={this.hideGroceryList}
             titleHidden={this.state.titleHidden}
+            authenticate={this.authenticate}
+            userAuthenticated={this.state.userAuthenticated}
           />
           <Menu
             menuHidden={this.state.menuHidden}
