@@ -40,8 +40,12 @@ html {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 4% 4%;
+    padding: 2% 2%;
     margin-bottom: 0;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; /* required */
+    z-index:1; /*height*/
 }
 
 @media only screen and (min-width: 768px) {
@@ -52,19 +56,21 @@ html {
 }
 
 .sign-in-button-container-header {
-}
-
-.sign-in-modal-logo-container {
+    width: 60%;
     margin: auto;
-    text-align: center;
+    
 }
 
 @media only screen and (min-width: 768px) {
     /* For desktop: */
     .sign-in-button-container-header {
-        width: 35%;
-        margin: auto;
+        width: 100%;
     }
+}
+
+.sign-in-modal-logo-container {
+    margin: auto;
+    text-align: center;
 }
 
 .page-header {
@@ -915,14 +921,15 @@ hr {
 @media only screen and (min-width: 768px) {
     /* For desktop: */
     #logo {
-        width: 45%;
-        height: 45%;
+        width: 40%;
+        height: 40%;
         box-shadow: 0 0 0 0;
     }
 }
 
 .grocery-list-button-container {
     margin: auto;
+    width: 75%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -963,7 +970,7 @@ hr {
     opacity: 1;
     transform: translateY(0) scale(1);
     transition: 1s;
-    transition-timing-function: cubic-bezier(0.18, 1.5, 0.59, 0.84);
+    transition-timing-function: cubic-bezier(.18,1.69,1,.91);
 }
 
 #menu-item-0-animation {

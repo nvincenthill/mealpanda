@@ -35,6 +35,7 @@ class SignInModal extends React.Component {
   render() {
     return (
       <div>
+      <div className="sign-in-button-container-header">
         <Button
           id="signInButton"
           bsSize="large"
@@ -44,6 +45,7 @@ class SignInModal extends React.Component {
         >
           Sign in
         </Button>
+      </div>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
