@@ -49,7 +49,7 @@ class RestaurantModal extends React.Component {
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>{instructionsOrDirections}</Modal.Title>
+            <Modal.Title className="recipe-modal-title">{instructionsOrDirections}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <a href={this.props.recipeData.website}><h4>{name}</h4></a>

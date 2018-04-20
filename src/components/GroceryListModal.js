@@ -35,7 +35,7 @@ class GroceryListModal extends React.Component {
     let groceryList = createGroceryList(this.props.randomRecipes);
 
     return (
-      <div>
+      <div className="grocery-list-button-container">
         <Button
           className="show-grocery-list"
           bsSize="large"
