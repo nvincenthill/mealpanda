@@ -19,24 +19,23 @@ class Footer extends React.Component {
           <h4 className="footer">
             {" "}
             Created by &nbsp;
+            <br />
             <b>
               <a href="https://nvincenthill.github.io/">
                 Nicholas Vincent-Hill &nbsp;
               </a>
             </b>
-            and &nbsp;
+            & &nbsp;
             <b>
-              <a href="https://avhdesign.win/">
-                Alexander Vincent-Hill &nbsp;
-              </a>
-            </b> 
-            in &nbsp; 
-            <b>2018</b>
+              <a href="https://avhdesign.win/">Alexander Vincent-Hill &nbsp;</a>{" "}
+              <br />
+            </b>
+            in <b> 2018 </b>
           </h4>
-        <div className="footer-buttons">
-          {this.props.userAuthenticated ? null : signInModal}
-          {this.props.userAuthenticated ? logOutButton : null}
-        </div>
+          <div className="footer-buttons">
+            {this.props.userAuthenticated ? null : signInModal}
+            {this.props.userAuthenticated ? logOutButton : null}
+          </div>
         </div>
       </Collapse>
     );

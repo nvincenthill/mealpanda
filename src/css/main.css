@@ -12,7 +12,7 @@ html {
 }
 
 #maintitle {
-    font-size: 7em;
+    font-size: 3em;
     font-family: "Dancing Script", cursive;
     font-weight: bold;
     padding: 0;
@@ -199,7 +199,7 @@ html {
 .footer {
     text-align: center;
     font-family: "Lato";
-    font-size: 2em;
+    font-size: 1em;
     margin: 2% 2%;
 }
 
@@ -588,18 +588,19 @@ img {
 }
 
 #generate-button-new {
-    font: 700 4em "Oswald", sans-serif;
+    font: bold 2em "Oswald", sans-serif;
     text-transform: uppercase;
     transition: 1s ease-in-out;
     color: black;
-    padding: 8px 30px 11px 30px;
-    border-radius: 15px;
+    padding: 0.1em 0.75em;
+    border-radius: 2em;
 }
 
 #generate-button-new:hover {
-    -webkit-transform: scale(1.15);
+    -webkit-transform: scale(1.10);
     transition: 1s ease-in-out;
     opacity: 1;
+    background: white;
 }
 
 #generate-button-new-panda {
@@ -738,5 +739,5 @@ img {
 }
 
 #signInButton {
-    font-size: 2em;
+    font-size: 1em;
 }
