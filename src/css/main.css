@@ -55,14 +55,18 @@ html {
 .caption {
     text-align: center;
     font-family: "Lato";
+    padding: 0;
 }
 
+.menu-items-animation {
+    padding: 0;
+}
 .day {
     font-family: "Oswald";
     text-transform: uppercase;
     text-align: center;
     font-weight: 600;
-    margin-top: 0;
+    margin: 4%;
     font-size: 3em;
 }
 
@@ -75,17 +79,22 @@ html {
     text-align: center;
 }
 
+#menu-item {
+    padding: 0;
+}
 #ingtable {
     margin: auto;
 }
 
 .thumbnail {
-    padding: 5px;
+    padding: 0%;
     border: 0;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    height: 100%;
+    margin: 0%;
+}
+
+#single-menu-item {
+    padding: 0;
+    margin: 0;
 }
 
 .row.equal {
@@ -97,34 +106,8 @@ html {
 
 /*.btn-default:hover {-webkit-filter: sepia(100%);}*/
 
-.btn-default {
-    font-family: "Oswald";
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 23px;
-    letter-spacing: 1px;
-    outline: none !important;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-.btn-default:focus {
-    margin-top: 5pt;
-    font-family: "Oswald";
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 23px;
-    letter-spacing: 1px;
-    outline: none !important;
-    background-color: white;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-
-
 .name {
-    font-size: 2em;
+    font-size: 3em;
     font-family: "Lato";
     font-weight: 500;
 }
@@ -152,19 +135,6 @@ html {
     border-width: 0;
 }
 
-.btn-success:hover {
-    font-family: "Oswald";
-    color: black;
-    text-transform: uppercase;
-    font-size: 18px;
-    transition: 1s ease-in-out;
-    line-height: 23px;
-    letter-spacing: 2px;
-    background-color: white;
-    outline: none !important;
-    border-width: 0;
-}
-
 .btn-success:focus {
     font-family: "Oswald";
     text-transform: uppercase;
@@ -172,18 +142,16 @@ html {
     line-height: 23px;
     letter-spacing: 2px;
     outline: none !important;
-    background-color: black;
 }
 
 .definitions {
     font-family: "Lato";
     font-size: large;
+    opacity: .9;
 }
 
 .grocery-list-button:hover {
     transition: 0.5s ease-in-out;
-    background-color: black;
-    color: white;
     border-color: #ccc;
 }
 
@@ -203,27 +171,82 @@ html {
     margin: 2% 2%;
 }
 
-.btn-warning {
-    margin-top: 5pt;
+#remove-recipe-button {
     font-family: "Oswald";
     text-transform: uppercase;
-    font-size: 18px;
-    line-height: 23px;
-    letter-spacing: 1px;
+    font-size: 1.5em;
+    line-height: 1em;
+    letter-spacing: 0.05em;
     outline: none !important;
     color: #ff9800;
     background-color: white;
+    padding: .5em;
+    border-radius: .5em;
 }
 
-.btn-warning:focus {
+#remove-recipe-button:focus {
     font-family: "Oswald";
     text-transform: uppercase;
-    font-size: 18px;
-    line-height: 23px;
-    letter-spacing: 1px;
-    background-color: white;
-    color: #ff9800;
+    font-size: 1.5em;
+    line-height: 1em;
+    letter-spacing: 0.05em;
     outline: none !important;
+    color: #ff9800;
+    background-color: white;
+    padding: .5em;
+    border-radius: .5em;
+    border-color: #ff9800;
+}
+
+#remove-recipe-button:hover {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    font-size: 1.5em;
+    line-height: 1em;
+    letter-spacing: 0.05em;
+    background-color: #ff9800;
+    color: white;
+    outline: none !important;
+}
+
+#instructions-button {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    font-size: 1.5em;
+    line-height: 1em;
+    letter-spacing: 0.05em;
+    outline: none !important;
+    color: grey;
+    background-color: white;
+    padding: .5em;
+    border-radius: .5em;
+    border-color: grey;
+}
+
+#instructions-button:focus {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    font-size: 1.5em;
+    line-height: 1em;
+    letter-spacing: 0.05em;
+    outline: none !important;
+    color: grey;
+    background-color: white;
+    padding: .5em;
+    border-radius: .5em;
+    border-color: grey;
+}
+
+#instructions-button:hover {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    font-size: 1.5em;
+    line-height: 1em;
+    letter-spacing: 0.05em;
+    background-color: grey;
+    color: white;
+    outline: none !important;
+    border-color: grey;
 }
 
 .btn {
@@ -290,16 +313,6 @@ html {
 }
 
 .btn-hide {
-}
-
-#hbutton {
-    font-family: "Oswald";
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 23px;
-    letter-spacing: 2px;
-    /*    outline: none !important;*/
-    background-color: black;
 }
 
 .btn-lg {
@@ -414,10 +427,12 @@ html {
 }
 
 .menu-item-thumbnail {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    padding: 0px 0px 0px 0px;
+    margin: 0;
+    padding: 0;
+}
+
+.col-md-2 .col-sm-12 .col-xs-12 {
+    padding: 0;
 }
 
 img {
@@ -521,44 +536,43 @@ img {
 .show-grocery-list {
     font-family: "Oswald";
     text-transform: uppercase;
-    font-size: 18px;
-/*    font-weight: 600;*/
-    line-height: 23px;
-    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 2.75em;
+    line-height: 1em;
     background-color: white;
     color: black;
     outline: none !important;
-    margin-bottom: 1em;
+    margin-bottom: 4%;
     margin-top: 0;
-    outline-offset: 0px;
 }
 
 .show-grocery-list:hover {
     font-family: "Oswald";
     text-transform: uppercase;
-    font-size: 18px;
-    line-height: 23px;
-    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 2.75em;
+    line-height: 1em;
     background-color: black;
     color: white;
+    border-color: black;
+    transition: 1s ease-in-out;
     outline: none !important;
-    margin-bottom: 1em;
+    margin-bottom: 4%;
     margin-top: 0;
-    outline-offset: 0px;
 }
 
 .show-grocery-list:focus {
     font-family: "Oswald";
     text-transform: uppercase;
-    font-size: 18px;
-    line-height: 23px;
-    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 2.75em;
+    line-height: 1em;
     background-color: white;
     color: black;
+    transition: 1s ease-in-out;
     outline: none !important;
-    margin-bottom: 1em;
+    margin-bottom: 4%;
     margin-top: 0;
-    outline-offset: 0px;
 }
 
 .recipe-modal-picture {
@@ -588,11 +602,11 @@ img {
 }
 
 #generate-button-new {
-    font: bold 2em "Oswald", sans-serif;
+    font: bold 1.85em "Oswald", sans-serif;
     text-transform: uppercase;
     transition: 1s ease-in-out;
     color: black;
-    padding: 0.1em 0.75em;
+    padding: 0.1em 0.5em;
     border-radius: 2em;
 }
 
@@ -740,4 +754,8 @@ img {
 
 #signInButton {
     font-size: 1em;
+}
+
+.row {
+    margin: 0;
 }

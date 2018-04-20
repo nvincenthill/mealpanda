@@ -68,10 +68,10 @@ class Header extends React.Component {
           ))
 
     const signInModal = (
-        <Collapse isOpened={this.props.titleHidden}>
+        <Collapse isOpened={!this.props.userAuthenticated && this.props.titleHidden}>
           <div className="no-margin">
             <div>
-              <SignInModal />
+              <SignInModal authenticate={this.props.authenticate} />
             </div>
           </div>
         </Collapse>
@@ -79,12 +79,12 @@ class Header extends React.Component {
 
     return (
       <div className="jumbotron">
-        {signInModal}
         {oldTitle}
         <div className="divider">{generateButton}</div>
         <div>
         {groceryListModal}
         </div>
+        <div> {this.props.userAuthenticated ? null : signInModal} </div>
       </div>
     );
   }

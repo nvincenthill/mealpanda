@@ -7,12 +7,6 @@ import RestaurantModal from "./RestaurantModal";
 class MenuItem extends React.Component {
   state = {
     className: "menu-items-animation"
-    // meal1: this.props.recipeData[0],
-    // meal2: this.props.recipeData[1],
-    // meal3: this.props.recipeData[2],
-    // meal4: this.props.recipeData[3],
-    // meal5: this.props.recipeData[4],
-    // meal6: this.props.recipeData[5]
   };
 
   changeClass = () => {
@@ -47,34 +41,32 @@ class MenuItem extends React.Component {
       );
 
     let item = (
-      <div className={this.state.className}>
-        <Col xs={12} sm={12} md={2}>
-          <Thumbnail className="menu-item-thumbnail">
+      <Col id="menu-item" xs={12} sm={12} md={2}>
+        <Thumbnail className="menu-item-thumbnail">
+          <div id="single-menu-item">
             <h2 className="day">{this.props.week}</h2>
-            <div className="caption">
-              <Image
-                src={`/images/${this.props.recipeData.image}`}
-                alt={this.props.recipeData.image}
-                className="img"
-                rounded
-              />
-              <h3 id="dinnername1" className="name">
-                {this.props.recipeData.name}
-              </h3>
-              <p id="dinnerdef1" className="definitions">
-                {this.props.recipeData.description}
-              </p>{" "}
-              {recipeOrRestaurantModal}
-              <button
-                className="btn btn-warning"
-                onClick={() => this.props.changeRecipe(this.props.index)}
-              >
-                Remove
-              </button>
-            </div>
-          </Thumbnail>
-        </Col>{" "}
-      </div>
+            <Image
+              src={`/images/${this.props.recipeData.image}`}
+              alt={this.props.recipeData.image}
+              className="img"
+              rounded
+            />
+            <h3 className="name">{this.props.recipeData.name}</h3>
+            <p className="definitions">
+              {this.props.recipeData.description}
+            </p>{" "}
+            {recipeOrRestaurantModal}
+            <div className="divider" />
+            <button
+              id="remove-recipe-button"
+              className="btn btn-warning"
+              onClick={() => this.props.changeRecipe(this.props.index)}
+            >
+              Change
+            </button>
+          </div>
+        </Thumbnail>
+      </Col>
     );
     return (
       <ReactCSSTransitionGroup
