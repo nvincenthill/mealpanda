@@ -5,7 +5,6 @@ import { Button } from "react-bootstrap";
 import { Collapse } from "react-collapse";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
-
 class Footer extends React.Component {
   render() {
     const logOutButton = (
@@ -29,29 +28,29 @@ class Footer extends React.Component {
           transitionEnterTimeout={3000}
           transitionLeaveTimeout={3000}
         >
-        <div className="no-margin">
-          <div className="footer-buttons">
-            {this.props.userAuthenticated ? null : signInModal}
-            {this.props.userAuthenticated ? logOutButton : null}
+          <div className="no-margin">
+            <div className="footer-buttons">
+              {this.props.userAuthenticated ? null : signInModal}
+              {this.props.userAuthenticated ? logOutButton : null}
+            </div>
+            <div className="divider-small" />
+            <h4 className="footer">
+              {" "}
+              Created in <b> 2018 </b> by &nbsp;
+              <br />
+              <b>
+                <a className="link" href="https://nvincenthill.github.io/">
+                  Nicholas Vincent-Hill &nbsp;
+                </a>
+              </b>
+              & &nbsp;
+              <b>
+                <a className="link" href="https://avhdesign.win/">
+                  Alexander Vincent-Hill &nbsp;
+                </a>{" "}
+              </b>
+            </h4>
           </div>
-          <div className="divider-small" />
-          <h4 className="footer">
-            {" "}
-            Created in <b> 2018 </b> by &nbsp;
-            <br />
-            <b>
-              <a className="link" href="https://nvincenthill.github.io/">
-                Nicholas Vincent-Hill &nbsp;
-              </a>
-            </b>
-            & &nbsp;
-            <b>
-              <a className="link" href="https://avhdesign.win/">
-                Alexander Vincent-Hill &nbsp;
-              </a>{" "}
-            </b>
-          </h4>
-        </div>
         </ReactCSSTransitionGroup>
       </Collapse>
     );
