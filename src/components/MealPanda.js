@@ -4,19 +4,19 @@ import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 class MealPanda extends React.Component {
   componentWillMount() {
-    console.log("MOUNTING PANDA");
+    // console.log("MOUNTING PANDA");
   }
 
   componentDidMount() {
-    console.log("PANDA MOUNTED!");
+    // console.log("PANDA MOUNTED!");
   }
 
   componentDidUpdate() {
-    console.log("PANDA CHANGED!");
+    // console.log("PANDA CHANGED!");
   }
 
   componentWillUnmount() {
-    console.log("PANDA KILLED!");
+    // console.log("PANDA KILLED!");
   }
 
   render() {

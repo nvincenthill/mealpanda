@@ -25,13 +25,6 @@ class Header extends React.Component {
   render() {
     const generateButton = (
       <Collapse isOpened={!this.props.generateButtonHidden}>
-        <ReactCSSTransitionGroup
-          transitionName="generate-button-animation"
-          transitionAppear={true}
-          transitionAppearTimeout={3000}
-          transitionEnterTimeout={3000}
-          transitionLeaveTimeout={3000}
-        >
           <div className="generate-button-container">
             <Button
               onClick={this.props.loadMenu}
@@ -43,7 +36,6 @@ class Header extends React.Component {
               decide{" "}
             </Button>
           </div>
-        </ReactCSSTransitionGroup>
       </Collapse>
     );
 
