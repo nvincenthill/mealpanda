@@ -313,9 +313,9 @@ class GroceryList extends React.Component {
 
     let empty = (
       <tr className="grocery-list-table-empty">
-        <th>n/a</th>
-        <th>n/a</th>
-        <th>n/a</th>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
       </tr>
     );
 
@@ -336,7 +336,6 @@ class GroceryList extends React.Component {
               <div>
                 <table className="grocery-list-table" align="center">
                   <tbody className="grocery-list-table-body" align="left">
-                    {header}
                     {produceArray ? produceArray : empty}
                   </tbody>
                 </table>
@@ -357,7 +356,6 @@ class GroceryList extends React.Component {
           <Collapse isOpened={this.state.showMeat}>
             <table className="grocery-list-table" align="center">
               <tbody className="grocery-list-table-body" align="left">
-                {header}
                 {meatArray ? meatArray : empty}
               </tbody>
             </table>
@@ -376,7 +374,6 @@ class GroceryList extends React.Component {
           <Collapse isOpened={this.state.showGrains}>
             <table className="grocery-list-table" align="center">
               <tbody className="grocery-list-table-body" align="left">
-                {header}
                 {grainsArray ? grainsArray : empty}
               </tbody>
             </table>
@@ -395,7 +392,6 @@ class GroceryList extends React.Component {
           <Collapse isOpened={this.state.showBread}>
             <table className="grocery-list-table" align="center">
               <tbody className="grocery-list-table-body" align="left">
-                {header}
                 {breadArray ? breadArray : empty}
               </tbody>
             </table>
@@ -414,7 +410,6 @@ class GroceryList extends React.Component {
           <Collapse isOpened={this.state.showDairy}>
             <table className="grocery-list-table" align="center">
               <tbody className="grocery-list-table-body" align="left">
-                {header}
                 {dairyArray ? dairyArray : empty}
               </tbody>
             </table>
@@ -433,7 +428,6 @@ class GroceryList extends React.Component {
           <Collapse isOpened={this.state.showBeverages}>
             <table className="grocery-list-table" align="center">
               <tbody className="grocery-list-table-body" align="left">
-                {header}
                 {beveragesArray ? beveragesArray : empty}
               </tbody>
             </table>
@@ -452,7 +446,6 @@ class GroceryList extends React.Component {
           <Collapse isOpened={this.state.showWine}>
             <table className="grocery-list-table" align="center">
               <tbody className="grocery-list-table-body" align="left">
-                {header}
                 {wineArray ? wineArray : empty}
               </tbody>
             </table>
@@ -471,7 +464,6 @@ class GroceryList extends React.Component {
           <Collapse isOpened={this.state.showCanned}>
             <table className="grocery-list-table" align="center">
               <tbody className="grocery-list-table-body" align="left">
-                {header}
                 {cannedArray ? cannedArray : empty}
               </tbody>
             </table>
@@ -490,7 +482,6 @@ class GroceryList extends React.Component {
           <Collapse isOpened={this.state.showFrozen}>
             <table className="grocery-list-table" align="center">
               <tbody className="grocery-list-table-body" align="left">
-                {header}
                 {frozenArray ? frozenArray : empty}
               </tbody>
             </table>
@@ -509,7 +500,6 @@ class GroceryList extends React.Component {
           <Collapse isOpened={this.state.showCookies}>
             <table className="grocery-list-table" align="center">
               <tbody className="grocery-list-table-body" align="left">
-                {header}
                 {cookiesArray ? cookiesArray : empty}
               </tbody>
             </table>
@@ -528,7 +518,6 @@ class GroceryList extends React.Component {
           <Collapse isOpened={this.state.showCondiments}>
             <table className="grocery-list-table" align="center">
               <tbody className="grocery-list-table-body" align="left">
-                {header}
                 {condimentsArray ? condimentsArray : empty}
               </tbody>
             </table>
@@ -547,7 +536,6 @@ class GroceryList extends React.Component {
           <Collapse isOpened={this.state.showSpices}>
             <table className="grocery-list-table" align="center">
               <tbody className="grocery-list-table-body" align="left">
-                {header}
                 {spicesArray ? spicesArray : empty}
               </tbody>
             </table>

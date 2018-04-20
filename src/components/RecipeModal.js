@@ -64,11 +64,18 @@ class RecipeModal extends React.Component {
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>{name}</Modal.Title>
+            <Modal.Title className="recipe-modal-title">{name}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Row>
-              <Col xs={4} sm={4} md={6}>
+            <Col className="recipe-modal-picture-container" xs={12} sm={12} md={6}>
+              <img
+                className="recipe-modal-picture"
+                src={`/images/${this.props.recipeData.image}`}
+                alt={this.props.recipeData.name}
+              />
+            </Col>
+              <Col xs={12} sm={12} md={6}>
                 <div className="ingredients-list">
                   <table className="ingredients-list-table" align="center">
                     <tbody className="ingredients-list-table-body" align="left">
@@ -77,13 +84,7 @@ class RecipeModal extends React.Component {
                   </table>
                 </div>
               </Col>
-              <Col className="recipe-modal-picture-container" xs={8} sm={8} md={6}>
-                <img
-                  className="recipe-modal-picture"
-                  src={`/images/${this.props.recipeData.image}`}
-                  alt={this.props.recipeData.name}
-                />
-              </Col>
+              
             </Row>
             <hr />
             <h2 className="instructions-list-header">Instructions</h2>

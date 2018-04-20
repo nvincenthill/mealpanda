@@ -495,9 +495,8 @@ img {
 
 .grocery-list-table {
     font-family: "Lato";
-    table-layout: fixed;
-    width: 85%;
-    margin-top: 0;
+/*    table-layout: fixed;*/
+    width: 90%;
     margin-bottom: 0;
     overflow-y: auto;
     border-spacing: 2em 0;
@@ -774,4 +773,10 @@ img {
 #logout-button {
     font-size: 1em;
     border-radius: .5em;
+}
+
+.recipe-modal-title {
+    font-size: 3em;
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
 }
