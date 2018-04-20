@@ -9,7 +9,7 @@ import firebase from "firebase";
 import data from "../recipes.js";
 import { shuffle } from "../helpers";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-import update from 'immutability-helper';
+import update from "immutability-helper";
 
 class App extends React.Component {
   state = {
@@ -24,7 +24,7 @@ class App extends React.Component {
     HideGroceryListButtonHidden: true,
     groceryListHidden: true,
     userAuthenticated: false,
-    uid: null,
+    uid: null
   };
 
   loadMenu = () => {
@@ -71,10 +71,10 @@ class App extends React.Component {
     }
 
     randomRecipes.splice(key, 1, newRecipe);
-    this.setState({ 
+    this.setState({
       randomRecipes: randomRecipes
-  });
-  }
+    });
+  };
 
   authHandler = async authData => {
     this.setState({
@@ -187,29 +187,32 @@ class App extends React.Component {
       return null; // render null when app is not ready
     }
 
-    const pandaLogo = <MealPanda generateButtonHidden={this.state.generateButtonHidden} />;
+    const pandaLogo = (
+      <MealPanda generateButtonHidden={this.state.generateButtonHidden} />
+    );
     return (
       <React.Fragment>
-          {pandaLogo}
-          <Header
-            title="Hey Mel ... What do you want for dinner this week?"
-            loadMenu={this.loadMenu}
-            loadGroceryList={this.loadGroceryList}
-            generateButtonHidden={this.state.generateButtonHidden}
-            groceryButtonHidden={this.state.groceryButtonHidden}
-            groceryListHidden={this.state.groceryListHidden}
-            randomRecipes={this.state.randomRecipes}
-            HideGroceryListButtonHidden={this.state.HideGroceryListButtonHidden}
-            hideGroceryList={this.hideGroceryList}
-            titleHidden={this.state.titleHidden}
-            authenticate={this.authenticate}
-            userAuthenticated={this.state.userAuthenticated}
-          />
-          <Menu
-            menuHidden={this.state.menuHidden}
-            recipeData={this.state.randomRecipes}
-            changeRecipe={this.changeRecipe}
-          />
+        {pandaLogo}
+        <Header
+          title="Hey Mel ... What do you want for dinner this week?"
+          loadMenu={this.loadMenu}
+          loadGroceryList={this.loadGroceryList}
+          generateButtonHidden={this.state.generateButtonHidden}
+          groceryButtonHidden={this.state.groceryButtonHidden}
+          groceryListHidden={this.state.groceryListHidden}
+          randomRecipes={this.state.randomRecipes}
+          HideGroceryListButtonHidden={this.state.HideGroceryListButtonHidden}
+          hideGroceryList={this.hideGroceryList}
+          titleHidden={this.state.titleHidden}
+          authenticate={this.authenticate}
+          userAuthenticated={this.state.userAuthenticated}
+        />
+        <Menu
+          menuHidden={this.state.menuHidden}
+          recipeData={this.state.randomRecipes}
+          changeRecipe={this.changeRecipe}
+        />
+        <div className="divider-small" />
 
         <ReactCSSTransitionGroup
           transitionName="footer-animation"

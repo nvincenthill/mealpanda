@@ -40,7 +40,7 @@ class Header extends React.Component {
             >
               {" "}
               Let the <span id="generate-button-new-panda">panda</span>{" "}
-              decide...{" "}
+              decide{" "}
             </Button>
           </div>
         </ReactCSSTransitionGroup>
