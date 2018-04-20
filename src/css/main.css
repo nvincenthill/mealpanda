@@ -115,10 +115,15 @@ html {
 .btn-danger {
     font-family: "Oswald";
     text-transform: uppercase;
-    font-size: 18px;
-    line-height: 23px;
-    letter-spacing: 2px;
-    background-color: black;
+    font-size: 1em;
+    line-height: 1em;
+    letter-spacing: 0.1em;
+    outline: none !important;
+}
+
+.btn-danger:focus {
+    font-family: "Oswald";
+    text-transform: uppercase;
     outline: none !important;
 }
 
@@ -168,7 +173,8 @@ html {
     text-align: center;
     font-family: "Lato";
     font-size: 1em;
-    margin: 2% 2%;
+    margin: 0;
+    line-height: 1.5em;
 }
 
 #remove-recipe-button {
@@ -607,7 +613,7 @@ img {
     transition: 1s ease-in-out;
     color: black;
     padding: 0.1em 0.5em;
-    border-radius: 2em;
+    border-radius: .5em;
 }
 
 #generate-button-new:hover {
@@ -752,10 +758,20 @@ img {
     margin-top: 4%;
 }
 
+.divider-small {
+    margin-top: 2%;
+}
+
 #signInButton {
     font-size: 1em;
+    border-radius: .5em;
 }
 
 .row {
     margin: 0;
+}
+
+#logout-button {
+    font-size: 1em;
+    border-radius: .5em;
 }

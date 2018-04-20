@@ -7,7 +7,7 @@ import { Collapse } from "react-collapse";
 class Footer extends React.Component {
   render() {
     const logOutButton = (
-      <Button bsSize="large" onClick={this.props.logOut}>
+      <Button id="logout-button" bsStyle="danger" bsSize="large" onClick={this.props.logOut}>
         {" "}
         Log Out{" "}
       </Button>
@@ -31,7 +31,7 @@ class Footer extends React.Component {
             </b>
           </h4>
           <div className="footer-buttons">
-          <div className="divider">
+          <div className="divider-small">
             {this.props.userAuthenticated ? null : signInModal}
             {this.props.userAuthenticated ? logOutButton : null}
             </div>
