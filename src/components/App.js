@@ -51,7 +51,6 @@ class App extends React.Component {
   };
 
   changeRecipe = key => {
-    console.log(key);
     const mixed = shuffle(this.state.recipeData);
     const randomRecipes = this.state.randomRecipes;
     const oldRecipe = randomRecipes[key];
@@ -69,9 +68,10 @@ class App extends React.Component {
       }
     }
 
-    randomRecipes.splice(key, 1, newRecipe);
+    let newRecipes = randomRecipes;
+    newRecipes[key] = newRecipe
     this.setState({
-      randomRecipes: randomRecipes
+      randomRecipes: newRecipes
     });
   };
 

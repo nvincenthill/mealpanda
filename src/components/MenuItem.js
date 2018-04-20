@@ -4,13 +4,23 @@ import { Col, Image, Thumbnail } from "react-bootstrap";
 import RecipeModal from "./RecipeModal";
 import RestaurantModal from "./RestaurantModal";
 
-class MenuItem extends React.Component {
+class MenuItem extends React.PureComponent {
   state = {
-    className: "menu-items-animation"
+    isChanging: false,
+    activeIndex: null
+  };
+
+  handleClick = () => {
+    this.setState({ activeIndex: this.props.index });
+    this.setState({ isChanging: true });
+    setTimeout(this.changeClass, 1500);
   };
 
   changeClass = () => {
-    this.setState({ className: "menu-items-animation" });
+    console.log("reverting to static");
+    this.props.changeRecipe(this.props.index)
+    this.setState({ isChanging: false });
+    this.setState({ activeIndex: null });
   };
 
   componentWillMount() {
@@ -21,12 +31,7 @@ class MenuItem extends React.Component {
     console.log("ITEM MOUNTED!");
   }
 
-  componentDidUpdate() {
-    console.log(`Updated item #${this.props.index}`);
-    if (this.state.className === "fancy-flash-class-in") {
-      setTimeout(this.changeClass, 500);
-    }
-  }
+  componentDidUpdate() {}
 
   componentWillUnmount() {
     console.log("ITEM KILLED!");
@@ -45,25 +50,33 @@ class MenuItem extends React.Component {
         <Thumbnail className="menu-item-thumbnail">
           <div id="single-menu-item">
             <h2 className="day">{this.props.week}</h2>
-            <Image
-              src={`/images/${this.props.recipeData.image}`}
-              alt={this.props.recipeData.image}
-              className="img"
-              rounded
-            />
-            <h3 className="name">{this.props.recipeData.name}</h3>
-            <p className="definitions">
-              {this.props.recipeData.description}
-            </p>{" "}
-            {recipeOrRestaurantModal}
-            <div className="divider" />
-            <button
-              id="remove-recipe-button"
-              className="btn btn-warning"
-              onClick={() => this.props.changeRecipe(this.props.index)}
+            <div
+              id={
+                this.state.isChanging
+                  ? `menu-item-${this.props.index}-animation`
+                  : "menu-items-static"
+              }
             >
-              Change
-            </button>
+              <Image
+                src={`/images/${this.props.recipeData.image}`}
+                alt={this.props.recipeData.image}
+                className="img"
+                rounded
+              />
+              <h3 className="name">{this.props.recipeData.name}</h3>
+              <p className="definitions">
+                {this.props.recipeData.description}
+              </p>{" "}
+              {recipeOrRestaurantModal}
+              <div className="divider" />
+              <button
+                id="remove-recipe-button"
+                className="btn btn-warning"
+                onClick={this.handleClick}
+              >
+                Change
+              </button>
+            </div>
           </div>
         </Thumbnail>
       </Col>

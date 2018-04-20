@@ -69,7 +69,7 @@ const recipes = [
         "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
       userInteractionCount: "5"
     },
-    name: "Nick's Basil Pesto",
+    name: "Nick's Basil Pesto and Gnocchi",
     nutrition: {
       "@type": "NutritionInformation",
       calories: "1200 calories",
@@ -95,7 +95,7 @@ const recipes = [
     author: "Nicholas Vincent-Hill",
     cookTime: "PT2H",
     datePublished: "2015-05-18",
-    description: "A homemade chicken pot pie seasoned with sage and thyme",
+    description: "A chicken pot pie seasoned with sage and thyme",
     image: "pie.png",
     recipeIngredient: [
       {
@@ -183,7 +183,7 @@ const recipes = [
         "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
       userInteractionCount: "5"
     },
-    name: "Chicken Pot Pie",
+    name: "Savory Chicken Pot Pie",
     nutrition: {
       "@type": "NutritionInformation",
       calories: "1200 calories",
@@ -298,7 +298,7 @@ const recipes = [
     author: "Nicholas Vincent-Hill",
     cookTime: "PT2H",
     datePublished: "2015-05-18",
-    description: "Deep fried panko-battered shimp with a homemade garlic aioli",
+    description: "Deep fried shimp with a homemade garlic aioli",
     image: "pshrimp.png",
     recipeIngredient: [
       {
@@ -549,7 +549,7 @@ const recipes = [
         "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
       userInteractionCount: "5"
     },
-    name: "Steak Au Poivre and Tarragon Potatoes",
+    name: "Steak Au Poivre and Potatoes",
     nutrition: {
       "@type": "NutritionInformation",
       calories: "1200 calories",
@@ -578,7 +578,7 @@ const recipes = [
     author: "Nicholas Vincent-Hill",
     cookTime: "PT2H",
     datePublished: "2015-05-18",
-    description: "Thin-crust Italian style pizza",
+    description: "Thin-crust Italian style pizza with à la carte toppings",
     image: "pizza.png",
     recipeIngredient: [
       {
@@ -642,7 +642,7 @@ const recipes = [
         "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
       userInteractionCount: "5"
     },
-    name: "Nick's Pizza",
+    name: "Nick's Neapolitan Pizza",
     nutrition: {
       "@type": "NutritionInformation",
       calories: "1200 calories",
@@ -671,7 +671,7 @@ const recipes = [
     author: "Nicholas Vincent-Hill",
     cookTime: "PT2H",
     datePublished: "2015-05-18",
-    description: "Thai stir-fried rice noodles",
+    description: "Stir-fried rice noodles with shrimp and fresh vegetables",
     image: "pthai.png",
     recipeIngredient: [
       {
@@ -735,7 +735,7 @@ const recipes = [
         "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
       userInteractionCount: "5"
     },
-    name: "Melody's Pad Thai",
+    name: "Melody's Famous Pad Thai",
     nutrition: {
       "@type": "NutritionInformation",
       calories: "1200 calories",
@@ -765,7 +765,7 @@ const recipes = [
     cookTime: "PT2H",
     datePublished: "2015-05-18",
     description:
-      "A popular Thai dish consisting of red curry paste cooked in coconut milk",
+      "A popular Thai red curry cooked in coconut milk",
     image: "rcurry.png",
     recipeIngredient: [
       {
@@ -829,7 +829,7 @@ const recipes = [
         "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
       userInteractionCount: "5"
     },
-    name: "Melody's Favorite Thai Red Curry",
+    name: "Melody's Thai Red Curry",
     nutrition: {
       "@type": "NutritionInformation",
       calories: "1200 calories",
@@ -952,7 +952,7 @@ const recipes = [
     cookTime: "PT2H",
     datePublished: "2015-05-18",
     description:
-      "Braised pork belly - one of the most popular comfort foods in Taiwan",
+      "One of the most popular comfort foods in Taiwan",
     image: "pbelly.png",
     recipeIngredient: [
       {
@@ -1130,7 +1130,7 @@ const recipes = [
     author: "Nicholas Vincent-Hill",
     cookTime: "PT2H",
     datePublished: "2015-05-18",
-    description: "Hawaiian marinated chicken - served with rice",
+    description: "Marinated chicken grilled with pineapple and rice",
     image: "hchicken.png",
     recipeIngredient: [
       {
@@ -1194,7 +1194,7 @@ const recipes = [
         "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
       userInteractionCount: "5"
     },
-    name: "Hawaiian Pineapple Grilled Chicken",
+    name: "Hawaiian Grilled Chicken",
     nutrition: {
       "@type": "NutritionInformation",
       calories: "1200 calories",
@@ -1401,7 +1401,7 @@ const recipes = [
         "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
       userInteractionCount: "5"
     },
-    name: "The Vincent's Chicken Salad",
+    name: "Vincent's Chicken Salad",
     nutrition: {
       "@type": "NutritionInformation",
       calories: "1200 calories",
@@ -1493,7 +1493,7 @@ const recipes = [
         "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
       userInteractionCount: "5"
     },
-    name: "Braised Pork Shoulder",
+    name: "Braised Pork Shoulder Sandwiches",
     nutrition: {
       "@type": "NutritionInformation",
       calories: "1200 calories",
@@ -1523,7 +1523,7 @@ const recipes = [
     cookTime: "",
     datePublished: "2018-22-2018",
     description:
-      "A rustic neighborhood restaurant serving the American brasserie experience",
+      "A rustic neighborhood American gastro-pub",
     image: "wtavern.png",
     address: "6317 College Ave, Oakland, CA 94618",
     website: "https://www.woodtavern.net/",
@@ -1534,7 +1534,7 @@ const recipes = [
         "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
       userInteractionCount: "5"
     },
-    name: "Wood Tavern",
+    name: "Wood Tavern Brasserie",
     nutrition: {
       "@type": "NutritionInformation",
       calories: "1200 calories",
@@ -1555,7 +1555,7 @@ const recipes = [
     cookTime: "",
     datePublished: "2018-22-2018",
     description:
-      "Neighborhood bistro offering modern & classic Italian cuisine served in a cozy space",
+      "Neighborhood gem serving classic Italian cuisine",
     image: "belotti.png",
     address: "5403 College Ave, Oakland, CA 94618",
     website: "http://belottirb.com/",
@@ -1566,7 +1566,7 @@ const recipes = [
         "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
       userInteractionCount: "5"
     },
-    name: "Belotti Ristorante",
+    name: "Belotti Ristorante e Bottega",
     nutrition: {
       "@type": "NutritionInformation",
       calories: "1200 calories",
@@ -1668,7 +1668,7 @@ const recipes = [
         "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
       userInteractionCount: "5"
     },
-    name: "Tuna Tartare",
+    name: "Tuna Tartare with Avocado",
     nutrition: {
       "@type": "NutritionInformation",
       calories: "1200 calories",
