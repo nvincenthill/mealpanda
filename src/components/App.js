@@ -18,6 +18,7 @@ class App extends React.Component {
     menuHidden: true,
     generateButtonHidden: false,
     groceryButtonHidden: true,
+    pandaHidden: false,
     titleHidden: false,
     footerHidden: false,
     HideGroceryListButtonHidden: true,
@@ -32,6 +33,7 @@ class App extends React.Component {
     this.setState({ groceryButtonHidden: false });
     this.setState({ footerHidden: true });
     this.setState({ titleHidden: true });
+    this.setState({ pandaHidden: true });
   };
 
   showMenu = () => {
@@ -179,7 +181,7 @@ class App extends React.Component {
 
   render() {
     const pandaLogo = (
-      <MealPanda generateButtonHidden={this.state.generateButtonHidden} />
+      <MealPanda pandaHidden={this.state.pandaHidden} />
     );
     return (
       <React.Fragment>
