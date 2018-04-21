@@ -1,16 +1,14 @@
 import React from "react";
 import Menu from "./Menu";
 import MealPanda from "./MealPanda";
-import MealPandaBottom from "./MealPandaBottom";
 import Header from "./Header";
 import Footer from "./Footer";
 import base, { firebaseApp } from "../base";
 import firebase from "firebase";
 import data from "../recipes.js";
 import { shuffle } from "../helpers";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-import update from "immutability-helper";
-import { mandrill } from "node-mandrill";
+// import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+// import update from "immutability-helper";
 
 class App extends React.Component {
   state = {
@@ -37,7 +35,7 @@ class App extends React.Component {
     this.setState({ footerHidden: true });
     this.setState({ titleHidden: true });
     this.setState({ pandaHidden: true });
-    this.setState({ pandaMessage: "Reawaken the menu panda" });
+    this.setState({ pandaMessage: "Reawaken the meal panda" });
   };
 
   returnToMain = () => {
@@ -92,14 +90,14 @@ class App extends React.Component {
   };
 
   regenerate = () => {
-    this.setState({ pandaMessage: "Pawstulating new menu..." });
+    this.setState({ pandaMessage: "Pawstulating new meals..." });
     setTimeout(() => this.handleClick("0"), 0);
     setTimeout(() => this.handleClick("1"), 2000);
     setTimeout(() => this.handleClick("2"), 4000);
     setTimeout(() => this.handleClick("3"), 6000);
     setTimeout(() => this.handleClick("4"), 8000);
     setTimeout(() => this.handleClick("5"), 10000);
-    setTimeout(() => this.setState({ pandaMessage: "Reawaken the panda" }), 12000);
+    setTimeout(() => this.setState({ pandaMessage: "Reawaken the meal panda" }), 12000);
   }; 
 
   handleClick = index => {
@@ -220,6 +218,7 @@ class App extends React.Component {
     }
   };
 
+  //TODO Do not mutate state
   componentWillMount() {
     for (let j = 0; j < this.state.recipeData.length; j++) {
       let sortedIngredients = this.state.recipeData[j].recipeIngredient.sort(
@@ -229,6 +228,7 @@ class App extends React.Component {
       );
       this.state.recipeData[j].recipeIngredient = sortedIngredients;
     }
+    // this.setState({ randomRecipes: randomRecipes });
   }
 
   componentDidMount() {

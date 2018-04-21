@@ -1,10 +1,10 @@
 import React from "react";
-import { mandrill } from "node-mandrill";
+// import { mandrill } from "node-mandrill";
 import {
   // Popover,
   // Tooltip,
   Button,
-  Modal
+  // Modal
   // OverlayTrigger
   // Well
 } from "react-bootstrap";

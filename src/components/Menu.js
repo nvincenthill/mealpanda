@@ -1,7 +1,7 @@
 import React from "react";
 import MenuItem from "./MenuItem";
 import { Grid, Row } from "react-bootstrap";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+// import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import { Collapse } from "react-collapse";
 
 class Menu extends React.Component {

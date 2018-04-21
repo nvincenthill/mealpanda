@@ -3,6 +3,7 @@ import GroceryListModal from "./GroceryListModal";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import { Collapse } from "react-collapse";
 import SignInModal from "./SignInModal";
+import MealPandaButton from "./MealPandaButton";
 
 import {
   // Popover,
@@ -23,23 +24,6 @@ class Header extends React.Component {
   }
 
   render() {
-    const letThePandaDecide = (
-      <Collapse
-        isOpened={!this.props.generateButtonHidden}
-        springConfig={{ stiffness: 100, damping: 10, precision: 20 }}
-      >
-        <div className="generate-button-container">
-          <Button
-            onClick={this.props.router}
-            type="submit"
-            id="generate-button-new"
-          >
-            {this.props.pandaMessage}
-          </Button>
-        </div>
-      </Collapse>
-    );
-
     const title = (
       <Collapse isOpened={!this.props.titleHidden}>
         <ReactCSSTransitionGroup
@@ -78,12 +62,12 @@ class Header extends React.Component {
     const pandaLogo = (
       <div className="header-logo-container">
         <Collapse isOpened={this.props.footerHidden}>
-            <img
-              onClick={this.props.returnToMain}
-              id="logo-header"
-              src="/images/mealpanda.png"
-              alt="logo"
-            />
+          <img
+            onClick={this.props.returnToMain}
+            id="logo-header"
+            src="/images/mealpanda.png"
+            alt="logo"
+          />
         </Collapse>
       </div>
     );
@@ -104,7 +88,12 @@ class Header extends React.Component {
         <div className="flex-title">{title}</div>
 
         <div className="inflexction">
-          {pandaLogo} {letThePandaDecide}{" "}
+          {pandaLogo}{" "}
+          <MealPandaButton
+            router={this.props.router}
+            generateButtonHidden={this.props.generateButtonHidden}
+            pandaMessage={this.props.pandaMessage}
+          />
           <div className="aux">
             {" "}
             {ingredients}{" "}
