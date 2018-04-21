@@ -30,14 +30,11 @@ class Header extends React.Component {
       >
         <div className="generate-button-container">
           <Button
-            onClick={this.props.loadMenu}
+            onClick={this.props.router}
             type="submit"
             id="generate-button-new"
           >
-            {" "}
-            Let the <span id="generate-button-new-panda">
-              panda
-            </span> decide{" "}
+            {this.props.pandaMessage}
           </Button>
         </div>
       </Collapse>
@@ -60,7 +57,10 @@ class Header extends React.Component {
     );
 
     const ingredients = this.props.groceryButtonHidden ? null : (
-      <GroceryListModal randomRecipes={this.props.randomRecipes} />
+      <GroceryListModal
+        randomRecipes={this.props.randomRecipes}
+        email={this.props.email}
+      />
     );
 
     const signIn = (
@@ -76,21 +76,34 @@ class Header extends React.Component {
     );
 
     const pandaLogo = (
+      <div className="header-logo-container">
       <Collapse isOpened={this.props.footerHidden}>
-        <div className="header-logo-container">
-          <img id="logo-header" src="/images/mealpanda.png" alt="logo" />
+        <div className="no-margin">
+          <img onClick={this.props.returnToMain} id="logo-header" src="/images/mealpanda.png" alt="logo" />
         </div>
       </Collapse>
+      </div>
+    );
+
+    const logOutButton = (
+      <Button
+        id="logOutButton"
+        bsStyle="danger"
+        bsSize="large"
+        onClick={this.props.logOut}
+      >
+        Log Out
+      </Button>
     );
 
     return (
       <div className="jumbotron">
-        {title}
-        <div className="divider">{letThePandaDecide}</div>
-        <div>{ingredients}</div>
-        <div className="sign-in-button-container-header">
-          {" "}
-          {this.props.userAuthenticated ? null : signIn}{" "}
+        <div className="flex-title">{title}</div>
+        <div>{letThePandaDecide}</div>
+        {pandaLogo}
+        <div className="aux"> {ingredients} {(this.props.userAuthenticated && this.props.titleHidden) ? logOutButton : signIn}</div>
+        <div>
+          
         </div>
       </div>
     );

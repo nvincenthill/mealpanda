@@ -41,6 +41,9 @@ class Menu extends React.Component {
                   handleShowInformationModal={
                     this.props.handleShowInformationModal
                   }
+                  isChanging={this.props.isChanging} 
+                  activeIndex={this.props.activeIndex}
+                  handleClick={this.props.handleClick}
                 />
               ))}
           </Row>

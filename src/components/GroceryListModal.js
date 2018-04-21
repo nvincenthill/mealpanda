@@ -1,6 +1,7 @@
 import React from "react";
 import GroceryList from "./GroceryList";
 import { createGroceryList, downloadCSV } from "../helpers";
+import Email from "./Email";
 
 import {
   // Popover,
@@ -40,9 +41,8 @@ class GroceryListModal extends React.Component {
           className="show-grocery-list"
           bsSize="large"
           onClick={this.handleShow}
-          block
         >
-          Ingredients
+          Grocery List
         </Button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
@@ -54,7 +54,7 @@ class GroceryListModal extends React.Component {
           </Modal.Body>
           <Modal.Footer className="recipe-modal-footer"> 
           <div className="export-grocery-list"> 
-            <Button>Email me my shopping list!</Button>
+            <Email email={this.props.email}/>
           </div>
           <Button className="btn-modal-close" onClick={this.handleClose}>Close</Button> </Modal.Footer>
         </Modal>

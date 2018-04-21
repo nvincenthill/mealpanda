@@ -10,6 +10,7 @@ import data from "../recipes.js";
 import { shuffle } from "../helpers";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import update from "immutability-helper";
+import { mandrill } from "node-mandrill";
 
 class App extends React.Component {
   state = {
@@ -24,16 +25,29 @@ class App extends React.Component {
     HideGroceryListButtonHidden: true,
     groceryListHidden: true,
     userAuthenticated: false,
-    uid: null
+    uid: null,
+    pandaMessage: "Let the panda decide",
+    isChanging: false,
+    activeIndex: null
   };
 
   loadMenu = () => {
     setTimeout(this.showMenu, 750);
-    this.setState({ generateButtonHidden: true });
     this.setState({ groceryButtonHidden: false });
     this.setState({ footerHidden: true });
     this.setState({ titleHidden: true });
     this.setState({ pandaHidden: true });
+    this.setState({ pandaMessage: "Regenerate menu" });
+  };
+
+  returnToMain = () => {
+    this.setState({ pandaHidden: false });
+    this.setState({ titleHidden: false });
+    this.setState({ menuHidden: true });
+    this.setState({ generateButtonHidden: false });
+    this.setState({ groceryButtonHidden: true });
+    this.setState({ footerHidden: false });
+    this.setState({ pandaMessage: "Let the panda decide" });
   };
 
   showMenu = () => {
@@ -71,10 +85,36 @@ class App extends React.Component {
     }
 
     let newRecipes = randomRecipes;
-    newRecipes[key] = newRecipe
+    newRecipes[key] = newRecipe;
     this.setState({
       randomRecipes: newRecipes
     });
+  };
+
+  regenerate = () => {
+    this.setState({ pandaMessage: "Pawstulating new menu..." });
+    setTimeout(() => this.handleClick("0"), 0);
+    setTimeout(() => this.handleClick("1"), 2000);
+    setTimeout(() => this.handleClick("2"), 4000);
+    setTimeout(() => this.handleClick("3"), 6000);
+    setTimeout(() => this.handleClick("4"), 8000);
+    setTimeout(() => this.handleClick("5"), 10000);
+    setTimeout(() => this.setState({ pandaMessage: "Bamboo-zled! Try again" }), 12000);
+  }; 
+
+  handleClick = index => {
+    console.log("handling click!");
+    console.log(index);
+    this.setState({ activeIndex: index });
+    this.setState({ isChanging: true });
+    setTimeout(() => this.changeClass(index), 800);
+  };
+
+  changeClass = index => {
+    console.log("reverting to static");
+    this.changeRecipe(index);
+    this.setState({ isChanging: false });
+    this.setState({ activeIndex: null });
   };
 
   authHandler = async authData => {
@@ -112,6 +152,30 @@ class App extends React.Component {
       .auth()
       .signInWithPopup(authProvider)
       .then(this.authHandler);
+  };
+
+  email = () => {
+    var mandrill = require("node-mandrill")(
+      "3150df61a2dce2abb43bb3da4fa3879d-us18"
+    );
+    mandrill(
+      "/messages/send",
+      {
+        message: {
+          to: [{ email: "nvincenthill@gmail.com", name: "Jim Rubenstein" }],
+          from_email: "nvincenthill@gmail.com",
+          subject: "Hey, what's up?",
+          text: "Hello, I sent this message using mandrill."
+        }
+      },
+      function(error, response) {
+        //uh oh, there was an error
+        if (error) console.log(JSON.stringify(error));
+        else
+          //everything's good, lets see what mandrill said
+          console.log(response);
+      }
+    );
   };
 
   logOut = async () => {
@@ -153,6 +217,14 @@ class App extends React.Component {
     });
   };
 
+  router = () => {
+    if (this.state.menuHidden) {
+      this.loadMenu();
+    } else {
+      this.regenerate();
+    }
+  };
+
   componentWillMount() {
     for (let j = 0; j < this.state.recipeData.length; j++) {
       let sortedIngredients = this.state.recipeData[j].recipeIngredient.sort(
@@ -180,9 +252,7 @@ class App extends React.Component {
   }
 
   render() {
-    const pandaLogo = (
-      <MealPanda pandaHidden={this.state.pandaHidden} />
-    );
+    const pandaLogo = <MealPanda pandaHidden={this.state.pandaHidden} />;
     return (
       <React.Fragment>
         {pandaLogo}
@@ -200,11 +270,20 @@ class App extends React.Component {
           authenticate={this.authenticate}
           userAuthenticated={this.state.userAuthenticated}
           footerHidden={this.state.footerHidden}
+          email={this.email}
+          logOut={this.logOut}
+          returnToMain={this.returnToMain}
+          pandaMessage={this.state.pandaMessage}
+          router={this.router}
+          activeIndex={this.state.activeIndex}
         />
         <Menu
           menuHidden={this.state.menuHidden}
           recipeData={this.state.randomRecipes}
           changeRecipe={this.changeRecipe}
+          isChanging={this.state.isChanging}
+          activeIndex={this.state.activeIndex}
+          handleClick={this.handleClick}
         />
         <div className="divider-small" />
 

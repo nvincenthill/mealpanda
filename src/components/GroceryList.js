@@ -14,6 +14,7 @@ class GroceryList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      showEverything: false,
       showProduce: false,
       showMeat: false,
       showGrains: false,
@@ -28,6 +29,16 @@ class GroceryList extends React.Component {
       showSpices: false
     };
   }
+
+  showOrHideEverything = () => {
+    let temp = this.state.showEverything;
+    if (!temp) {
+      temp = true;
+    } else {
+      temp = false;
+    }
+    this.setState({ showEverything: temp });
+  };
 
   showOrHideProduce = () => {
     let temp = this.state.showProduce;
@@ -189,6 +200,16 @@ class GroceryList extends React.Component {
       return val !== undefined;
     });
 
+    console.log(groceryList);
+
+      groceryList = groceryList.map(key => (
+        <tr key={`${key.name}`} className="grocery-list-table-row">
+          <td key={`${key.quantity}2`}>{key.quantity}</td>
+          <td key={`${key.uom}3`}>{key.uom}</td>
+          <td key={`${key.name}1`}>{key.name}</td>
+        </tr>
+      ));
+
     if (spicesArray) {
       spicesArray = spicesArray.map(key => (
         <tr key={`${key.name}`} className="grocery-list-table-row">
@@ -320,8 +341,30 @@ class GroceryList extends React.Component {
     );
 
     return (
-      <div className="grocery-list">
-        <div>
+      <React.Fragment>
+      <div className="grocery-list-button-container">
+        <Button
+          className="grocery-list-button"
+          onClick={this.showOrHideEverything}
+          bsStyle="default"
+          bsSize="large"
+          block
+        >
+          Show me everything!
+        </Button>
+        <Collapse isOpened={this.state.showEverything}>
+          <div className="tempclass">
+            <div>
+              <table className="grocery-list-table" align="center">
+                <tbody className="grocery-list-table-body" align="left">
+                  {groceryList}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </Collapse>
+      </div>
+        <div className="grocery-list-button-container">
           <Button
             className="grocery-list-button"
             onClick={this.showOrHideProduce}
@@ -343,7 +386,7 @@ class GroceryList extends React.Component {
             </div>
           </Collapse>
         </div>
-        <div>
+        <div className="grocery-list-button-container">
           <Button
             className="grocery-list-button"
             onClick={this.showOrHideMeat}
@@ -361,7 +404,7 @@ class GroceryList extends React.Component {
             </table>
           </Collapse>
         </div>
-        <div>
+        <div className="grocery-list-button-container">
           <Button
             className="grocery-list-button"
             onClick={this.showOrHideGrains}
@@ -379,7 +422,7 @@ class GroceryList extends React.Component {
             </table>
           </Collapse>
         </div>
-        <div>
+        <div className="grocery-list-button-container">
           <Button
             className="grocery-list-button"
             onClick={this.showOrHideBread}
@@ -397,7 +440,7 @@ class GroceryList extends React.Component {
             </table>
           </Collapse>
         </div>
-        <div>
+        <div className="grocery-list-button-container">
           <Button
             className="grocery-list-button"
             onClick={this.showOrHideDairy}
@@ -415,7 +458,7 @@ class GroceryList extends React.Component {
             </table>
           </Collapse>
         </div>
-        <div>
+        <div className="grocery-list-button-container">
           <Button
             className="grocery-list-button"
             onClick={this.showOrHideBeverages}
@@ -433,7 +476,7 @@ class GroceryList extends React.Component {
             </table>
           </Collapse>
         </div>
-        <div>
+        <div className="grocery-list-button-container">
           <Button
             className="grocery-list-button"
             onClick={this.showOrHideWine}
@@ -451,7 +494,7 @@ class GroceryList extends React.Component {
             </table>
           </Collapse>
         </div>
-        <div>
+        <div className="grocery-list-button-container">
           <Button
             className="grocery-list-button"
             onClick={this.showOrHideCanned}
@@ -469,7 +512,7 @@ class GroceryList extends React.Component {
             </table>
           </Collapse>
         </div>
-        <div>
+        <div className="grocery-list-button-container">
           <Button
             className="grocery-list-button"
             onClick={this.showOrHideFrozen}
@@ -487,7 +530,7 @@ class GroceryList extends React.Component {
             </table>
           </Collapse>
         </div>
-        <div>
+        <div className="grocery-list-button-container">
           <Button
             className="grocery-list-button"
             onClick={this.showOrHideCookies}
@@ -505,7 +548,7 @@ class GroceryList extends React.Component {
             </table>
           </Collapse>
         </div>
-        <div>
+        <div className="grocery-list-button-container">
           <Button
             className="grocery-list-button"
             onClick={this.showOrHideCondiments}
@@ -523,7 +566,7 @@ class GroceryList extends React.Component {
             </table>
           </Collapse>
         </div>
-        <div>
+        <div className="grocery-list-button-container">
           <Button
             className="grocery-list-button"
             onClick={this.showOrHideSpices}
@@ -541,7 +584,7 @@ class GroceryList extends React.Component {
             </table>
           </Collapse>
         </div>
-      </div>
+        </React.Fragment>
     );
   }
 }
