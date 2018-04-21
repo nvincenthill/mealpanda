@@ -6,21 +6,6 @@ import RestaurantModal from "./RestaurantModal";
 
 class MenuItem extends React.PureComponent {
   state = {
-    isChanging: false,
-    activeIndex: null
-  };
-
-  handleClick = () => {
-    this.setState({ activeIndex: this.props.index });
-    this.setState({ isChanging: true });
-    setTimeout(this.changeClass, 800);
-  };
-
-  changeClass = () => {
-    console.log("reverting to static");
-    this.props.changeRecipe(this.props.index);
-    this.setState({ isChanging: false });
-    this.setState({ activeIndex: null });
   };
 
   componentWillMount() {
@@ -52,7 +37,7 @@ class MenuItem extends React.PureComponent {
             <h2 className="day">{this.props.week}</h2>
             <div
               id={
-                this.state.isChanging
+                (this.props.activeIndex === this.props.index)
                   ? `menu-item-${this.props.index}-animation`
                   : "menu-items-static"
               }
@@ -72,7 +57,7 @@ class MenuItem extends React.PureComponent {
               <button
                 id="remove-recipe-button"
                 className="btn btn-warning"
-                onClick={this.handleClick}
+                onClick={() => this.props.handleClick(this.props.index)}
               >
                 Change
               </button>

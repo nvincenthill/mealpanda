@@ -1,13 +1,13 @@
 /* Border box declaration 
 https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-html {
+html {@maintit
     box-sizing: border-box;
     overflow-y: scroll;
 }
 /* inherit border-box on all elements in the universe and before and after
  */
 *,
-*:before,
+*:before,maintit
 *:after {
     box-sizing: inherit;
 }
@@ -21,6 +21,7 @@ html {
         padding: 0;
         margin: 0;
         opacity: 1;
+        z-index:3;
     }
 }
 
@@ -34,32 +35,53 @@ html {
         margin: 0;
         opacity: 1;
     }
+
+    .flex-title {
+        flex-basis: 100%;
+    }
+
+    .flex-generate-button {
+
+    }
 }
 
 .jumbotron {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 4% 4%;
+    padding: 6% 6%;
     margin-bottom: 0;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0; /* required */
-    z-index:1; /*height*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 768px) {
     /* For desktop: */
     .jumbotron {
-        padding: 2% 2%;
+        padding: 1% 1%;
+        display: flex;
+        justify-content: space-between;
+        align-content: left;
+        flex-direction: row;
     }
 }
 
 .sign-in-button-container-header {
-    width: 100%;
+    width: 75%;
     margin: auto;
     
 }
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .aux{
+        margin-left: auto;
+    }
+}
+
 
 @media only screen and (min-width: 768px) {
     /* For desktop: */
@@ -111,7 +133,7 @@ html {
     text-transform: uppercase;
     text-align: center;
     font-weight: 600;
-    margin: 4%;
+    margin-top: 0;
     font-size: 3em;
 }
 
@@ -565,6 +587,7 @@ html {
 
 .grocery-list {
     font-family: "Lato";
+    margin: auto;
 }
 
 .recipe-modal-footer {
@@ -629,19 +652,18 @@ html {
     .show-grocery-list {
         font-size: 2.75em;
         line-height: 1em;
-        margin-bottom: 2%;
+        margin-bottom: 1%;
     }
 
     .show-grocery-list:hover {
         font-size: 2.75em;
         line-height: 1em;
-        margin-bottom: 2%;
+        margin-bottom: 1%;
     }
 
     .show-grocery-list:focus {
         font-size: 2.75em;
         line-height: 1em;
-        margin-bottom: 2%;
     }
 }
 
@@ -670,7 +692,7 @@ hr {
 
 .generate-button-container {
     margin-bottom: 0;
-    margin-top: 0;
+    z-index:2;
 }
 
 #generate-button-new {
@@ -680,6 +702,7 @@ hr {
     color: black;
     padding: 0.1em 0.5em;
     border-radius: 0.5em;
+    margin-top: 4%;
 }
 
 #generate-button-new:hover {
@@ -698,6 +721,9 @@ hr {
         color: black;
         padding: 0.1em 0.5em;
         border-radius: 0.5em;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #generate-button-new:hover {
@@ -861,12 +887,13 @@ hr {
 
 #signInButton {
     font-weight: bold;
-    font-size: 2em;
-    line-height: 1em;
+    font-size: 1.75em;
+    line-height: .75em;
     border-radius: 0.5em;
     border-width: 1px;
     border-color: green;
     color: white;
+    padding: .5em;
 }
 
 #signInButton:hover {
@@ -883,13 +910,62 @@ hr {
     color: white;
 }
 
-.row {
-    margin: 0;
+#logOutButton {
+    font-weight: bold;
+    font-size: 1.75em;
+    line-height: .75em;
+    border-radius: 0.5em;
+    border-width: 1px;
+    border-color: red;
+    background-color: red;
+    color: black;
+    padding: .5em;
 }
 
-#logout-button {
-    font-size: 1em;
+#logOutButton:hover {
+    color: red;
+    background-color: black;
+    border-color: red;
+    border-width: 1px;
+    transition: 1s ease-in-out;
+}
+
+#logOutButton:focus {
+    border-color: red;
+    background-color: red;
+    background-color: red;
+    color: black;
+}
+
+#logOutButtonFooter {
+    font-weight: bold;
+    font-size: 1.75em;
+    line-height: .75em;
     border-radius: 0.5em;
+    border-width: 1px;
+    border-color: red;
+    background-color: red;
+    color: white;
+    padding: .5em;
+}
+
+#logOutButtonFooter:hover {
+    color: red;
+    background-color: white;
+    border-color: red;
+    border-width: 1px;
+    transition: 1s ease-in-out;
+}
+
+#logOutButtonFooter:focus {
+    border-color: red;
+    background-color: red;
+    background-color: red;
+    color: white;
+}
+
+.row {
+    margin: 0;
 }
 
 .recipe-modal-title {
@@ -928,41 +1004,55 @@ hr {
 }
 
 .grocery-list-button-container {
-    margin: auto;
-    width: 75%;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 @media only screen and (min-width: 768px) {
     /* For desktop: */
     .grocery-list-button-container {
         width: 45%;
+        margin-bottom: 1em;
     }
 }
 
 .header-logo-container {
-    width: 40%;
-    height: 40%;
     text-align: center;
-    margin: auto;
+    align-content: center;
     margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 #logo-header {
-    border-radius: 35%;
+    border-radius: 2em;
+    width: 50%;
+    height: 50%;
+    border-color: white;
 }
 
 @media only screen and (min-width: 768px) {
     /* For desktop: */
     .header-logo-container {
-        width: 30%;
-        height: 30%;
-        text-align: center;
-        margin: auto;
-        margin-bottom: 1em;
+        border-radius: 2em;
+        text-align: left;
+        width: 40%;
+        height: 40%;
+        display: flex;
     }
 
     #logo-header {
         border-radius: 50%;
+        width: 25%;
+        height: 25%;
+        margin-top: 1em;
+        margin-left: 1em;
+        transition: 1s ease-in-out;
+    }
+
+    #logo-header:hover {
+        transition: 1s ease-in-out;
+        -webkit-filter: invert(100%);
     }
 }
 
@@ -970,48 +1060,48 @@ hr {
     opacity: 1;
     transform: translateY(0) scale(1);
     transition: 1s;
-    transition-timing-function: cubic-bezier(.18,1.69,1,.91);
+    transition-timing-function: cubic-bezier(.36,1.33,.97,.94);
 }
 
 #menu-item-0-animation {
     opacity: 0;
     transform: translateY(175%) scale(0.5);
     transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
-    transition: 1s;
+    transition: 0.5s;
 }
 
 #menu-item-1-animation {
     opacity: 0;
     transform: translateY(175%) scale(0.5);
     transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
-    transition: 1s;
+    transition: 0.5s;
 }
 
 #menu-item-2-animation {
     opacity: 0;
     transform: translateY(175%) scale(0.5);
     transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
-    transition: 1s;
+    transition: 0.5s;
 }
 
 #menu-item-3-animation {
     opacity: 0;
     transform: translateY(175%) scale(0.5);
     transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
-    transition: 1s;
+    transition: 0.5s;
 }
 
 #menu-item-4-animation {
     opacity: 0;
     transform: translateY(175%) scale(0.5);
     transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
-    transition: 1s;
+    transition: 0.5s;
 }
 
 #menu-item-5-animation {
     opacity: 0;
     transform: translateY(175%) scale(0.5);
-    transition: 1s;
+    transition: 0.5s;
     transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
 }
 

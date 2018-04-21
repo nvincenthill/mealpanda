@@ -9,7 +9,7 @@ class Footer extends React.Component {
   render() {
     const logOutButton = (
       <Button
-        id="logout-button"
+        id="logOutButtonFooter"
         bsStyle="danger"
         bsSize="large"
         onClick={this.props.logOut}
@@ -30,8 +30,7 @@ class Footer extends React.Component {
         >
           <div className="no-margin">
             <div className="footer-buttons">
-              {this.props.userAuthenticated ? null : signInModal}
-              {this.props.userAuthenticated ? logOutButton : null}
+              {this.props.userAuthenticated ? logOutButton : signInModal}
             </div>
             <div className="divider-small" />
             <h4 className="footer">

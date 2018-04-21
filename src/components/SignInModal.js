@@ -35,13 +35,12 @@ class SignInModal extends React.Component {
   render() {
     return (
       <div>
-      <div className="sign-in-button-container-header">
+      <div>
         <Button
           id="signInButton"
           bsSize="large"
           bsStyle="success"
           onClick={this.handleShow}
-          block
         >
           Sign in
         </Button>
