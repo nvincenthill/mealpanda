@@ -94,8 +94,8 @@ maintit *:after {
 #generate-button-new:hover {
     transition: 1s ease-in-out;
     opacity: 1;
-    background: black;
-    color: white;
+    background: white;
+    color: black;
 }
 
 #generate-button-new:focus {
