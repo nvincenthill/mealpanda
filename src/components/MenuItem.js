@@ -9,17 +9,17 @@ class MenuItem extends React.PureComponent {
   };
 
   componentWillMount() {
-    console.log("MOUNTING ITEM");
+    // console.log("MOUNTING ITEM");
   }
 
   componentDidMount() {
-    console.log("ITEM MOUNTED!");
+    // console.log("ITEM MOUNTED!");
   }
 
   componentDidUpdate() {}
 
   componentWillUnmount() {
-    console.log("ITEM KILLED!");
+    // console.log("ITEM KILLED!");
   }
 
   render() {

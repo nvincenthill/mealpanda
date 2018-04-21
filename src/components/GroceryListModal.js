@@ -1,6 +1,6 @@
 import React from "react";
 import GroceryList from "./GroceryList";
-import { createGroceryList, downloadCSV } from "../helpers";
+// import { createGroceryList, /* downloadCSV */ } from "../helpers";
 import Email from "./Email";
 
 import {
@@ -33,7 +33,7 @@ class GroceryListModal extends React.Component {
   }
 
   render() {
-    let groceryList = createGroceryList(this.props.randomRecipes);
+    // let groceryList = createGroceryList(this.props.randomRecipes);
 
     return (
       <div className="grocery-list-button-container">

@@ -181,24 +181,24 @@ class GroceryList extends React.Component {
     let spicesArray = sortedGroceries["Spices & Herbs"];
     let grainsArray = sortedGroceries["Grains, Pastas, & Sides"];
 
-    let groceriesArray = [
-      beveragesArray,
-      cannedArray,
-      frozenArray,
-      meatArray,
-      produceArray,
-      condimentsArray,
-      breadArray,
-      wineArray,
-      cookiesArray,
-      dairyArray,
-      spicesArray,
-      grainsArray
-    ];
+    // let groceriesArray = [
+    //   beveragesArray,
+    //   cannedArray,
+    //   frozenArray,
+    //   meatArray,
+    //   produceArray,
+    //   condimentsArray,
+    //   breadArray,
+    //   wineArray,
+    //   cookiesArray,
+    //   dairyArray,
+    //   spicesArray,
+    //   grainsArray
+    // ];
 
-    let cleanGroceriesArray = groceriesArray.filter(function(val) {
-      return val !== undefined;
-    });
+    // let cleanGroceriesArray = groceriesArray.filter(function(val) {
+    //   return val !== undefined;
+    // });
 
       groceryList = groceryList.map(key => (
         <tr key={`${key.name}`} className="grocery-list-table-row">
@@ -322,13 +322,13 @@ class GroceryList extends React.Component {
       ));
     }
 
-    let header = (
-      <tr className="grocery-list-table-header">
-        <th>Quantity</th>
-        <th>Units</th>
-        <th>Name</th>
-      </tr>
-    );
+    // let header = (
+    //   <tr className="grocery-list-table-header">
+    //     <th>Quantity</th>
+    //     <th>Units</th>
+    //     <th>Name</th>
+    //   </tr>
+    // );
 
     let empty = (
       <tr className="grocery-list-table-empty">

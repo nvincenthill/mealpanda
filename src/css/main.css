@@ -142,6 +142,7 @@ maintit *:after {
         margin: 0;
         margin-left: auto;
         margin-right: auto;
+        text-shadow: 0 0 2em white;
     }
 
     #generate-button-new:focus {
@@ -155,6 +156,21 @@ maintit *:after {
         margin: 0;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .generate-button-active {
+        -webkit-animation: flux 2s infinite;
+    }
+
+    @-webkit-keyframes flux {
+        0% {
+            color: black;
+            background: white;
+        }
+        100% {
+            color: black;
+            background: white;
+        }
     }
 }
 
@@ -1101,7 +1117,7 @@ hr {
 #menu-items-static {
     opacity: 1;
     transform: translateY(0) scale(1);
-    transition: 1s;
+    transition: 0.5s;
     transition-timing-function: cubic-bezier(0.36, 1.33, 0.97, 0.94);
 }
 

@@ -68,14 +68,14 @@ class RecipeModal extends React.Component {
           </Modal.Header>
           <Modal.Body>
             <Row>
-            <Col className="recipe-modal-picture-container" xs={12} sm={12} md={6}>
+            <Col className="recipe-modal-picture-container" xs={12} sm={12} md={4}>
               <img
                 className="recipe-modal-picture"
                 src={`/images/${this.props.recipeData.image}`}
                 alt={this.props.recipeData.name}
               />
             </Col>
-              <Col xs={12} sm={12} md={6}>
+              <Col xs={12} sm={12} md={4}>
                 <div className="ingredients-list">
                   <table className="ingredients-list-table" align="center">
                     <tbody className="ingredients-list-table-body" align="left">
