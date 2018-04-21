@@ -1,15 +1,24 @@
 /* Border box declaration 
 https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-html {@maintit
-    box-sizing: border-box;
+html {
+    @maintit box-sizing: border-box;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 /* inherit border-box on all elements in the universe and before and after
  */
 *,
-*:before,maintit
-*:after {
+*:before,
+maintit *:after {
     box-sizing: inherit;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    #main {
+        transform: scale(0.9);
+        margin-top: -2%;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -21,7 +30,7 @@ html {@maintit
         padding: 0;
         margin: 0;
         opacity: 1;
-        z-index:3;
+        z-index: 3;
     }
 }
 
@@ -41,7 +50,7 @@ html {@maintit
     }
 
     .inflexction {
-        display:flex;
+        display: flex;
         flex-direction: row;
         align-content: center;
     }
@@ -79,6 +88,7 @@ html {@maintit
     color: black;
     padding: 0.1em 0.5em;
     border-radius: 0.5em;
+    margin-bottom: 4%;
 }
 
 #generate-button-new:hover {
@@ -151,12 +161,11 @@ html {@maintit
 .sign-in-button-container-header {
     width: 75%;
     margin: auto;
-    
 }
 
 @media only screen and (min-width: 768px) {
     /* For desktop: */
-    .aux{
+    .aux {
         margin-left: auto;
         text-align: right;
         width: 33.3333%;
@@ -182,7 +191,6 @@ html {@maintit
         text-align: left;
         margin-bottom: 0;
         width: 33.3333%;
-
     }
 
     #logo-header {
@@ -961,12 +969,12 @@ hr {
 #signInButton {
     font-weight: bold;
     font-size: 1.75em;
-    line-height: .75em;
+    line-height: 0.75em;
     border-radius: 0.5em;
     border-width: 1px;
     border-color: green;
     color: white;
-    padding: .5em;
+    padding: 0.5em;
 }
 
 #signInButton:hover {
@@ -986,13 +994,13 @@ hr {
 #logOutButton {
     font-weight: bold;
     font-size: 1.75em;
-    line-height: .75em;
+    line-height: 0.75em;
     border-radius: 0.5em;
     border-width: 1px;
     border-color: red;
     background-color: red;
     color: black;
-    padding: .5em;
+    padding: 0.5em;
 }
 
 #logOutButton:hover {
@@ -1013,13 +1021,13 @@ hr {
 #logOutButtonFooter {
     font-weight: bold;
     font-size: 1.75em;
-    line-height: .75em;
+    line-height: 0.75em;
     border-radius: 0.5em;
     border-width: 1px;
     border-color: red;
     background-color: red;
     color: white;
-    padding: .5em;
+    padding: 0.5em;
 }
 
 #logOutButtonFooter:hover {
@@ -1094,7 +1102,7 @@ hr {
     opacity: 1;
     transform: translateY(0) scale(1);
     transition: 1s;
-    transition-timing-function: cubic-bezier(.36,1.33,.97,.94);
+    transition-timing-function: cubic-bezier(0.36, 1.33, 0.97, 0.94);
 }
 
 #menu-item-0-animation {
@@ -1139,20 +1147,19 @@ hr {
     transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
 }
 
-
 .menu-item-image {
     width: 100%;
     height: auto;
     box-shadow: 0 5px 10px 0 hsla(0, 0%, 0%, 0.2);
-    transition: .75s ease-in-out;
+    transition: 0.75s ease-in-out;
 }
 
 .menu-item-image:hover {
     transform: translateY(-2.5%);
     -webkit-filter: contrast(150%);
-/*    -webkit-filter: brightness(125%);*/
+    /*    -webkit-filter: brightness(125%);*/
     -webkit-filter: saturate(125%);
-/*    transform: scale(.95);*/
-border-radius: 50%;
-    transition: .1s;
+    /*    transform: scale(.95);*/
+    border-radius: 50%;
+    transition: 0.5s;
 }

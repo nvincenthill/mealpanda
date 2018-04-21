@@ -99,7 +99,7 @@ class App extends React.Component {
     setTimeout(() => this.handleClick("3"), 6000);
     setTimeout(() => this.handleClick("4"), 8000);
     setTimeout(() => this.handleClick("5"), 10000);
-    setTimeout(() => this.setState({ pandaMessage: "Bamboo-zled! Try again" }), 12000);
+    setTimeout(() => this.setState({ pandaMessage: "Reawaken the panda" }), 12000);
   }; 
 
   handleClick = index => {
