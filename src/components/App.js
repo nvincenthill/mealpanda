@@ -37,7 +37,7 @@ class App extends React.Component {
     this.setState({ footerHidden: true });
     this.setState({ titleHidden: true });
     this.setState({ pandaHidden: true });
-    this.setState({ pandaMessage: "Regenerate menu" });
+    this.setState({ pandaMessage: "Reawaken the menu panda" });
   };
 
   returnToMain = () => {
@@ -103,15 +103,12 @@ class App extends React.Component {
   }; 
 
   handleClick = index => {
-    console.log("handling click!");
-    console.log(index);
     this.setState({ activeIndex: index });
     this.setState({ isChanging: true });
     setTimeout(() => this.changeClass(index), 800);
   };
 
   changeClass = index => {
-    console.log("reverting to static");
     this.changeRecipe(index);
     this.setState({ isChanging: false });
     this.setState({ activeIndex: null });
@@ -123,7 +120,6 @@ class App extends React.Component {
       userAuthenticated: true
     });
 
-    console.log(authData.user);
     let userRecipes;
 
     if (!authData.additionalUserInfo.isNewUser) {
@@ -155,27 +151,27 @@ class App extends React.Component {
   };
 
   email = () => {
-    var mandrill = require("node-mandrill")(
-      "3150df61a2dce2abb43bb3da4fa3879d-us18"
-    );
-    mandrill(
-      "/messages/send",
-      {
-        message: {
-          to: [{ email: "nvincenthill@gmail.com", name: "Jim Rubenstein" }],
-          from_email: "nvincenthill@gmail.com",
-          subject: "Hey, what's up?",
-          text: "Hello, I sent this message using mandrill."
-        }
-      },
-      function(error, response) {
-        //uh oh, there was an error
-        if (error) console.log(JSON.stringify(error));
-        else
-          //everything's good, lets see what mandrill said
-          console.log(response);
-      }
-    );
+    // var mandrill = require("node-mandrill")(
+    //   "3150df61a2dce2abb43bb3da4fa3879d-us18"
+    // );
+    // mandrill(
+    //   "/messages/send",
+    //   {
+    //     message: {
+    //       to: [{ email: "nvincenthill@gmail.com", name: "Jim Rubenstein" }],
+    //       from_email: "nvincenthill@gmail.com",
+    //       subject: "Hey, what's up?",
+    //       text: "Hello, I sent this message using mandrill."
+    //     }
+    //   },
+    //   function(error, response) {
+    //     //uh oh, there was an error
+    //     if (error) console.log(JSON.stringify(error));
+    //     else
+    //       //everything's good, lets see what mandrill said
+    //       console.log(response);
+    //   }
+    // );
   };
 
   logOut = async () => {
@@ -212,7 +208,6 @@ class App extends React.Component {
     usersRef.child(userId).once("value", function(snapshot) {
       var exists = snapshot.val() !== null;
       if (exists) {
-        console.log(` ${userId} exists!`);
       }
     });
   };

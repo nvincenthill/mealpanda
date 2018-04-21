@@ -42,7 +42,7 @@ class GroceryListModal extends React.Component {
           bsSize="large"
           onClick={this.handleShow}
         >
-          Grocery List
+          Ingredients
         </Button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>

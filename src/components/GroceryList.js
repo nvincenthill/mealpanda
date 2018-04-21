@@ -200,8 +200,6 @@ class GroceryList extends React.Component {
       return val !== undefined;
     });
 
-    console.log(groceryList);
-
       groceryList = groceryList.map(key => (
         <tr key={`${key.name}`} className="grocery-list-table-row">
           <td key={`${key.quantity}2`}>{key.quantity}</td>

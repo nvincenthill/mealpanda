@@ -77,11 +77,14 @@ class Header extends React.Component {
 
     const pandaLogo = (
       <div className="header-logo-container">
-      <Collapse isOpened={this.props.footerHidden}>
-        <div className="no-margin">
-          <img onClick={this.props.returnToMain} id="logo-header" src="/images/mealpanda.png" alt="logo" />
-        </div>
-      </Collapse>
+        <Collapse isOpened={this.props.footerHidden}>
+            <img
+              onClick={this.props.returnToMain}
+              id="logo-header"
+              src="/images/mealpanda.png"
+              alt="logo"
+            />
+        </Collapse>
       </div>
     );
 
@@ -99,11 +102,16 @@ class Header extends React.Component {
     return (
       <div className="jumbotron">
         <div className="flex-title">{title}</div>
-        <div>{letThePandaDecide}</div>
-        {pandaLogo}
-        <div className="aux"> {ingredients} {(this.props.userAuthenticated && this.props.titleHidden) ? logOutButton : signIn}</div>
-        <div>
-          
+
+        <div className="inflexction">
+          {pandaLogo} {letThePandaDecide}{" "}
+          <div className="aux">
+            {" "}
+            {ingredients}{" "}
+            {this.props.userAuthenticated && this.props.titleHidden
+              ? logOutButton
+              : signIn}
+          </div>
         </div>
       </div>
     );

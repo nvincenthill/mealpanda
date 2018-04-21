@@ -40,8 +40,10 @@ html {@maintit
         flex-basis: 100%;
     }
 
-    .flex-generate-button {
-
+    .inflexction {
+        display:flex;
+        flex-direction: row;
+        align-content: center;
     }
 }
 
@@ -49,7 +51,7 @@ html {@maintit
     background-color: black;
     color: white;
     text-align: center;
-    padding: 6% 6%;
+    padding: 4% 4%;
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
@@ -64,8 +66,85 @@ html {@maintit
         padding: 1% 1%;
         display: flex;
         justify-content: space-between;
-        align-content: left;
-        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+#generate-button-new {
+    font: bold 2em "Oswald", sans-serif;
+    text-transform: uppercase;
+    transition: 1s ease-in-out;
+    color: black;
+    padding: 0.1em 0.5em;
+    border-radius: 0.5em;
+}
+
+#generate-button-new:hover {
+    transition: 1s ease-in-out;
+    opacity: 1;
+    background: black;
+    color: white;
+}
+
+#generate-button-new:focus {
+    font: bold 2em "Oswald", sans-serif;
+    text-transform: uppercase;
+    transition: 1s ease-in-out;
+    color: black;
+    background: white;
+    padding: 0.1em 0.5em;
+    border-radius: 0.5em;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .generate-button-container {
+        text-align: center;
+        margin-top: 4%;
+        margin-bottom: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
+    }
+
+    #generate-button-new {
+        font: bold 4em "Oswald", sans-serif;
+        text-transform: uppercase;
+        transition: 1s ease-in-out;
+        color: black;
+        padding: 0.1em 0.5em;
+        border-radius: 0.5em;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #generate-button-new:hover {
+        font: bold 4em "Oswald", sans-serif;
+        text-transform: uppercase;
+        transition: 1s ease-in-out;
+        color: white;
+        background-color: black;
+        padding: 0.1em 0.5em;
+        border-radius: 0.5em;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #generate-button-new:focus {
+        font: bold 4em "Oswald", sans-serif;
+        text-transform: uppercase;
+        transition: 1s ease-in-out;
+        color: black;
+        background: white;
+        padding: 0.1em 0.5em;
+        border-radius: 0.5em;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -79,9 +158,44 @@ html {@maintit
     /* For desktop: */
     .aux{
         margin-left: auto;
+        text-align: right;
+        width: 33.3333%;
     }
 }
 
+.header-logo-container {
+    text-align: center;
+    align-content: center;
+    margin-bottom: 4%;
+}
+
+#logo-header {
+    border-radius: 2em;
+    width: 50%;
+    height: 50%;
+    border-color: white;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .header-logo-container {
+        text-align: left;
+        margin-bottom: 0;
+        width: 33.3333%;
+
+    }
+
+    #logo-header {
+        width: 50%;
+        height: 50%;
+        transition: 1s ease-in-out;
+    }
+
+    #logo-header:hover {
+        transition: 1s ease-in-out;
+        -webkit-filter: invert(100%);
+    }
+}
 
 @media only screen and (min-width: 768px) {
     /* For desktop: */
@@ -690,48 +804,6 @@ hr {
     box-shadow: 0 0 0 0;
 }
 
-.generate-button-container {
-    margin-bottom: 0;
-    z-index:2;
-}
-
-#generate-button-new {
-    font: bold 2em "Oswald", sans-serif;
-    text-transform: uppercase;
-    transition: 1s ease-in-out;
-    color: black;
-    padding: 0.1em 0.5em;
-    border-radius: 0.5em;
-    margin-top: 4%;
-}
-
-#generate-button-new:hover {
-    transition: 1s ease-in-out;
-    opacity: 1;
-    background: black;
-    color: white;
-}
-
-@media only screen and (min-width: 768px) {
-    /* For desktop: */
-    #generate-button-new {
-        font: bold 4em "Oswald", sans-serif;
-        text-transform: uppercase;
-        transition: 1s ease-in-out;
-        color: black;
-        padding: 0.1em 0.5em;
-        border-radius: 0.5em;
-        margin-top: 2%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #generate-button-new:hover {
-        transition: 1s ease-in-out;
-        opacity: 1;
-    }
-}
-
 .logo-animation-appear {
     opacity: 0;
 }
@@ -852,6 +924,7 @@ hr {
 .no-margin {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
+    white-space: nowrap;
 }
 
 .footer-buttons {
@@ -997,8 +1070,8 @@ hr {
 @media only screen and (min-width: 768px) {
     /* For desktop: */
     #logo {
-        width: 40%;
-        height: 40%;
+        width: 35%;
+        height: 35%;
         box-shadow: 0 0 0 0;
     }
 }
@@ -1012,47 +1085,8 @@ hr {
 @media only screen and (min-width: 768px) {
     /* For desktop: */
     .grocery-list-button-container {
-        width: 45%;
+        text-align: right;
         margin-bottom: 1em;
-    }
-}
-
-.header-logo-container {
-    text-align: center;
-    align-content: center;
-    margin-bottom: 1em;
-    margin-top: 1em;
-}
-
-#logo-header {
-    border-radius: 2em;
-    width: 50%;
-    height: 50%;
-    border-color: white;
-}
-
-@media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .header-logo-container {
-        border-radius: 2em;
-        text-align: left;
-        width: 40%;
-        height: 40%;
-        display: flex;
-    }
-
-    #logo-header {
-        border-radius: 50%;
-        width: 25%;
-        height: 25%;
-        margin-top: 1em;
-        margin-left: 1em;
-        transition: 1s ease-in-out;
-    }
-
-    #logo-header:hover {
-        transition: 1s ease-in-out;
-        -webkit-filter: invert(100%);
     }
 }
 
@@ -1114,10 +1148,11 @@ hr {
 }
 
 .menu-item-image:hover {
+    transform: translateY(-2.5%);
     -webkit-filter: contrast(150%);
 /*    -webkit-filter: brightness(125%);*/
     -webkit-filter: saturate(125%);
 /*    transform: scale(.95);*/
 border-radius: 50%;
-    transition: .25s ease-in-out;
+    transition: .1s;
 }
