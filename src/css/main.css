@@ -112,15 +112,15 @@ maintit *:after {
     /* For desktop: */
     .generate-button-container {
         text-align: center;
-        margin-top: 4%;
-        margin-bottom: 2%;
+        margin-top: 1%;
+        margin-bottom: 1%;
         margin-left: auto;
         margin-right: auto;
         align-self: center;
     }
 
     #generate-button-new {
-        font: bold 4em "Oswald", sans-serif;
+        font: bold 4.75em "Oswald", sans-serif;
         text-transform: uppercase;
         transition: 1s ease-in-out;
         color: black;
@@ -132,7 +132,7 @@ maintit *:after {
     }
 
     #generate-button-new:hover {
-        font: bold 4em "Oswald", sans-serif;
+        font: bold 4.75em "Oswald", sans-serif;
         text-transform: uppercase;
         transition: 1s ease-in-out;
         color: white;
@@ -146,7 +146,7 @@ maintit *:after {
     }
 
     #generate-button-new:focus {
-        font: bold 4em "Oswald", sans-serif;
+        font: bold 4.75em "Oswald", sans-serif;
         text-transform: uppercase;
         transition: 1s ease-in-out;
         color: black;
@@ -179,6 +179,16 @@ maintit *:after {
     margin: auto;
 }
 
+.modal {
+ overflow-y: auto;
+}
+
+.modal-open {
+ overflow: auto;
+}
+
+body { padding-right: 0 !important }
+
 @media only screen and (min-width: 768px) {
     /* For desktop: */
     .aux {
@@ -210,8 +220,8 @@ maintit *:after {
     }
 
     #logo-header {
-        width: 50%;
-        height: 50%;
+        width: 63%;
+        height: 63%;
         transition: 1s ease-in-out;
     }
 
@@ -315,7 +325,7 @@ maintit *:after {
 /*.btn-default:hover {-webkit-filter: sepia(100%);}*/
 
 .name {
-    font-size: 3em;
+    font-size: 2em;
     font-family: "Lato";
     font-weight: 500;
 }
@@ -1168,14 +1178,18 @@ hr {
     height: auto;
     box-shadow: 0 5px 10px 0 hsla(0, 0%, 0%, 0.2);
     transition: 0.75s ease-in-out;
+    border-width: 0;
 }
 
-.menu-item-image:hover {
-    transform: translateY(-2.5%);
-    -webkit-filter: contrast(150%);
-    /*    -webkit-filter: brightness(125%);*/
-    -webkit-filter: saturate(125%);
-    /*    transform: scale(.95);*/
-    border-radius: 50%;
-    transition: 0.5s;
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .menu-item-image:hover {
+/*        transform: translateY(-2.5%);*/
+        -webkit-filter: contrast(150%);
+        /*    -webkit-filter: brightness(125%);*/
+        -webkit-filter: saturate(125%);
+        /*    transform: scale(.95);*/
+        border-radius: 50%;
+        transition: 0.5s;
+    }
 }

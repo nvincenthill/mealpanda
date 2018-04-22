@@ -90,14 +90,14 @@ class App extends React.Component {
   };
 
   regenerate = () => {
-    this.setState({ pandaMessage: "Pawstulating new meals..." });
+    // this.setState({ pandaMessage: "Pawstulating new meals..." });
     setTimeout(() => this.handleClick("0"), 0);
     setTimeout(() => this.handleClick("1"), 2000);
     setTimeout(() => this.handleClick("2"), 4000);
     setTimeout(() => this.handleClick("3"), 6000);
     setTimeout(() => this.handleClick("4"), 8000);
     setTimeout(() => this.handleClick("5"), 10000);
-    setTimeout(() => this.setState({ pandaMessage: "Reawaken the meal panda" }), 12000);
+    // setTimeout(() => this.setState({ pandaMessage: "Reawaken the meal panda" }), 12000);
   }; 
 
   handleClick = index => {
