@@ -21,17 +21,20 @@ maintit *:after {
     }
 }
 
-@media only screen and (max-width: 767px) {
-    /* For mobile: */
-    #maintitle {
-        font-size: 3em;
-        font-family: "Dancing Script", cursive;
-        font-weight: bold;
-        padding: 0;
-        margin: 0;
-        opacity: 1;
-        z-index: 3;
-    }
+.flex-title {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+#maintitle {
+    font-size: 3em;
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    z-index: 3;
+    white-space: pre-line;
 }
 
 @media only screen and (min-width: 768px) {
@@ -180,14 +183,16 @@ maintit *:after {
 }
 
 .modal {
- overflow-y: auto;
+    overflow-y: auto;
 }
 
 .modal-open {
- overflow: auto;
+    overflow: auto;
 }
 
-body { padding-right: 0 !important }
+body {
+    padding-right: 0 !important;
+}
 
 @media only screen and (min-width: 768px) {
     /* For desktop: */
@@ -1184,7 +1189,7 @@ hr {
 @media only screen and (min-width: 768px) {
     /* For desktop: */
     .menu-item-image:hover {
-/*        transform: translateY(-2.5%);*/
+        /*        transform: translateY(-2.5%);*/
         -webkit-filter: contrast(150%);
         /*    -webkit-filter: brightness(125%);*/
         -webkit-filter: saturate(125%);

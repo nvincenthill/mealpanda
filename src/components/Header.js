@@ -87,7 +87,7 @@ class Header extends React.Component {
 
     return (
       <div className="jumbotron">
-        <div className="flex-title">{title}</div>
+        <div>{title}</div>
 
         <div className="inflexction">
           {pandaLogo}{" "}
