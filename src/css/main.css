@@ -95,7 +95,7 @@ maintit *:after {
 }
 
 #generate-button-new:hover {
-    transition: 1s ease-in-out;
+    transition: .25s ease-in-out;
     opacity: 1;
     background: white;
     color: black;
@@ -104,7 +104,7 @@ maintit *:after {
 #generate-button-new:focus {
     font: bold 2em "Oswald", sans-serif;
     text-transform: uppercase;
-    transition: 1s ease-in-out;
+    transition: .25s ease-in-out;
     color: black;
     background: white;
     padding: 0.1em 0.5em;
@@ -138,7 +138,7 @@ maintit *:after {
     #generate-button-new:hover {
         font: bold 4.75em "Oswald", sans-serif;
         text-transform: uppercase;
-        transition: .5s;
+        transition: .25s;
         color: white;
         background-color: black;
         padding: 0.1em 0.5em;
@@ -153,9 +153,9 @@ maintit *:after {
     #generate-button-new:focus {
         font: bold 4.75em "Oswald", sans-serif;
         text-transform: uppercase;
-        transition: .5s ease-in-out;
-        color: black;
-        background: white;
+        transition: .25s ease-in-out;
+        color: white;
+        background: black;
         padding: 0.1em 0.5em;
         border-radius: 0.5em;
         margin: 0;
