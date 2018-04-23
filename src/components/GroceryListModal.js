@@ -38,7 +38,7 @@ class GroceryListModal extends React.Component {
     return (
       <div className="grocery-list-button-container">
         <Button
-          className="show-grocery-list"
+          id="show-grocery-list"
           bsSize="large"
           onClick={this.handleShow}
         >

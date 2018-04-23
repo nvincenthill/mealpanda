@@ -758,7 +758,7 @@ body {
 .map-holder {
 }
 
-.show-grocery-list {
+#show-grocery-list {
     font-family: "Oswald";
     text-transform: uppercase;
     font-weight: bold;
@@ -771,7 +771,7 @@ body {
     margin-top: 0;
 }
 
-.show-grocery-list:hover {
+#show-grocery-list:hover {
     font-family: "Oswald";
     text-transform: uppercase;
     font-weight: bold;
@@ -786,7 +786,7 @@ body {
     margin-top: 0;
 }
 
-.show-grocery-list:focus {
+#show-grocery-list:focus {
     font-family: "Oswald";
     text-transform: uppercase;
     font-weight: bold;
@@ -1125,6 +1125,14 @@ hr {
     /* For desktop: */
     .grocery-list-button-container {
         text-align: right;
+        margin-bottom: 1em;
+    }
+
+    .grocery-list-button-container:hover {
+        margin-bottom: 1em;
+    }
+
+    .grocery-list-button-container:focus {
         margin-bottom: 1em;
     }
 }
