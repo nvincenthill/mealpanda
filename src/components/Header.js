@@ -55,7 +55,7 @@ class Header extends React.Component {
       >
         <div className="no-margin">
           <div>
-            <SignInModal authenticate={this.props.authenticate} />
+            <SignInModal footerHidden={this.props.footerHidden} authenticate={this.props.authenticate} />
           </div>
         </div>
       </Collapse>
