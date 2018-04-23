@@ -33,8 +33,7 @@ class SignInModal extends React.Component {
   }
 
   render() {
-    return (
-      <div>
+    const signInButtonHeader = (
       <div>
         <Button
           id="signInButton"
@@ -45,6 +44,24 @@ class SignInModal extends React.Component {
           Sign in
         </Button>
       </div>
+      )
+
+    const signInButtonFooter = (
+      <div>
+        <Button
+          id="signInButton-footer"
+          bsSize="large"
+          bsStyle="success"
+          onClick={this.handleShow}
+        >
+          Sign in
+        </Button>
+      </div>
+      )
+
+    return (
+      <div>
+      {this.props.footerHidden ? signInButtonHeader : signInButtonFooter}
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
@@ -54,7 +71,7 @@ class SignInModal extends React.Component {
           </Modal.Header>
           <Modal.Body>
             <Button
-              id="signInButton"
+              id="signInButton-modal"
               bsStyle="success"
               bsSize="large"
               onClick={() => this.props.authenticate("Google")}

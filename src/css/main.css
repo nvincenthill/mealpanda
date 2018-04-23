@@ -1,7 +1,7 @@
 /* Border box declaration 
 https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 html {
-    @maintit box-sizing: border-box;
+    @maintitle box-sizing: border-box;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -764,8 +764,8 @@ body {
     font-weight: bold;
     font-size: 2.75em;
     line-height: 1em;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     outline: none !important;
     margin-bottom: 4%;
     margin-top: 0;
@@ -777,8 +777,8 @@ body {
     font-weight: bold;
     font-size: 2.75em;
     line-height: 1em;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     border-color: white;
     transition: 1s ease-in-out;
     outline: none !important;
@@ -792,8 +792,8 @@ body {
     font-weight: bold;
     font-size: 2.75em;
     line-height: 1em;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     transition: 1s ease-in-out;
     outline: none !important;
     margin-bottom: 4%;
@@ -1004,13 +1004,14 @@ hr {
     border-radius: 0.5em;
     border-width: 1px;
     border-color: green;
-    color: white;
+    color: green;
+    background: black;
     padding: 0.5em;
 }
 
 #signInButton:hover {
     color: white;
-    background-color: black;
+    background-color: green;
     border-color: green;
     border-width: 1px;
     transition: 1s ease-in-out;
@@ -1018,8 +1019,60 @@ hr {
 
 #signInButton:focus {
     border-color: green;
-    background-color: green;
+    background-color: black;
+    color: green;
+}
+
+#signInButton-footer {
+    font-weight: bold;
+    font-size: 1.75em;
+    line-height: 0.75em;
+    border-radius: 0.5em;
+    border-width: 1px;
+    border-color: green;
+    color: green;
+    background: white;
+    padding: 0.5em;
+}
+
+#signInButton-footer:hover {
     color: white;
+    background-color: green;
+    border-color: green;
+    border-width: 1px;
+    transition: 1s ease-in-out;
+}
+
+#signInButton-footer:focus {
+    border-color: green;
+    background-color: white;
+    color: green;
+}
+
+#signInButton-modal {
+    font-weight: bold;
+    font-size: 1.75em;
+    line-height: 0.75em;
+    border-radius: 0.5em;
+    border-width: 1px;
+    border-color: green;
+    color: green;
+    background: white;
+    padding: 0.5em;
+}
+
+#signInButton-modal:hover {
+    color: white;
+    background-color: green;
+    border-color: green;
+    border-width: 1px;
+    transition: 1s ease-in-out;
+}
+
+#signInButton-modal:focus {
+    border-color: green;
+    background-color: white;
+    color: green;
 }
 
 #logOutButton {
@@ -1029,14 +1082,14 @@ hr {
     border-radius: 0.5em;
     border-width: 1px;
     border-color: red;
-    background-color: red;
-    color: black;
+    background-color: black;
+    color: red;
     padding: 0.5em;
 }
 
 #logOutButton:hover {
-    color: red;
-    background-color: black;
+    background-color: red;
+    color: black;
     border-color: red;
     border-width: 1px;
     transition: 1s ease-in-out;
@@ -1045,8 +1098,8 @@ hr {
 #logOutButton:focus {
     border-color: red;
     background-color: red;
-    background-color: red;
-    color: black;
+    background-color: black;
+    color: red;
 }
 
 #logOutButtonFooter {
