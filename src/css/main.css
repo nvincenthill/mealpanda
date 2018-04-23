@@ -677,7 +677,7 @@ body {
 }*/
 
 .modal-header {
-    padding: 10px 10px 0px 0px;
+    padding: 1em;
     font-size: 1em;
     font-family: "Oswald";
 }
@@ -694,6 +694,7 @@ body {
 
 .sign-in-message {
     margin-top: 20px;
+    font-size: 2em;
 }
 
 .recipe-modal-instructions {
@@ -784,10 +785,12 @@ body {
     background-color: white;
     color: black;
     border-color: white;
-    transition: .25s ease-in-out;
+    transition: .25s;
     outline: none !important;
     margin-bottom: 4%;
     margin-top: 0;
+    transform: scale(1.05);
+    transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
 }
 
 #show-grocery-list:focus {
@@ -1011,14 +1014,18 @@ hr {
     color: green;
     background: black;
     padding: 0.5em;
+    transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
+    transition: .25s;
 }
 
 #signInButton:hover {
-    color: white;
+    color: black;
     background-color: green;
     border-color: green;
     border-width: 1px;
-    transition: 1s ease-in-out;
+    transition: .25s;
+    transform: scale(1.05);
+    transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
 }
 
 #signInButton:focus {
@@ -1037,6 +1044,8 @@ hr {
     color: green;
     background: white;
     padding: 0.5em;
+    transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
+    transition: .25s;
 }
 
 #signInButton-footer:hover {
@@ -1044,7 +1053,9 @@ hr {
     background-color: green;
     border-color: green;
     border-width: 1px;
-    transition: 1s ease-in-out;
+    transition: .25s;
+    transform: scale(1.05);
+    transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
 }
 
 #signInButton-footer:focus {
@@ -1063,6 +1074,7 @@ hr {
     color: green;
     background: white;
     padding: 0.5em;
+    transition: .25s;
 }
 
 #signInButton-modal:hover {
@@ -1070,7 +1082,9 @@ hr {
     background-color: green;
     border-color: green;
     border-width: 1px;
-    transition: .25s ease-in-out;
+    transition: .25s;
+    transform: scale(1.05);
+    transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
 }
 
 #signInButton-modal:focus {

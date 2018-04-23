@@ -78,9 +78,11 @@ class SignInModal extends React.Component {
             >
               Sign in
             </Button>
+            <div>
             <p className="sign-in-message">
-              Sign in to save your menu and grocery list.
+              Sign in to save your menu and grocery list
             </p>
+            </div>
             <hr />
 
             <h4>Privacy policy</h4>
