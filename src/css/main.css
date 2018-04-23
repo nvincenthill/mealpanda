@@ -125,19 +125,20 @@ maintit *:after {
     #generate-button-new {
         font: bold 4.75em "Oswald", sans-serif;
         text-transform: uppercase;
-        transition: 1s ease-in-out;
+        transition: .25s;
         color: black;
         padding: 0.1em 0.5em;
         border-radius: 0.5em;
         margin: 0;
         margin-left: auto;
         margin-right: auto;
+        transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
     }
 
     #generate-button-new:hover {
         font: bold 4.75em "Oswald", sans-serif;
         text-transform: uppercase;
-        transition: 1s ease-in-out;
+        transition: .5s;
         color: white;
         background-color: black;
         padding: 0.1em 0.5em;
@@ -145,13 +146,14 @@ maintit *:after {
         margin: 0;
         margin-left: auto;
         margin-right: auto;
-        text-shadow: 0 0 2em white;
+        transform: scale(1.05);
+        transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
     }
 
     #generate-button-new:focus {
         font: bold 4.75em "Oswald", sans-serif;
         text-transform: uppercase;
-        transition: 1s ease-in-out;
+        transition: .5s ease-in-out;
         color: black;
         background: white;
         padding: 0.1em 0.5em;
@@ -227,12 +229,14 @@ body {
     #logo-header {
         width: 63%;
         height: 63%;
-        transition: 1s ease-in-out;
+        transition: .5s;
+        transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
     }
 
     #logo-header:hover {
-        transition: 1s ease-in-out;
-        -webkit-filter: invert(100%);
+        transition: .5s;
+        transform: scale(1.05);
+        transition-timing-function: cubic-bezier(0.18, 1.8, 0.59, 0.85);
     }
 }
 
@@ -780,7 +784,7 @@ body {
     background-color: white;
     color: black;
     border-color: white;
-    transition: 1s ease-in-out;
+    transition: .25s ease-in-out;
     outline: none !important;
     margin-bottom: 4%;
     margin-top: 0;
@@ -794,7 +798,7 @@ body {
     line-height: 1em;
     background-color: black;
     color: white;
-    transition: 1s ease-in-out;
+    transition: .25s ease-in-out;
     outline: none !important;
     margin-bottom: 4%;
     margin-top: 0;
@@ -1066,13 +1070,14 @@ hr {
     background-color: green;
     border-color: green;
     border-width: 1px;
-    transition: 1s ease-in-out;
+    transition: .25s ease-in-out;
 }
 
 #signInButton-modal:focus {
     border-color: green;
     background-color: white;
     color: green;
+    transition: .25s ease-in-out;
 }
 
 #logOutButton {
@@ -1092,7 +1097,7 @@ hr {
     color: black;
     border-color: red;
     border-width: 1px;
-    transition: 1s ease-in-out;
+    transition: .25s ease-in-out;
 }
 
 #logOutButton:focus {
@@ -1112,6 +1117,7 @@ hr {
     background-color: red;
     color: white;
     padding: 0.5em;
+    transition: .25s ease-in-out;
 }
 
 #logOutButtonFooter:hover {
@@ -1119,7 +1125,7 @@ hr {
     background-color: white;
     border-color: red;
     border-width: 1px;
-    transition: 1s ease-in-out;
+    transition: .25s ease-in-out;
 }
 
 #logOutButtonFooter:focus {
@@ -1127,6 +1133,7 @@ hr {
     background-color: red;
     background-color: red;
     color: white;
+    transition: .25s ease-in-out;
 }
 
 .row {
@@ -1249,13 +1256,10 @@ hr {
 
 @media only screen and (min-width: 768px) {
     /* For desktop: */
-    .menu-item-image:hover {
-        /*        transform: translateY(-2.5%);*/
+/*    .menu-item-image:hover {
         -webkit-filter: contrast(150%);
-        /*    -webkit-filter: brightness(125%);*/
         -webkit-filter: saturate(125%);
-        /*    transform: scale(.95);*/
         border-radius: 50%;
         transition: 0.5s;
-    }
+    }*/
 }
