@@ -424,41 +424,11 @@ const recipes = [
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
     author: "Nicholas Vincent-Hill",
-    cookTime: "PT2H",
-    datePublished: "2015-05-18",
+    cookTime: "PT3H",
+    datePublished: "2018-04-22",
     description: "Ribs with a Kansas City style dry rub",
     image: "kribs.png",
     recipeIngredient: [
-      {
-        quantity: 4,
-        uom: "oz",
-        name: "Basil",
-        type: "Spices & Herbs"
-      },
-      {
-        quantity: 4,
-        uom: "tbsp",
-        name: "Olive oil",
-        type: "Condiments"
-      },
-      {
-        quantity: 3,
-        uom: "tbsp",
-        name: "Lemon juice",
-        type: "Produce"
-      },
-      {
-        quantity: 0.5,
-        uom: "cup",
-        name: "Parmesean Reggiano",
-        type: "Dairy, Eggs, & Cheese"
-      },
-      {
-        quantity: 1,
-        uom: "tsp",
-        name: "Kosher salt",
-        type: "Spices & Herbs"
-      },
       {
         quantity: 1,
         uom: "tsp",
@@ -466,22 +436,64 @@ const recipes = [
         type: "Spices & Herbs"
       },
       {
+        name: "Kosher salt",
+        quantity: 3,
+        type: "Spices & Herbs",
+        uom: "tbsp"
+      },
+      {
+        name: "Paprika",
+        quantity: 2,
+        type: "Spices & Herbs",
+        uom: "tbsp"
+      },
+      {
+        name: "Cumin",
+        quantity: 1.5,
+        type: "Spices & Herbs",
+        uom: "tbsp"
+      },
+      {
+        name: "Oregano",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tbsp"
+      },
+      {
+        name: "Onion powder",
+        quantity: 2,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Garlic powder",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Allspice",
+        quantity: 0.5,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Cinnamon",
+        quantity: 0.5,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Pork spare ribs",
+        quantity: 3,
+        type: "Meat & Seafood",
+        uom: "lb"
+      },
+      {
+        name: "BBQ sauce",
         quantity: 8,
-        uom: "oz",
-        name: "Pasta",
-        type: "Grains, Pastas, & Sides"
-      },
-      {
-        quantity: 4,
-        uom: "clvs",
-        name: "Garlic",
-        type: "Produce"
-      },
-      {
-        quantity: 0.25,
-        uom: "cu",
-        name: "Pine nuts",
-        type: "Produce"
+        type: "Condiments",
+        uom: "tbsp"
       }
     ],
     interactionStatistic: {
@@ -498,20 +510,19 @@ const recipes = [
       proteinContent: "9 grams of protein",
       fatContent: "9 grams fat"
     },
-    prepTime: "PT15M",
+    prepTime: "PT30M",
     recipeInstructions: [
-      "Preheat oven to 425°F.",
-      "Cut off the woody bottom part of the asparagus spears and discard.",
-      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
-      "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
-      "Sprinkle with salt.",
-      "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
-      "Roast for 10-15 minutes, depending on the thickness of your stalks and how tender you like them.",
-      "They should be tender when pierced with the tip of a knife.",
-      "The tips of the spears will get very brown but watch them to prevent burning.",
-      "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
+      "Combine spices to form dry rub",
+      "Trim ribs and season on all sides with dry rub",
+      "Wrap ribs in tin-foil twice and place on cooking rack",
+      "Pre-heat oven to 275F",
+      "Bake ribs for a little under three hours or until pork is tender",
+      "Remove ribs from tin foil (save juices) and finish on grill for 30 minutes (15 minutes a side or until charred)",
+      "Warm BBQ sauce in pan and add half a cup of the pork drippings",
+      "Serve ribs with BBQ sauce and cold beer",
+      "Enjoy!"
     ],
-    recipeYield: "12 cookies"
+    recipeYield: "Six servings"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
