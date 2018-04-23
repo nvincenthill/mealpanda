@@ -15,6 +15,12 @@ const recipes = [
         type: "Spices & Herbs"
       },
       {
+        name: "Gnocchi, fresh",
+        quantity: 12,
+        type: "Grains, Pastas, & Sides",
+        uom: "oz"
+      },
+      {
         quantity: 4,
         uom: "tbsp",
         name: "Olive oil",
@@ -43,12 +49,6 @@ const recipes = [
         uom: "tsp",
         name: "Black pepper",
         type: "Spices & Herbs"
-      },
-      {
-        quantity: 8,
-        uom: "oz",
-        name: "Pasta",
-        type: "Grains, Pastas, & Sides"
       },
       {
         quantity: 4,
@@ -83,7 +83,7 @@ const recipes = [
       "Blend pine nuts, parmesean, and garlic in food processor",
       "Add basil and lemon juice while blending",
       "Add olive oil, salt & pepper to season",
-      "Prepare pasta",
+      "Prepare gnocchi",
       "Serve topped with grated parmsean reggiano",
       "Enjoy!"
     ],
@@ -114,7 +114,7 @@ const recipes = [
         quantity: 2,
         uom: "cu",
         name: "Chicken broth",
-        type: "Misc."
+        type: "Canned Goods"
       },
       {
         quantity: 1,
@@ -138,7 +138,7 @@ const recipes = [
         quantity: 0.5,
         uom: "cu",
         name: "Vegetable shortening",
-        type: "Misc."
+        type: "Canned Goods"
       },
       {
         quantity: 0.5,
@@ -193,17 +193,27 @@ const recipes = [
     },
     prepTime: "PT15M",
     recipeInstructions: [
-      "Preheat oven to 425°F.",
-      "Cut off the woody bottom part of the asparagus spears and discard.",
-      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
-      "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
-      "Sprinkle with salt.",
-      "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
-      "Roast for 10-15 minutes, depending on the thickness of your stalks and how tender you like them.",
-      "They should be tender when pierced with the tip of a knife.",
-      "The tips of the spears will get very brown but watch them to prevent burning.",
-      "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
+      "Set out 3 tbsp of butter to soften for beurre manie (cold roux)",
+      "Measure frozen vegetables to start thawing",
+      "Lightly stir flour and salt in a medium bowl",
+      "With a pastry cutter cut in butter and shortening until mixture resembles coarse crumbs",
+      "Sprinkle in five to six tbsp cold water with mixing and shape into a firm ball ",
+      "Wrap in wax paper and refrigerate for thirty minutes ",
+      "Pre-heat oven to 350F",
+      "Sauté vegetables in a few tablespoons of olive oil until they start to brown",
+      "Add chicken and cook until chicken starts to brown",
+      "Add remaining frozen (now thawed) vegetables (peas, corn, greenbeans, etc.) to taste, and cook for five minutes",
+      "Add chicken broth and reduce filling",
+      "Season with salt and pepper",
+      "Make beurre manie by blending 3 tbsp flour with the softened 3 tbsp of butter to make a smooth paste",
+      "Whisk in the beurre manie a little bit at a time to thicken the filling ",
+      "Roll out the dough to fit your pie tin, then add filling and top crust",
+      "Decorate with extra dough on top and make ventilation holes",
+      "Bake until crust is golden brown (approximately one hour)",
+      "Let the pie cool for 20 minutes",
+      "Enjoy!"
     ],
+
     recipeYield: "Four servings"
   },
   {
@@ -234,7 +244,7 @@ const recipes = [
         type: "Spices & Herbs",
         uom: "tbsp"
       },
-      { name: "Kosher Salt", quantity: 1, type: "Spices & Herbs", uom: "tbsp" },
+      { name: "Kosher salt", quantity: 1, type: "Spices & Herbs", uom: "tbsp" },
       { name: "Tumeric", quantity: 2, type: "Spices & Herbs", uom: "tbsp" },
       { name: "Cumin", quantity: 1, type: "Spices & Herbs", uom: "tbsp" },
       {
@@ -296,64 +306,88 @@ const recipes = [
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
     author: "Nicholas Vincent-Hill",
-    cookTime: "PT2H",
-    datePublished: "2015-05-18",
+    cookTime: "PT1H",
+    datePublished: "2018-22-2018",
     description: "Deep fried shimp with a homemade garlic aioli",
     image: "pshrimp.png",
     recipeIngredient: [
       {
-        quantity: 4,
-        uom: "oz",
-        name: "Basil",
-        type: "Spices & Herbs"
-      },
-      {
-        quantity: 4,
-        uom: "tbsp",
-        name: "Olive oil",
-        type: "Condiments"
-      },
-      {
-        quantity: 3,
-        uom: "tbsp",
-        name: "Lemon juice",
-        type: "Produce"
-      },
-      {
-        quantity: 0.5,
-        uom: "cup",
-        name: "Parmesean Reggiano",
-        type: "Dairy, Eggs, & Cheese"
-      },
-      {
+        name: "Shrimp",
         quantity: 1,
-        uom: "tsp",
+        type: "Meat & Seafood",
+        uom: "lb"
+      },
+      {
         name: "Kosher salt",
-        type: "Spices & Herbs"
-      },
-      {
         quantity: 1,
-        uom: "tsp",
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
         name: "Black pepper",
-        type: "Spices & Herbs"
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tsp"
       },
       {
-        quantity: 8,
-        uom: "oz",
-        name: "Pasta",
-        type: "Grains, Pastas, & Sides"
+        name: "Paprika",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tsp"
       },
       {
-        quantity: 4,
-        uom: "clvs",
+        name: "Cayenne pepper",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Garlic powder",
+        quantity: 0.5,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Eggs",
+        quantity: 2,
+        type: "Dairy, Eggs, & Cheese",
+        uom: "units"
+      },
+      {
+        name: "Panko",
+        quantity: 1,
+        type: "Grains, Pastas, & Sides",
+        uom: "cu"
+      },
+      {
+        name: "Flour",
+        quantity: 0.5,
+        type: "Grains, Pastas, & Sides",
+        uom: "cu"
+      },
+      {
+        name: "Vegetable oil",
+        quantity: 6,
+        type: "Condiments",
+        uom: "cu"
+      },
+      {
+        name: "Mayonnaise",
+        quantity: 0.5,
+        type: "Condiments",
+        uom: "cu"
+      },
+      {
+        name: "Lemon juice",
+        quantity: 1,
+        type: "Produce",
+        uom: "tbsp"
+      },
+      {
         name: "Garlic",
-        type: "Produce"
-      },
-      {
-        quantity: 0.25,
-        uom: "cu",
-        name: "Pine nuts",
-        type: "Produce"
+        quantity: 2,
+        type: "Produce",
+        uom: "clvs"
       }
     ],
     interactionStatistic: {
@@ -370,20 +404,21 @@ const recipes = [
       proteinContent: "9 grams of protein",
       fatContent: "9 grams fat"
     },
-    prepTime: "PT15M",
+    prepTime: "PT30M",
     recipeInstructions: [
-      "Preheat oven to 425°F.",
-      "Cut off the woody bottom part of the asparagus spears and discard.",
-      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
-      "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
-      "Sprinkle with salt.",
-      "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
-      "Roast for 10-15 minutes, depending on the thickness of your stalks and how tender you like them.",
-      "They should be tender when pierced with the tip of a knife.",
-      "The tips of the spears will get very brown but watch them to prevent burning.",
-      "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
+      "Peel and de-vein shrimp",
+      "Season with salt, pepper, and garlic powder",
+      "Combine paprika, flour, and cayenne in a separate bowl ",
+      "Beat eggs in a small bowl ",
+      "Pour panko in a small bowl",
+      "Heat oil in frying pan",
+      'Flour shrimp, then coat in egg mixture and panko using the "wet hand - dry hand" technique',
+      "Fry shrimp until golden brown (approximately five minutes, two and a half minutes per side)",
+      "Blend aioli ingredients ",
+      "Sprinkle shrimp with cayenne and serve with aioli ",
+      "Enjoy!"
     ],
-    recipeYield: "12 cookies"
+    recipeYield: "Four servings"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
@@ -484,8 +519,7 @@ const recipes = [
     author: "Nicholas Vincent-Hill",
     cookTime: "PT2H",
     datePublished: "2015-05-18",
-    description:
-      "Filet mignon and peppercorn cream sauce",
+    description: "Filet mignon and peppercorn cream sauce",
     image: "steak.png",
     recipeIngredient: [
       {
@@ -764,8 +798,7 @@ const recipes = [
     author: "Nicholas Vincent-Hill",
     cookTime: "PT2H",
     datePublished: "2015-05-18",
-    description:
-      "A popular Thai red curry cooked in coconut milk",
+    description: "A popular Thai red curry cooked in coconut milk",
     image: "rcurry.png",
     recipeIngredient: [
       {
@@ -951,8 +984,7 @@ const recipes = [
     author: "Nicholas Vincent-Hill",
     cookTime: "PT2H",
     datePublished: "2015-05-18",
-    description:
-      "One of the most popular comfort foods in Taiwan",
+    description: "One of the most popular comfort foods in Taiwan",
     image: "pbelly.png",
     recipeIngredient: [
       {
@@ -1103,7 +1135,7 @@ const recipes = [
         "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
       userInteractionCount: "5"
     },
-    name: "Homeroom's Gilroy Mac & Cheese",
+    name: "Homeroom's Gilroy Mac",
     nutrition: {
       "@type": "NutritionInformation",
       calories: "1200 calories",
@@ -1128,64 +1160,76 @@ const recipes = [
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
     author: "Nicholas Vincent-Hill",
-    cookTime: "PT2H",
-    datePublished: "2015-05-18",
+    cookTime: "PT4H",
+    datePublished: "2018-22-2018",
     description: "Marinated chicken grilled with pineapple and rice",
     image: "hchicken.png",
     recipeIngredient: [
       {
-        quantity: 4,
-        uom: "oz",
-        name: "Basil",
-        type: "Spices & Herbs"
+        name: "Chicken, drumsticks",
+        quantity: 2,
+        type: "Meat & Seafood",
+        uom: "lb"
       },
       {
-        quantity: 4,
-        uom: "tbsp",
-        name: "Olive oil",
-        type: "Condiments"
-      },
-      {
-        quantity: 3,
-        uom: "tbsp",
-        name: "Lemon juice",
-        type: "Produce"
-      },
-      {
-        quantity: 0.5,
-        uom: "cup",
-        name: "Parmesean Reggiano",
-        type: "Dairy, Eggs, & Cheese"
-      },
-      {
+        name: "Pineapple juice",
         quantity: 1,
-        uom: "tsp",
-        name: "Kosher salt",
-        type: "Spices & Herbs"
+        type: "Beverages",
+        uom: "cu"
       },
       {
-        quantity: 1,
-        uom: "tsp",
-        name: "Black pepper",
-        type: "Spices & Herbs"
-      },
-      {
+        name: "Pineapple",
         quantity: 8,
-        uom: "oz",
-        name: "Pasta",
-        type: "Grains, Pastas, & Sides"
+        type: "Produce",
+        uom: "oz"
       },
       {
-        quantity: 4,
-        uom: "clvs",
-        name: "Garlic",
-        type: "Produce"
+        name: "Soy sauce",
+        quantity: 0.5,
+        type: "Condiments",
+        uom: "cu"
       },
       {
+        name: "Brown sugar",
+        quantity: 0.5,
+        type: "Bread & Bakery",
+        uom: "cu"
+      },
+      {
+        name: "Chicken stock",
         quantity: 0.25,
-        uom: "cu",
-        name: "Pine nuts",
-        type: "Produce"
+        type: "Canned Goods",
+        uom: "cu"
+      },
+      {
+        name: "Ginger",
+        quantity: 1,
+        type: "Produce",
+        uom: "tbsp"
+      },
+      {
+        name: "Garlic",
+        quantity: 4,
+        type: "Produce",
+        uom: "clvs"
+      },
+      {
+        name: "Garlic-chili sauce",
+        quantity: 1,
+        type: "Condiments",
+        uom: "tbsp"
+      },
+      {
+        name: "Green onions",
+        quantity: 0.5,
+        type: "Condiments",
+        uom: "cu"
+      },
+      {
+        name: "Lime juice",
+        quantity: 1,
+        type: "Produce",
+        uom: "tbsp"
       }
     ],
     interactionStatistic: {
@@ -1202,20 +1246,16 @@ const recipes = [
       proteinContent: "9 grams of protein",
       fatContent: "9 grams fat"
     },
-    prepTime: "PT15M",
+    prepTime: "PT30M",
     recipeInstructions: [
-      "Preheat oven to 425°F.",
-      "Cut off the woody bottom part of the asparagus spears and discard.",
-      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
-      "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
-      "Sprinkle with salt.",
-      "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
-      "Roast for 10-15 minutes, depending on the thickness of your stalks and how tender you like them.",
-      "They should be tender when pierced with the tip of a knife.",
-      "The tips of the spears will get very brown but watch them to prevent burning.",
-      "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
+      "Marinate chicken with pineapple juice, soy sauce, brown sugar, chicken stock, ginger, chili sauce, garlic for at least one hour",
+      "Save half a cup of the marinate to baste the chicken with",
+      "Grill chicken on high while continually basting with sauce",
+      "Grill pineapple to charred",
+      "Garnish with green onions and lime, season with salt and pepper to taste",
+      "Enjoy!"
     ],
-    recipeYield: "12 cookies"
+    recipeYield: "Four servings"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
@@ -1427,64 +1467,100 @@ const recipes = [
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
     "@type": "Recipe",
     author: "Nicholas Vincent-Hill",
-    cookTime: "PT2H",
-    datePublished: "2015-05-18",
+    cookTime: "PT1H",
+    datePublished: "2018-04-22",
     description: "Slow-cooked pork served with BBQ sauce and coleslaw",
-    image: "bpork.jpeg",
+    image: "bpork.png",
     recipeIngredient: [
       {
-        quantity: 4,
-        uom: "oz",
-        name: "Basil",
-        type: "Spices & Herbs"
+        name: "Pork shoulder, boneless",
+        quantity: 1.5,
+        type: "Meat & Seafood",
+        uom: "lb"
       },
       {
-        quantity: 4,
-        uom: "tbsp",
-        name: "Olive oil",
-        type: "Condiments"
-      },
-      {
-        quantity: 3,
-        uom: "tbsp",
-        name: "Lemon juice",
-        type: "Produce"
-      },
-      {
-        quantity: 0.5,
-        uom: "cup",
-        name: "Parmesean Reggiano",
-        type: "Dairy, Eggs, & Cheese"
-      },
-      {
+        name: "Cayenne pepper",
         quantity: 1,
-        uom: "tsp",
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Onion powder",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
         name: "Kosher salt",
-        type: "Spices & Herbs"
-      },
-      {
         quantity: 1,
-        uom: "tsp",
+        type: "Spices & Herbs",
+        uom: "tbsp"
+      },
+      {
         name: "Black pepper",
-        type: "Spices & Herbs"
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tsp"
       },
       {
-        quantity: 8,
-        uom: "oz",
-        name: "Pasta",
-        type: "Grains, Pastas, & Sides"
+        name: "Cumin",
+        quantity: 0.5,
+        type: "Spices & Herbs",
+        uom: "tsp"
       },
       {
-        quantity: 4,
-        uom: "clvs",
-        name: "Garlic",
-        type: "Produce"
+        name: "Oregano",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tbsp"
       },
       {
+        name: "Cinnamon",
         quantity: 0.25,
-        uom: "cu",
-        name: "Pine nuts",
-        type: "Produce"
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Onion",
+        quantity: 8,
+        type: "Produce",
+        uom: "oz"
+      },
+      {
+        name: "Garlic",
+        quantity: 5,
+        type: "Produce",
+        uom: "clvs"
+      },
+      {
+        name: "Chicken broth",
+        quantity: 1,
+        type: "Canned Goods",
+        uom: "cu"
+      },
+      {
+        name: "Chili powder",
+        quantity: 0.5,
+        type: "Spices & Herbs",
+        uom: "tbsp"
+      },
+      {
+        name: "BBQ sauce",
+        quantity: 4,
+        type: "Condiments",
+        uom: "tbsp"
+      },
+      {
+        name: "Vegetable oil ",
+        quantity: 2,
+        type: "Condiments",
+        uom: "tbsp"
+      },
+      {
+        name: "Brioche buns",
+        quantity: 0.5,
+        type: "Bread & Bakery",
+        uom: "doz"
       }
     ],
     interactionStatistic: {
@@ -1493,7 +1569,7 @@ const recipes = [
         "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
       userInteractionCount: "5"
     },
-    name: "Braised Pork Shoulder Sandwiches",
+    name: "Braised Pork Shoulder",
     nutrition: {
       "@type": "NutritionInformation",
       calories: "1200 calories",
@@ -1501,20 +1577,18 @@ const recipes = [
       proteinContent: "9 grams of protein",
       fatContent: "9 grams fat"
     },
-    prepTime: "PT15M",
+    prepTime: "PT30M",
     recipeInstructions: [
-      "Preheat oven to 425°F.",
-      "Cut off the woody bottom part of the asparagus spears and discard.",
-      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
-      "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
-      "Sprinkle with salt.",
-      "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
-      "Roast for 10-15 minutes, depending on the thickness of your stalks and how tender you like them.",
-      "They should be tender when pierced with the tip of a knife.",
-      "The tips of the spears will get very brown but watch them to prevent burning.",
-      "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
+      "Heat oil in pan",
+      "Chop onions and garlic",
+      "Trim pork, combine spices, and coat evenly",
+      "Brown pork on high until a nice crust forms on all sides",
+      "Place onions, garlic, pork, and chicken broth in slow cooker",
+      "Cook for six to eight hours",
+      "Shred pork and serve on toasted brioche buns with coleslaw and BBQ sauce",
+      "Enjoy!"
     ],
-    recipeYield: "12 cookies"
+    recipeYield: "Four servings"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
@@ -1522,8 +1596,7 @@ const recipes = [
     author: "Nicholas Vincent-Hill",
     cookTime: "",
     datePublished: "2018-22-2018",
-    description:
-      "A rustic neighborhood American gastro-pub",
+    description: "A rustic neighborhood American gastro-pub",
     image: "wtavern.png",
     address: "6317 College Ave, Oakland, CA 94618",
     website: "https://www.woodtavern.net/",
@@ -1554,8 +1627,7 @@ const recipes = [
     author: "Nicholas Vincent-Hill",
     cookTime: "",
     datePublished: "2018-22-2018",
-    description:
-      "Neighborhood gem serving classic Italian cuisine",
+    description: "Neighborhood gem serving classic Italian cuisine",
     image: "belotti.png",
     address: "5403 College Ave, Oakland, CA 94618",
     website: "http://belottirb.com/",
@@ -1796,6 +1868,132 @@ const recipes = [
       "Stew for two to three hours or until the meat is tender on low heat",
       "Taste and season with salt and pepper",
       "Garnish with chopped parsley and serve with champ, colcannon, plain boiled or mashed potatoes",
+      "Enjoy!"
+    ],
+    recipeYield: "Eight servings"
+  },
+  {
+    "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
+    "@type": "Recipe",
+    author: "Don Hill",
+    cookTime: "PT2H",
+    datePublished: "2018-04-22",
+    description: "A spicy green chile with pork and poblanos",
+    image: "chili.png",
+    recipeIngredient: [
+      {
+        name: "Tomatillos",
+        quantity: 1.5,
+        type: "Produce",
+        uom: "lb"
+      },
+      {
+        name: "Garlic",
+        quantity: 5,
+        type: "Produce",
+        uom: "clvs"
+      },
+      {
+        name: "Jalapenos",
+        quantity: 2,
+        type: "Produce",
+        uom: "units"
+      },
+      {
+        name: "Poblano chiles",
+        quantity: 2,
+        type: "Produce",
+        uom: "units"
+      },
+      {
+        name: "Onion",
+        quantity: 2,
+        type: "Produce",
+        uom: "cu"
+      },
+      {
+        name: "Cilantro",
+        quantity: 0.5,
+        type: "Spices & Herbs",
+        uom: "oz"
+      },
+      {
+        name: "Pork shoulder, boneless",
+        quantity: 3.5,
+        type: "Meat & Seafood",
+        uom: "lb"
+      },
+      {
+        name: "Kosher salt",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tbsp"
+      },
+      {
+        name: "Cloves, ground",
+        quantity: 0.5,
+        type: "Spices & Herbs",
+        uom: "tsp"
+      },
+      {
+        name: "Oregano, fresh",
+        quantity: 2,
+        type: "Spices & Herbs",
+        uom: "tbsp"
+      },
+      {
+        name: "Black pepper",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tbsp"
+      },
+      {
+        name: "Olive oil",
+        quantity: 1,
+        type: "Condiments",
+        uom: "tbsp"
+      },
+      {
+        name: "Chicken stock",
+        quantity: 2.5,
+        type: "Canned Goods",
+        uom: "cu"
+      }
+    ],
+    interactionStatistic: {
+      "@type": "InteractionCounter",
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
+    },
+    name: "Tomatillo Chile Verde",
+    nutrition: {
+      "@type": "NutritionInformation",
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
+    },
+    prepTime: "PT30M",
+    recipeInstructions: [
+      "Remove papery husks from tomatillos and rinse well",
+      "Cut in half and place cut side down, along with unpeeled garlic cloves, on a foil-lined baking sheet",
+      "Broil for about five to seven minutes to lightly blacken the skin",
+      "Roast fresh chilies over a gas flame or under the broiler until blackened ",
+      "Remove the skin, seeds, and stem",
+      "Place tomatillos, peeled roasted garlic, and peppers into blender",
+      "Add chopped Jalapeño peppers and cilantro to the blender",
+      "Pulse until all ingredients are finely chopped and mixed",
+      "Cube pork and season generously with salt and pepper",
+      "Heat olive oil in a large, heavy-bottomed skillet over medium high heat and brown pork chunks well on all sides",
+      "Pour off excess fat and place the onions and garlic in the same skillet and cook, stirring occasionally until limp, about five minutes",
+      "In a large soup pot combine the onions, garlic, and pork",
+      "Add the oregano and the tomatillo chile verde sauce",
+      "Add the chicken stock",
+      "Add a pinch of ground cloves, a little salt, and pepper.",
+      "Bring to a boil and reduce to a slight simmer ",
+      "Cook for two to three hours uncovered or until the pork is fork tender",
+      "Serve with Spanish rice and warmed flour tortillas or freshly made corn tortillas",
       "Enjoy!"
     ],
     recipeYield: "Eight servings"
