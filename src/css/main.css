@@ -1125,15 +1125,15 @@ hr {
     /* For desktop: */
     .grocery-list-button-container {
         text-align: right;
-        margin-bottom: 1em;
+        margin-bottom: 0em;
     }
 
     .grocery-list-button-container:hover {
-        margin-bottom: 1em;
+        margin-bottom: 0em;
     }
 
     .grocery-list-button-container:focus {
-        margin-bottom: 1em;
+        margin-bottom: 0em;
     }
 }
 
