@@ -42,12 +42,12 @@ class Footer extends React.Component {
                   Nicholas Vincent-Hill &nbsp;
                 </a>
               </b>
-              & &nbsp;
+              {/* & &nbsp;
               <b>
                 <a className="link" href="https://avhdesign.win/">
                   Alexander Vincent-Hill &nbsp;
                 </a>{" "}
-              </b>
+              </b> */}
             </h4>
           </div>
         </ReactCSSTransitionGroup>
