@@ -39,13 +39,15 @@ class Footer extends React.Component {
               <br />
               <b>
                 <a className="link" href="https://nvincenthill.github.io/">
-                  Nicholas Vincent-Hill &nbsp;
+                  Nicholas Vincent-Hill&nbsp;
                 </a>
+                <br />
               </b>
                with contributions from &nbsp;
               <b>
+              <br />
                 <a className="link" href="https://avhdesign.win/">
-                  Alexander Vincent-Hill &nbsp;
+                  Alexander Vincent-Hill&nbsp;
                 </a>{" "}
               </b> 
             </h4>
