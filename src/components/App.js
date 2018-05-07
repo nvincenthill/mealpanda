@@ -9,6 +9,7 @@ import data from "../recipes.js";
 import { shuffle } from "../helpers";
 // import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 // import update from "immutability-helper";
+// import GithubCorner from 'react-github-corner';
 
 class App extends React.Component {
   state = {
