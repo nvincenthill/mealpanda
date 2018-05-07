@@ -71,6 +71,7 @@ I use [Git](https://git-scm.com/) for versioning.
 ## Authors
 
 * **Nicholas Vincent-Hill** - *Initial work* - [nvincenthill](https://github.com/nvincenthill)
+* **Alexander Vincent-Hill** - *Design, version control, project management* - [avincenthill](https://github.com/avincenthill)
 
 ## License
 
