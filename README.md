@@ -24,7 +24,7 @@ To run locally:
 npm start || npm run watch
 ```
 
-(```npm run watch```) recompiles styling and animations)
+```npm run watch``` recompiles styling and animations)
 
 ## Running the tests
 
@@ -81,4 +81,4 @@ I make a concerted effort to use only unlicensed content - If I have included yo
 
 ## Acknowledgments
 
-* Wes Bos's React tutorials helped me learn the React framework and produce this content.
+* Wes Bos helped me learn the React framework and produce this content.
