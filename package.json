@@ -9,6 +9,7 @@
   "dependencies": {
     "autoprefixer-stylus": "0.14.0",
     "eslint": "^4.19.1",
+    "faker": "^4.1.0",
     "firebase": "^4.10.0",
     "google-maps-react": "^2.0.0",
     "immutability-helper": "^2.6.6",
@@ -31,9 +32,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "watch": "concurrently --names \"webpack, stylus\" --prefix name \"npm run start\" \"npm run styles:watch\"",
+    "watch": "concurrently --names \"webpack, stylus\" --prefix name \"npm run start\" \"npm run styles:watch\" \"npm run test\"",
     "build": "react-scripts build",
     "test": "jest",
+    "debug": "NODE_ENV=debug npm test",
     "eject": "react-scripts eject",
     "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
     "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css"
