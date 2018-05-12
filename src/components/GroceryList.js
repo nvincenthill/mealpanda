@@ -30,6 +30,11 @@ class GroceryList extends React.Component {
     };
   }
 
+
+  checkListItem = () => {
+    console.log(this);
+  }
+
   showOrHideEverything = () => {
     let temp = this.state.showEverything;
     if (!temp) {
@@ -201,7 +206,7 @@ class GroceryList extends React.Component {
     // });
 
       groceryList = groceryList.map(key => (
-        <tr key={`${key.name}`} className="grocery-list-table-row">
+        <tr key={`${key.name}`} className="grocery-list-table-row" onClick={this.checkListItem}>
           <td key={`${key.quantity}2`}>{key.quantity}</td>
           <td key={`${key.uom}3`}>{key.uom}</td>
           <td key={`${key.name}1`}>{key.name}</td>
