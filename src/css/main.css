@@ -726,6 +726,10 @@ body {
     border-spacing: 2em 0;
 }
 
+.grocery-list-table-row-checked {
+    /*background: green;*/
+}
+
 .ingredients-list-table {
     font-family: "Lato";
     padding: 0;
