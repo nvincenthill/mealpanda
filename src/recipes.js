@@ -533,60 +533,37 @@ const recipes = [
     description: "Filet mignon and peppercorn cream sauce",
     image: "steak.png",
     recipeIngredient: [
+      { name: "Filet mignon", quantity: 16, type: "Meat & Seafood", uom: "oz" },
+      { name: "Kosher salt", quantity: 1, type: "Spices & Herbs", uom: "tbsp" },
       {
-        quantity: 4,
-        uom: "oz",
-        name: "Basil",
-        type: "Spices & Herbs"
-      },
-      {
-        quantity: 4,
-        uom: "tbsp",
-        name: "Olive oil",
-        type: "Condiments"
-      },
-      {
-        quantity: 3,
-        uom: "tbsp",
-        name: "Lemon juice",
-        type: "Produce"
-      },
-      {
-        quantity: 0.5,
-        uom: "cup",
-        name: "Parmesean Reggiano",
-        type: "Dairy, Eggs, & Cheese"
-      },
-      {
-        quantity: 1,
-        uom: "tsp",
-        name: "Kosher salt",
-        type: "Spices & Herbs"
-      },
-      {
-        quantity: 1,
-        uom: "tsp",
         name: "Black pepper",
-        type: "Spices & Herbs"
+        quantity: 2,
+        type: "Spices & Herbs",
+        uom: "tbsp"
       },
       {
-        quantity: 8,
-        uom: "oz",
-        name: "Pasta",
-        type: "Grains, Pastas, & Sides"
+        name: "Green peppercorns",
+        quantity: 1,
+        type: "Spices & Herbs",
+        uom: "tbsp"
       },
       {
+        name: "Butter",
         quantity: 4,
-        uom: "clvs",
-        name: "Garlic",
-        type: "Produce"
+        type: "Dairy, Eggs, & Cheese",
+        uom: "tbsp"
       },
+      { name: "Olive oil", quantity: 1, type: "Condiments", uom: "tbsp" },
       {
-        quantity: 0.25,
-        uom: "cu",
-        name: "Pine nuts",
-        type: "Produce"
-      }
+        name: "Cognac",
+        quantity: 0.5,
+        type: "Wine, Beer, & Spirits",
+        uom: "cu"
+      },
+      { name: "Cream", quantity: 1, type: "Dairy, Eggs, & Cheese", uom: "cu" },
+      { name: "Potatoes", quantity: 2, type: "Produce", uom: "cu" },
+      { name: "Tarragon ", quantity: 1, type: "Spices & Herbs", uom: "tbsp" },
+      { name: "Tarragon ", quantity: 1, type: "Spices & Herbs", uom: "tbsp" }
     ],
     interactionStatistic: {
       "@type": "InteractionCounter",
@@ -604,16 +581,23 @@ const recipes = [
     },
     prepTime: "PT15M",
     recipeInstructions: [
-      "Preheat oven to 425°F.",
-      "Cut off the woody bottom part of the asparagus spears and discard.",
-      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
-      "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
-      "Sprinkle with salt.",
-      "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
-      "Roast for 10-15 minutes, depending on the thickness of your stalks and how tender you like them.",
-      "They should be tender when pierced with the tip of a knife.",
-      "The tips of the spears will get very brown but watch them to prevent burning.",
-      "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
+      "Remove the steaks from the refrigerator for at least 30 minutes and up to 1 hour prior to cooking. ",
+      "Coat sides in salt, pepper, and coarse-ground green peppercorns.",
+      "In a medium skillet over medium heat, melt 1 tbsp of butter and olive oil.",
+      "As soon as the butter and oil begin to turn golden and smoke, gently place the steaks in the pan.",
+      "For medium-rare, cook for three minutes on each side.",
+      "Once done, remove the steaks to a plate, tent with foil and set aside to rest.",
+      "Add 1/3 cup Cognac to de-glaze the pan.",
+      "Add the cream and simmer on low heat.",
+      "Bring the mixture to a boil and whisk until the sauce coats the back of a spoon, approximately 5 to 6 minutes.",
+      " Add a teaspoon of Cognac, some whole green peppercorns, and season with salt and pepper to taste.",
+      "For the potatoes- peel and dice to one-inch cubes.",
+      "Toss with olive oil, salt, pepper, and tarragon.",
+      "Roast in oven at 425F for 15-20 minutes.",
+      "To finish- pan fry in butter for 10 minutes.",
+      "Serve rested steaks with cream sauce and double-cooked potatoes.",
+      "Fight to the death over the remaining sauce.",
+      "Enjoy!"
     ],
     recipeYield: "12 cookies"
   },
