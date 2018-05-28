@@ -32,21 +32,25 @@ class App extends React.Component {
 
   loadMenu = () => {
     setTimeout(this.showMenu, 750);
-    this.setState({ groceryButtonHidden: false });
-    this.setState({ footerHidden: true });
-    this.setState({ titleHidden: true });
-    this.setState({ pandaHidden: true });
-    this.setState({ pandaMessage: "Reawaken the meal panda" });
+    this.setState({
+      groceryButtonHidden: false,
+      footerHidden: true,
+      titleHidden: true,
+      pandaHidden: true,
+      pandaMessage: "Reawaken the meal panda"
+    });
   };
 
   returnToMain = () => {
-    this.setState({ pandaHidden: false });
-    this.setState({ titleHidden: false });
-    this.setState({ menuHidden: true });
-    this.setState({ generateButtonHidden: false });
-    this.setState({ groceryButtonHidden: true });
-    this.setState({ footerHidden: false });
-    this.setState({ pandaMessage: "Let the panda decide" });
+    this.setState({
+      pandaHidden: false,
+      titleHidden: false,
+      menuHidden: true,
+      generateButtonHidden: false,
+      groceryButtonHidden: true,
+      footerHidden: false,
+      pandaMessage: "Let the panda decide"
+    });
   };
 
   showMenu = () => {
@@ -54,19 +58,22 @@ class App extends React.Component {
   };
 
   loadGroceryList = () => {
-    this.setState({ groceryListHidden: false });
-    this.setState({ groceryButtonHidden: true });
-    this.setState({ HideGroceryListButtonHidden: false });
+    this.setState({
+      groceryListHidden: false,
+      groceryButtonHidden: true,
+      HideGroceryListButtonHidden: false
+    });
   };
 
   hideGroceryList = () => {
-    this.setState({ groceryListHidden: true });
-    this.setState({ groceryButtonHidden: false });
-    this.setState({ HideGroceryListButtonHidden: true });
+    this.setState({
+      groceryListHidden: true,
+      groceryButtonHidden: false,
+      HideGroceryListButtonHidden: true
+    });
   };
 
   changeRecipe = key => {
-    console.log(`changing ${key}`);
     const mixed = shuffle(this.state.recipeData);
     const randomRecipes = this.state.randomRecipes;
     const oldRecipe = randomRecipes[key];
@@ -94,23 +101,20 @@ class App extends React.Component {
   regenerate = () => {
     this.returnToMain();
     this.setState({ pandaMessage: "Pawstulating new meals..." });
-      for(let i = 0; i < 6; i++) {
-        this.changeRecipe(i);
-      }
-    setTimeout((this.loadMenu), 1500);
-
-  }; 
+    for (let i = 0; i < 6; i++) {
+      this.changeRecipe(i);
+    }
+    setTimeout(this.loadMenu, 1500);
+  };
 
   handleClick = index => {
-    this.setState({ activeIndex: index });
-    this.setState({ isChanging: true });
+    this.setState({ activeIndex: index, isChanging: true });
     setTimeout(() => this.changeClass(index), 800);
   };
 
   changeClass = index => {
     this.changeRecipe(index);
-    this.setState({ isChanging: false });
-    this.setState({ activeIndex: null });
+    this.setState({ isChanging: false, activeIndex: null });
   };
 
   authHandler = async authData => {
@@ -149,6 +153,7 @@ class App extends React.Component {
       .then(this.authHandler);
   };
 
+  // TODO - Email ingredients list with Mandrill
   email = () => {
     // var mandrill = require("node-mandrill")(
     //   "3150df61a2dce2abb43bb3da4fa3879d-us18"
@@ -219,17 +224,14 @@ class App extends React.Component {
     }
   };
 
-  //TODO Do not mutate state
   componentWillMount() {
-    for (let j = 0; j < this.state.recipeData.length; j++) {
-      let sortedIngredients = this.state.recipeData[j].recipeIngredient.sort(
-        function(a, b) {
-          return a.type > b.type ? 1 : b.type > a.type ? -1 : 0;
-        }
-      );
-      this.state.recipeData[j].recipeIngredient = sortedIngredients;
+    let sortedIngredients = this.state.recipeData;
+    for (let j = 0; j < sortedIngredients.length; j++) {
+      sortedIngredients[j].recipeIngredient.sort(function(a, b) {
+        return a.type > b.type ? 1 : b.type > a.type ? -1 : 0;
+      });
     }
-    // this.setState({ randomRecipes: randomRecipes });
+    this.setState({ recipeData: sortedIngredients });
   }
 
   componentDidMount() {
