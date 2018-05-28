@@ -587,10 +587,10 @@ const recipes = [
       "As soon as the butter and oil begin to turn golden and smoke, gently place the steaks in the pan.",
       "For medium-rare, cook for three minutes on each side.",
       "Once done, remove the steaks to a plate, tent with foil and set aside to rest.",
-      "Add 1/3 cup Cognac to de-glaze the pan.",
+      "Add 1/3 cup cognac to de-glaze the pan.",
       "Add the cream and simmer on low heat.",
       "Bring the mixture to a boil and whisk until the sauce coats the back of a spoon, approximately 5 to 6 minutes.",
-      " Add a teaspoon of Cognac, some whole green peppercorns, and season with salt and pepper to taste.",
+      " Add a teaspoon of cognac, some whole green peppercorns, and season with salt and pepper to taste.",
       "For the potatoes- peel and dice to one-inch cubes.",
       "Toss with olive oil, salt, pepper, and tarragon.",
       "Roast in oven at 425F for 15-20 minutes.",
@@ -599,7 +599,7 @@ const recipes = [
       "Fight to the death over the remaining sauce.",
       "Enjoy!"
     ],
-    recipeYield: "12 cookies"
+    recipeYield: "2 servings"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
@@ -610,89 +610,53 @@ const recipes = [
     description: "Thin-crust Italian style pizza with à la carte toppings",
     image: "pizza.png",
     recipeIngredient: [
+      { name: "Yeast", quantity: 1, type: "Canned Goods", uom: "tbsp" },
+      { name: "Olive oil", quantity: 8, type: "Canned Goods", uom: "tbsp" },
+      { name: "Flour", quantity: 4.25, type: "Bread & Bakery", uom: "cu" },
+      { name: "Kosher salt", quantity: 1, type: "Spices & Herbs", uom: "tbsp" },
       {
-        quantity: 4,
-        uom: "oz",
-        name: "Basil",
-        type: "Spices & Herbs"
-      },
-      {
-        quantity: 4,
-        uom: "tbsp",
-        name: "Olive oil",
-        type: "Condiments"
-      },
-      {
-        quantity: 3,
-        uom: "tbsp",
-        name: "Lemon juice",
-        type: "Produce"
-      },
-      {
-        quantity: 0.5,
-        uom: "cup",
-        name: "Parmesean Reggiano",
-        type: "Dairy, Eggs, & Cheese"
-      },
-      {
+        name: "Mozzarella",
         quantity: 1,
-        uom: "tsp",
-        name: "Kosher salt",
-        type: "Spices & Herbs"
+        type: "Dairy, Eggs, & Cheese",
+        uom: "lb"
       },
       {
+        name: "Tomatoes, San Marzano",
+        quantity: 15,
+        type: "Canned Goods",
+        uom: "oz"
+      },
+      { name: "Basil, fresh", quantity: 1, type: "Spices & Herbs", uom: "oz" },
+      {
+        name: "Oregano, fresh",
         quantity: 1,
-        uom: "tsp",
-        name: "Black pepper",
-        type: "Spices & Herbs"
+        type: "Spices & Herbs",
+        uom: "oz"
       },
-      {
-        quantity: 8,
-        uom: "oz",
-        name: "Pasta",
-        type: "Grains, Pastas, & Sides"
-      },
-      {
-        quantity: 4,
-        uom: "clvs",
-        name: "Garlic",
-        type: "Produce"
-      },
-      {
-        quantity: 0.25,
-        uom: "cu",
-        name: "Pine nuts",
-        type: "Produce"
-      }
+      { name: "Black pepper", quantity: 1, type: "Spices & Herbs", uom: "tsp" }
     ],
-    interactionStatistic: {
-      "@type": "InteractionCounter",
-      interactionType:
-        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
-      userInteractionCount: "5"
-    },
-    name: "Nick's Neapolitan Pizza",
-    nutrition: {
-      "@type": "NutritionInformation",
-      calories: "1200 calories",
-      carbohydrateContent: "12 carbs",
-      proteinContent: "9 grams of protein",
-      fatContent: "9 grams fat"
-    },
-    prepTime: "PT15M",
+    prepTime: "PT45M",
     recipeInstructions: [
-      "Preheat oven to 425°F.",
-      "Cut off the woody bottom part of the asparagus spears and discard.",
-      'With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.",string.", and if you eat asparagus you know what I mean by that).',
-      "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
-      "Sprinkle with salt.",
-      "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
-      "Roast for 10-15 minutes, depending on the thickness of your stalks and how tender you like them.",
-      "They should be tender when pierced with the tip of a knife.",
-      "The tips of the spears will get very brown but watch them to prevent burning.",
-      "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
+      "In the bowl of a stand mixer fitted with the hook attachment (or in a small bowl with a spoon), combine the warm water, yeast, and oil.",
+      "With the mixer on low, stir the mixture to dissolve the yeast.",
+      "Add the flour and salt, and continue to stir on low just until the ingredients are combined, then increase the mixer speed to medium and knead the dough until it's smooth and elastic, 5 to 6 minutes. ",
+      " Gather the dough into a ball and transfer it to a clean bowl that's large enough to hold the dough after it doubles in volume.",
+      "Dust the surface of the dough with flour, cover tightly with plastic wrap, and let the dough rise at room temperature until it doubles in volume.",
+      "While the dough is rising, drain the sliced mozzarella on several paper towels to remove any excess moisture.",
+      "Position an oven rack in the bottom third of the oven, placing a pizza stone on the rack if available.",
+      "If a pizza stone is unavailable, brush a pizza pan lightly with olive oil. Preheat the oven to 450°F.",
+      "Transfer the dough to a floured work surface.",
+      "Gently press it into a rough square then pull the four corners in toward the center and flip the dough over so the upper surface is smooth.",
+      "Drape the ball of dough with the plastic you used during the first rise, and let it rest until it's relaxed, about 30 minutes.",
+      "Uncover the dough then spread and stretch it into a circle about the same dimensions as your stone or prepared pan.",
+      "Carefully lift and transfer the dough to a pizza peel (if using a stone) or the pan and stretch it out into an even layer. ",
+      "Spread the crushed tomatoes over the pizza in an even layer and top with the mozzarella slices.",
+      "If using a pizza stone, use the peel to slide the pizza onto the oven rack positioned in the lower third of the oven; if using a pizza pan, simply place the pan directly on the rack.",
+      "Bake the pizza until the edges are golden and the cheese is bubbling, 8 to 10 minutes.",
+      "Sprinkle with the torn basil and oregano, and season with salt and pepper if desired.",
+      "Enjoy!"
     ],
-    recipeYield: "12 cookies"
+    recipeYield: "Four servings"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
@@ -773,7 +737,7 @@ const recipes = [
       "Serve topped with cilantro, crushed peanuts, and lime wedges.",
       "Enjoy!"
     ],
-    recipeYield: "12 cookies"
+    recipeYield: "Two servings"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
@@ -1062,7 +1026,7 @@ const recipes = [
       "Serve pork belly with buns, scallions, and cilantro.",
       "Enjoy!"
     ],
-    recipeYield: "12 cookies"
+    recipeYield: "Two servings"
   },
   {
     "@context": "https://github.com/nvincenthill/nvincenthill.github.io",
