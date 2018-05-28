@@ -562,7 +562,6 @@ const recipes = [
       },
       { name: "Cream", quantity: 1, type: "Dairy, Eggs, & Cheese", uom: "cu" },
       { name: "Potatoes", quantity: 2, type: "Produce", uom: "cu" },
-      { name: "Tarragon ", quantity: 1, type: "Spices & Herbs", uom: "tbsp" },
       { name: "Tarragon ", quantity: 1, type: "Spices & Herbs", uom: "tbsp" }
     ],
     interactionStatistic: {
@@ -635,6 +634,20 @@ const recipes = [
       },
       { name: "Black pepper", quantity: 1, type: "Spices & Herbs", uom: "tsp" }
     ],
+    interactionStatistic: {
+      "@type": "InteractionCounter",
+      interactionType:
+        "https://github.com/nvincenthill/nvincenthill.github.io/Comment",
+      userInteractionCount: "5"
+    },
+    name: "Nick's Neapolitan Pizza",
+    nutrition: {
+      "@type": "NutritionInformation",
+      calories: "1200 calories",
+      carbohydrateContent: "12 carbs",
+      proteinContent: "9 grams of protein",
+      fatContent: "9 grams fat"
+    },
     prepTime: "PT45M",
     recipeInstructions: [
       "In the bowl of a stand mixer fitted with the hook attachment (or in a small bowl with a spoon), combine the warm water, yeast, and oil.",
