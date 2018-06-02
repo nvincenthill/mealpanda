@@ -621,16 +621,16 @@ const recipes = [
       },
       {
         name: "Tomatoes, San Marzano",
-        quantity: 15,
+        quantity: 16,
         type: "Canned Goods",
         uom: "oz"
       },
       { name: "Basil, fresh", quantity: 1, type: "Spices & Herbs", uom: "oz" },
       {
         name: "Oregano, fresh",
-        quantity: 1,
+        quantity: 2,
         type: "Spices & Herbs",
-        uom: "oz"
+        uom: "tbsp"
       },
       { name: "Black pepper", quantity: 1, type: "Spices & Herbs", uom: "tsp" }
     ],
@@ -650,7 +650,7 @@ const recipes = [
     },
     prepTime: "PT45M",
     recipeInstructions: [
-      "In the bowl of a stand mixer fitted with the hook attachment (or in a small bowl with a spoon), combine the warm water, yeast, and oil.",
+      "In the bowl of a mixer with the hook attachment (or in a small bowl with a spoon), combine the warm water, yeast, and oil.",
       "With the mixer on low, stir the mixture to dissolve the yeast.",
       "Add the flour and salt, and continue to stir on low just until the ingredients are combined, then increase the mixer speed to medium and knead the dough until it's smooth and elastic, 5 to 6 minutes. ",
       " Gather the dough into a ball and transfer it to a clean bowl that's large enough to hold the dough after it doubles in volume.",
