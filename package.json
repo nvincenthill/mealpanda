@@ -1,6 +1,6 @@
 {
-  "name": "cotd",
-  "version": "0.0.3",
+  "name": "mealpanda",
+  "version": "1.0.0",
   "private": true,
   "devDependencies": {
     "concurrently": "3.5.1",
