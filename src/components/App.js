@@ -30,6 +30,7 @@ class App extends React.Component {
     activeIndex: null
   };
 
+  // display menu
   loadMenu = () => {
     setTimeout(this.showMenu, 750);
     this.setState({
@@ -41,6 +42,7 @@ class App extends React.Component {
     });
   };
 
+  // reset state to fresh page load state
   returnToMain = () => {
     this.setState({
       pandaHidden: false,
