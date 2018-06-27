@@ -3,7 +3,9 @@ import Menu from "./Menu";
 import MealPanda from "./MealPanda";
 import Header from "./Header";
 import Footer from "./Footer";
-import base, { firebaseApp } from "../base";
+if (!process.env) {
+  import base, { firebaseApp } from "../base";
+}
 import firebase from "firebase";
 import data from "../recipes.js";
 import { shuffle } from "../helpers";
