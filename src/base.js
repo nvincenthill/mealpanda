@@ -1,6 +1,6 @@
 import Rebase from "re-base";
 import firebase from "firebase";
-import config from "./components/config";
+// import config from "./components/config";
 
 //remove
 const databaseURL = "https://mealplanner-196022.firebaseio.com";
