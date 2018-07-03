@@ -6,7 +6,7 @@ import config from "./components/config";
 const databaseURL = "https://mealplanner-196022.firebaseio.com";
 
 const firebaseApp = firebase.initializeApp({
-  apiKey: config.APIKey,
+  apiKey: 'AIzaSyDxflJBdQ-NZobymtt-nSnUICNnJIgqbqE',
   authDomain: "mealplanner-196022.firebaseapp.com",
   databaseURL: databaseURL
 });
