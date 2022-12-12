@@ -4,12 +4,9 @@ import MealPanda from "./MealPanda";
 import Header from "./Header";
 import Footer from "./Footer";
 import base, { firebaseApp } from "../base";
-import firebase from "firebase";
+import firebase from "firebase/compat/app"
 import data from "../recipes.js";
 import { shuffle } from "../helpers";
-// import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-// import update from "immutability-helper";
-// import GithubCorner from 'react-github-corner';
 
 class App extends React.Component {
   state = {

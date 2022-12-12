@@ -4,13 +4,13 @@
   "private": true,
   "devDependencies": {
     "concurrently": "3.5.1",
-    "react-scripts": "1.1.1"
+    "react-scripts": "5.0.1"
   },
   "dependencies": {
     "autoprefixer-stylus": "0.14.0",
-    "eslint": "^4.19.1",
+    "eslint": "^8.29.0",
     "faker": "^4.1.0",
-    "firebase": "^4.10.0",
+    "firebase": "^9.15.0",
     "google-maps-react": "^2.0.0",
     "immutability-helper": "^2.6.6",
     "node-mandrill": "^1.0.1",
@@ -40,5 +40,17 @@
     "eject": "react-scripts eject",
     "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
     "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
