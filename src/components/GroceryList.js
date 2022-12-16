@@ -1,12 +1,7 @@
 import React from "react";
 import { createGroceryList, groupBy } from "../helpers";
 import {
-  // Popover,
-  // Tooltip,
   Button
-  // Modal
-  // OverlayTrigger
-  // Well
 } from "react-bootstrap";
 import { Collapse } from "react-collapse";
 
@@ -165,10 +160,6 @@ class GroceryList extends React.Component {
     this.setState({ showSpices: temp });
   };
 
-  componentWillMount() {}
-
-  componentWillUpdate() {}
-
   render() {
     let groceryList = createGroceryList(this.props.randomRecipes);
     let sortedGroceries = groupBy(groceryList, "type");
@@ -185,25 +176,6 @@ class GroceryList extends React.Component {
     let dairyArray = sortedGroceries["Dairy, Eggs, & Cheese"];
     let spicesArray = sortedGroceries["Spices & Herbs"];
     let grainsArray = sortedGroceries["Grains, Pastas, & Sides"];
-
-    // let groceriesArray = [
-    //   beveragesArray,
-    //   cannedArray,
-    //   frozenArray,
-    //   meatArray,
-    //   produceArray,
-    //   condimentsArray,
-    //   breadArray,
-    //   wineArray,
-    //   cookiesArray,
-    //   dairyArray,
-    //   spicesArray,
-    //   grainsArray
-    // ];
-
-    // let cleanGroceriesArray = groceriesArray.filter(function(val) {
-    //   return val !== undefined;
-    // });
 
       groceryList = groceryList.map(key => (
         <tr key={`${key.name}`} className="grocery-list-table-row" onClick={this.checkListItem}>
@@ -326,15 +298,6 @@ class GroceryList extends React.Component {
         </tr>
       ));
     }
-
-    // let header = (
-    //   <tr className="grocery-list-table-header">
-    //     <th>Quantity</th>
-    //     <th>Units</th>
-    //     <th>Name</th>
-    //   </tr>
-    // );
-
     let empty = (
       <tr className="grocery-list-table-empty">
         <td>n/a</td>

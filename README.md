@@ -24,7 +24,7 @@ To run locally:
 npm start || npm run watch
 ```
 
-```npm run watch``` recompiles styling and animations)
+```npm run watch``` re-compiles styling and animations)
 
 ## Running the tests
 
@@ -58,7 +58,6 @@ npm build
 
 * [React](https://reactjs.org/) - The JS framework used
 * [React-Bootstrap](https://reactjs.org/) - The front-end styling framework
-* [Firebase](https://firebase.google.com/) - The database as a service for OAuth and data permanence 
 
 ## Contributing
 

@@ -2,12 +2,8 @@ import React from "react";
 import MapContainer from "./MapContainer";
 
 import {
-  // Popover,
-  // Tooltip,
   Button,
   Modal
-  // OverlayTrigger
-  // Well
 } from "react-bootstrap";
 
 class RestaurantModal extends React.Component {

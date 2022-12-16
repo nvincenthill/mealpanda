@@ -3,8 +3,6 @@ import Menu from "./Menu";
 import MealPanda from "./MealPanda";
 import Header from "./Header";
 import Footer from "./Footer";
-import base, { firebaseApp } from "../base";
-import firebase from "firebase/compat/app"
 import data from "../recipes.js";
 import { shuffle } from "../helpers";
 
@@ -150,31 +148,6 @@ class App extends React.Component {
       .auth()
       .signInWithPopup(authProvider)
       .then(this.authHandler);
-  };
-
-  // TODO - Email ingredients list with Mandrill
-  email = () => {
-    // var mandrill = require("node-mandrill")(
-    //   "3150df61a2dce2abb43bb3da4fa3879d-us18"
-    // );
-    // mandrill(
-    //   "/messages/send",
-    //   {
-    //     message: {
-    //       to: [{ email: "nvincenthill@gmail.com", name: "Jim Rubenstein" }],
-    //       from_email: "nvincenthill@gmail.com",
-    //       subject: "Hey, what's up?",
-    //       text: "Hello, I sent this message using mandrill."
-    //     }
-    //   },
-    //   function(error, response) {
-    //     //uh oh, there was an error
-    //     if (error) console.log(JSON.stringify(error));
-    //     else
-    //       //everything's good, lets see what mandrill said
-    //       console.log(response);
-    //   }
-    // );
   };
 
   logOut = async () => {

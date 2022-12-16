@@ -4,13 +4,6 @@ import { Button } from "react-bootstrap";
 
 class MealPandaButton extends React.Component {
   state = {};
-
-  componentWillMount() {}
-  componentDidMount() {}
-  componentDidUpdate() {
-    // console.log("UPDATED");
-  }
-  componentWillUnmount() {}
   render() {
     return (
       <div className="generate-button-container">

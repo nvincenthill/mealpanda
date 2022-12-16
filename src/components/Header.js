@@ -6,23 +6,10 @@ import SignInModal from "./SignInModal";
 import MealPandaButton from "./MealPandaButton";
 
 import {
-  // Popover,
-  // Tooltip,
   Button
-  // Modal
-  // OverlayTrigger
-  // Well
 } from "react-bootstrap";
 
 class Header extends React.Component {
-  componentWillMount() {
-    // console.log("MOUNTING HEADER");
-  }
-
-  componentDidMount() {
-    // console.log("HEADER MOUNTED!")
-  }
-
   render() {
     const title = (
       <Collapse isOpened={!this.props.titleHidden}>

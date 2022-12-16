@@ -7,21 +7,6 @@ import RestaurantModal from "./RestaurantModal";
 class MenuItem extends React.PureComponent {
   state = {
   };
-
-  componentWillMount() {
-    // console.log("MOUNTING ITEM");
-  }
-
-  componentDidMount() {
-    // console.log("ITEM MOUNTED!");
-  }
-
-  componentDidUpdate() {}
-
-  componentWillUnmount() {
-    // console.log("ITEM KILLED!");
-  }
-
   render() {
     const recipeOrRestaurantModal =
       this.props.recipeData["@type"] === "Recipe" ? (

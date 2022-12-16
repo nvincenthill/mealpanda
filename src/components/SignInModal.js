@@ -1,10 +1,7 @@
 import React from "react";
 import {
-  // Popover,
-  // Tooltip,
   Button,
   Modal,
-  // OverlayTrigger,
   Well
 } from "react-bootstrap";
 
@@ -26,10 +23,6 @@ class SignInModal extends React.Component {
 
   handleShow() {
     this.setState({ show: true });
-  }
-
-  componentWillMount() {
-    // console.log("MOUNTING SIGN IN MODAL");
   }
 
   render() {

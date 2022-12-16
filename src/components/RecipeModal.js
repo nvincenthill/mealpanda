@@ -1,15 +1,10 @@
 import React from "react";
 
 import {
-  // Grid,
   Col,
   Row,
-  // Popover,
-  // Tooltip,
   Button,
   Modal
-  // OverlayTrigger
-  // Well
 } from "react-bootstrap";
 
 class RecipeModal extends React.Component {

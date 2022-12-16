@@ -3,22 +3,6 @@ import { Collapse } from "react-collapse";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 class MealPanda extends React.Component {
-  componentWillMount() {
-    // console.log("MOUNTING PANDA");
-  }
-
-  componentDidMount() {
-    // console.log("PANDA MOUNTED!");
-  }
-
-  componentDidUpdate() {
-    // console.log("PANDA CHANGED!");
-  }
-
-  componentWillUnmount() {
-    // console.log("PANDA KILLED!");
-  }
-
   render() {
     let pandaTop = <img id="logo" src="/images/mealpanda.png" alt="logo"/>;
 

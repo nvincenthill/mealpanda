@@ -1,15 +1,10 @@
 import React from "react";
 import GroceryList from "./GroceryList";
-// import { createGroceryList, /* downloadCSV */ } from "../helpers";
 import Email from "./Email";
 
 import {
-  // Popover,
-  // Tooltip,
   Button,
   Modal
-  // OverlayTrigger
-  // Well
 } from "react-bootstrap";
 
 class GroceryListModal extends React.Component {
@@ -33,8 +28,6 @@ class GroceryListModal extends React.Component {
   }
 
   render() {
-    // let groceryList = createGroceryList(this.props.randomRecipes);
-
     return (
       <div className="grocery-list-button-container">
         <Button
