@@ -3,7 +3,6 @@ import { createGroceryList, groupBy } from "../helpers";
 import {
   Button
 } from "react-bootstrap";
-import { Collapse } from "react-collapse";
 
 class GroceryList extends React.Component {
   constructor(props) {

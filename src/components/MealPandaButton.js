@@ -1,5 +1,4 @@
 import React from "react";
-import { Collapse } from "react-collapse";
 import { Button } from "react-bootstrap";
 
 class MealPandaButton extends React.Component {

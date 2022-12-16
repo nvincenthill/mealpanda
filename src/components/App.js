@@ -114,62 +114,6 @@ class App extends React.Component {
     this.setState({ isChanging: false, activeIndex: null });
   };
 
-  authHandler = async authData => {
-    this.setState({
-      uid: authData.user.uid,
-      userAuthenticated: true
-    });
-
-    let userRecipes;
-
-    if (!authData.additionalUserInfo.isNewUser) {
-      userRecipes = await base.fetch(`users/${this.state.uid}/userRecipes`, {
-        context: this
-      });
-    } else {
-      userRecipes = this.state.randomRecipes;
-    }
-
-    this.writeUserData(
-      this.state.uid,
-      userRecipes,
-      authData.user.displayName,
-      authData.user.email
-    );
-    this.ref = base.syncState(`users/${this.state.uid}/userRecipes`, {
-      context: this,
-      state: "randomRecipes"
-    });
-  };
-
-  authenticate = provider => {
-    const authProvider = new firebase.auth[`${provider}AuthProvider`]();
-    firebaseApp
-      .auth()
-      .signInWithPopup(authProvider)
-      .then(this.authHandler);
-  };
-
-  logOut = async () => {
-    await firebase.auth().signOut();
-    this.setState({
-      uid: null,
-      userAuthenticated: false
-    });
-  };
-
-  writeUserData = (userId, userRecipes, name, email) => {
-    firebase
-      .database()
-      .ref("users/" + userId)
-      .set({
-        uid: userId,
-        userRecipes: userRecipes,
-        name: name,
-        email: email
-      });
-  };
-
   generateRandomRecipes = () => {
     const randomRecipes = [];
     const mixed = shuffle(this.state.recipeData);
@@ -177,15 +121,6 @@ class App extends React.Component {
       randomRecipes.push(mixed[i]);
     }
     this.setState({ randomRecipes: randomRecipes });
-  };
-
-  checkIfUserExists = userId => {
-    var usersRef = firebase.database().ref(`users/`);
-    usersRef.child(userId).once("value", function(snapshot) {
-      var exists = snapshot.val() !== null;
-      if (exists) {
-      }
-    });
   };
 
   router = () => {
@@ -208,13 +143,6 @@ class App extends React.Component {
 
   componentDidMount() {
     this.generateRandomRecipes();
-
-    if (this.state.uid) {
-      this.ref = base.syncState(`users/${this.state.uid}/userRecipes`, {
-        context: this,
-        state: "randomRecipes"
-      });
-    }
   }
 
   componentWillUnmount() {
@@ -237,11 +165,8 @@ class App extends React.Component {
           HideGroceryListButtonHidden={this.state.HideGroceryListButtonHidden}
           hideGroceryList={this.hideGroceryList}
           titleHidden={this.state.titleHidden}
-          authenticate={this.authenticate}
-          userAuthenticated={this.state.userAuthenticated}
           footerHidden={this.state.footerHidden}
           email={this.email}
-          logOut={this.logOut}
           returnToMain={this.returnToMain}
           pandaMessage={this.state.pandaMessage}
           router={this.router}

@@ -1,7 +1,6 @@
 import React from "react";
 import MenuItem from "./MenuItem";
 import { Grid, Row } from "react-bootstrap";
-import { Collapse } from "react-collapse";
 
 class Menu extends React.Component {
   render() {

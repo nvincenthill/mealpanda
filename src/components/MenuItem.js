@@ -1,5 +1,4 @@
 import React from "react";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import { Col, Image, Thumbnail } from "react-bootstrap";
 import RecipeModal from "./RecipeModal";
 import RestaurantModal from "./RestaurantModal";
@@ -52,15 +51,7 @@ class MenuItem extends React.PureComponent {
       </Col>
     );
     return (
-      <ReactCSSTransitionGroup
-        transitionName="menu-items-animation"
-        transitionAppear={true}
-        transitionAppearTimeout={1000}
-        transitionEnterTimeout={1000}
-        transitionLeaveTimeout={1000}
-      >
         {item}
-      </ReactCSSTransitionGroup>
     );
   }
 }

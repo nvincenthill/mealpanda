@@ -1,7 +1,5 @@
 import React from "react";
 import GroceryListModal from "./GroceryListModal";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-import { Collapse } from "react-collapse";
 import SignInModal from "./SignInModal";
 import MealPandaButton from "./MealPandaButton";
 
@@ -13,19 +11,11 @@ class Header extends React.Component {
   render() {
     const title = (
       <Collapse isOpened={!this.props.titleHidden}>
-        <ReactCSSTransitionGroup
-          transitionName="title-animation"
-          transitionAppear={true}
-          transitionAppearTimeout={2000}
-          transitionEnterTimeout={2000}
-          transitionLeaveTimeout={2000}
-        >
         <div className="no-margin">
           <h1 id="maintitle">
             Hey Mel ... <br />What do you want for dinner this week?
           </h1>
         </div>
-        </ReactCSSTransitionGroup>
       </Collapse>
     );
 

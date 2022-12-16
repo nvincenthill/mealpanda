@@ -33,6 +33,7 @@ class SignInModal extends React.Component {
           bsSize="large"
           bsStyle="success"
           onClick={this.handleShow}
+          disabled
         >
           Sign in
         </Button>
